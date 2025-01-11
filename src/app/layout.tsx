@@ -11,7 +11,7 @@ const title =
   "RICARDO CAMILO Programador | Desenvolvedor Frontend Especialista em React & Vue.js";
 const description =
   "Programador frontend com 4 anos de experiência, especializado em criar interfaces modernas e escaláveis. Expert em React.js, Vue.js e otimização de performance.";
-const url = "https://persona-nextjs-chronicles-part-2.netlify.app/";
+const url = process.env.NEXT_PUBLIC_SITE_URL || "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
