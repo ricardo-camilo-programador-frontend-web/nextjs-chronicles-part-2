@@ -8,10 +8,33 @@ import Script from "next/script";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 const title =
-  "RICARDO CAMILO Programador | Desenvolvedor Frontend Especialista em React & Vue.js";
+  "RICARDO CAMILO Programador | Programador Frontend Especialista em React & Vue.js";
 const description =
-  "Programador frontend com 4 anos de experiência, especializado em criar interfaces modernas e escaláveis. Expert em React.js, Vue.js e otimização de performance.";
+  "Desenvolvedor Frontend com 4 anos de experiência em Jaú-SP, especializado em React, Vue.js e tecnologias modernas. Criação de interfaces responsivas, Landing Pages, otimizadas para performance. Atendimento remoto e em Jaú e região.";
 const url = process.env.NEXT_PUBLIC_SITE_URL || "";
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ricardo Camilo",
+  "jobTitle": "Desenvolvedor Frontend",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Jaú",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "knowsAbout": ["React", "Vue.js", "JavaScript", "Frontend Development"],
+  "url": process.env.NEXT_PUBLIC_SITE_URL,
+  "workLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jaú",
+      "addressRegion": "SP"
+    }
+  }
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -26,6 +49,15 @@ export const metadata: Metadata = {
     "Programador Vue.js",
     "Especialista Frontend",
     "Desenvolvimento Web",
+    "Desenvolvedor Frontend Jaú",
+    "Desenvolvedor React Jaú SP",
+    "Programador Vue.js Jaú",
+    "Desenvolvedor Web Jaú e Região",
+    "Desenvolvedor Frontend São Paulo Interior",
+    "Freelancer Frontend Jaú",
+    "Desenvolvedor JavaScript Jaú",
+    "Desenvolvimento Web Bauru",
+    "Criação de Sites Jaú",
     "UI/UX",
     "Performance Web",
     "TypeScript",
@@ -37,6 +69,15 @@ export const metadata: Metadata = {
     "Desenvolvedor React Brasil",
     "Abyss Tech",
     "Ricardo Camilo",
+    "Astro.js",
+    "Tailwind CSS",
+    "Material UI",
+    "Frontend Architecture",
+    "Web Performance Optimization",
+    "Landing Page",
+    "Landing Page Jaú",
+    "Landing Page São Paulo",
+    "Landing Page Bauru",
   ],
   creator: "Ricardo Camilo",
   authors: [
@@ -95,6 +136,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body
         className={`${montserrat.className} flex justify-center w-full flex-col`}
       >
