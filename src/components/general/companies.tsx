@@ -1,46 +1,40 @@
-import Image from 'next/image';
-
-import { twMerge } from 'tailwind-merge';
-
-import Typography from '@/components/general/typography';
-import Link from '@/components/general/link';
-import { COMPANIESANDCLIENTS } from '@/lib/data';
-
-import LogoSign from '/public/icons/logo-sign.svg';
+import Typography from "@/components/general/typography";
+import Link from "@/components/general/link";
 
 const Companies = () => {
   return (
     <div
       className="bg-zinc-950 w-full flex flex-col justify-center"
-      id="contact">
+      id="contact"
+    >
       <div className="py-24 flex flex-col items-center gap-24 max-md:py-16">
-        <div className="flex max-xl:flex-col">
-          {COMPANIESANDCLIENTS.map((company, i) => (
-            <div
-              className={twMerge(
-                i === COMPANIESANDCLIENTS.length - 1
-                  ? 'border-r'
-                  : 'max-xl:border-r max-xl:border-b-0',
-                'w-48 h-48 border-zinc-800 border-l border-y flex justify-center items-center'
-              )}
-              key={company.name}>
-              <Image src={company.logo} alt={company.name} />
-            </div>
-          ))}
-        </div>
         <div className="flex flex-col gap-8 justify-center items-center">
           <Typography variant="h2" className="text-white text-center">
-            Lets build beautiful, <br />
-            meaningful things together!
+            Vamos criar algo <br />
+            extraordinário juntos!
           </Typography>
-          <Link
-            href="mailto:riddhiilimbachiya@gmail.com"
-            className="text-white uppercase text-center hover:no-underline"
-            variant="dark">
-            {' '}
-            riddhiilimbachiya@gmail.com
-          </Link>
-          <Image src={LogoSign} alt={"Riddhi's sign"} />
+
+          <div className="flex flex-col gap-4 items-center">
+            <Typography
+              variant="body1"
+              className="text-white text-center max-w-prose"
+            >
+              &quot;Como desenvolvedor metódico e dedicado, transformo ideias em
+              experiências digitais memoráveis. Cada projeto é uma oportunidade
+              de criar algo verdadeiramente significativo.&quot;
+            </Typography>
+          </div>
+
+          <div className="flex flex-col gap-2 items-center">
+            <Link
+              href="mailto:ricardo.camilo.dev@gmail.com
+"
+              className="text-white uppercase text-center hover:no-underline transition-all duration-300"
+              variant="dark"
+            >
+              ricardo.camilo.dev@gmail.com
+            </Link>
+          </div>
         </div>
       </div>
     </div>
