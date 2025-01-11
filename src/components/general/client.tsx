@@ -2,7 +2,7 @@ import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 
 import Typography from '@/components/general/typography';
-import LogoClientLove from '/public/icons/icon-client-love.svg';
+import LogoClientLove from '@/public/icons/icon-client-love.svg';
 
 type ClientProps = {
   name: string;
