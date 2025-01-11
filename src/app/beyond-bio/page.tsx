@@ -2,7 +2,6 @@ import Image from 'next/image';
 
 import { ArrowLeft } from 'iconoir-react';
 
-import Riddhi from '/public/images/riddhi-beyond-bio.png';
 import Footer from '@/components/layout/footer';
 import AboutMe from '@/components/sections/about-me';
 import Link from '@/components/general/link';
