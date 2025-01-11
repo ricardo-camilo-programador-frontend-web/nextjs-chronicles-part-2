@@ -80,7 +80,7 @@ Pretendo fazer integração com o NextJS, que seria um novo e complexo aprendiza
 - 📦 Praticar as habilidades de organização de código
 
 ## License
-
+[MIT License](https://github.com/ricardo-camilo-programador-frontend-web/nextjs-chronicles-part-2?tab=License-1-ov-file#readme)
 
 ## Credits
 
