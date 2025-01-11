@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col max-w-2xl">
               <Typography variant="body1" className="font-medium">
-                Frontend Developer especializado em frameworks JavaScript
+                Programador Frontend especializado em frameworks JavaScript
               </Typography>
               <Typography variant="body1" className="font-medium">
                 Transformando ideias em experiências digitais excepcionais
