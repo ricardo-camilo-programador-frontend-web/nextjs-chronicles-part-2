@@ -51,7 +51,7 @@ const Journey = () => {
             <br />
             <br />
             Acredito que o verdadeiro valor de um desenvolvedor está
-            não apenas no código que escreve, mas na capacidade de se tornar elegante e facil de dar manutenção.
+            não apenas no código que escrevo, mas na capacidade de se tornar elegante e facil de dar manutenção.
           </Typography>
         </div>
       </div>
