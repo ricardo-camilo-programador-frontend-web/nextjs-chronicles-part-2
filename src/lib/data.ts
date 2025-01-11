@@ -4,17 +4,9 @@ import LogoJavaScript from '@/public/icons/icon-javascript.svg';
 import LogoTypeScript from '@/public/icons/icon-typescript.svg';
 import LogoReact from '@/public/icons/icon-react.svg';
 import LogoNextjs from '@/public/icons/icon-nextjs.svg';
-import LogoNodejs from '@/public/icons/icon-nodejs.svg';
-import LogoExpressjs from '@/public/icons/icon-expressjs.svg';
-import LogoMongoDB from '@/public/icons/icon-mongodb.svg';
 import LogoSass from '@/public/icons/icon-sass.svg';
 import LogoTailwindCss from '@/public/icons/icon-tailwindcss.svg';
 import LogoFigma from '@/public/icons/icon-figma.svg';
-import LogoStorybook from '@/public/icons/icon-storybook.svg';
-import LogoCypress from '@/public/icons/icon-cypress.svg';
-import LogoFirebase from '@/public/icons/icon-firebase.svg';
-import LogoRedux from '@/public/icons/icon-redux.svg';
-import LogoJest from '@/public/icons/icon-jest.svg';
 import LogoMUI from '@/public/icons/icon-mui.svg';
 
 import IllustrationBreathNatural from '@/public/images/breath-natural.webp';
@@ -59,26 +51,6 @@ export const SKILLS = [
     icon: LogoNextjs,
   },
   {
-    label: 'Redux',
-    icon: LogoRedux,
-  },
-  {
-    label: 'Firebase',
-    icon: LogoFirebase,
-  },
-  {
-    label: 'Node.js',
-    icon: LogoNodejs,
-  },
-  {
-    label: 'Express.js',
-    icon: LogoExpressjs,
-  },
-  {
-    label: 'MongoDB',
-    icon: LogoMongoDB,
-  },
-  {
     label: 'Tailwind Css',
     icon: LogoTailwindCss,
   },
@@ -93,18 +65,6 @@ export const SKILLS = [
   {
     label: 'Figma',
     icon: LogoFigma,
-  },
-  {
-    label: 'Storybook',
-    icon: LogoStorybook,
-  },
-  {
-    label: 'Cypress',
-    icon: LogoCypress,
-  },
-  {
-    label: 'Jest',
-    icon: LogoJest,
   },
 ];
 
