@@ -11,9 +11,6 @@ importers:
       '@radix-ui/react-dialog':
         specifier: ^1.1.4
         version: 1.1.4(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@types/node':
-        specifier: 20.5.7
-        version: 20.5.7
       '@types/react':
         specifier: 18.2.21
         version: 18.2.21
@@ -53,19 +50,22 @@ importers:
       tailwindcss:
         specifier: 3.3.3
         version: 3.3.3
-      typescript:
-        specifier: 5.2.2
-        version: 5.2.2
       uuid:
         specifier: ^11.0.4
         version: 11.0.5
     devDependencies:
+      '@types/node':
+        specifier: 20.5.7
+        version: 20.5.7
       prettier:
         specifier: ^3.0.3
         version: 3.4.2
       prettier-plugin-tailwindcss:
         specifier: ^0.5.3
         version: 0.5.14(prettier@3.4.2)
+      typescript:
+        specifier: 5.2.2
+        version: 5.2.2
 
 packages:
 
