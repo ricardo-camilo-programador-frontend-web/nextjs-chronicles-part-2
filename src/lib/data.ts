@@ -8,6 +8,14 @@ import LogoSass from '@/public/icons/icon-sass.svg';
 import LogoTailwindCss from '@/public/icons/icon-tailwindcss.svg';
 import LogoFigma from '@/public/icons/icon-figma.svg';
 import LogoMUI from '@/public/icons/icon-mui.svg';
+import LogoVue from '@/public/icons/icon-vue.svg';
+import LogoNuxt from '@/public/icons/icon-nuxt.svg';
+import LogoAstro from '@/public/icons/icon-astro.svg';
+import LogoVuetify from '@/public/icons/icon-vuetify.svg';
+import LogoVite from '@/public/icons/icon-vite.svg';
+import LogoQwik from '@/public/icons/icon-qwik.svg';
+import LogoAngular from '@/public/icons/icon-angular.svg';
+import LogoAxios from '@/public/icons/icon-axios.svg';
 
 import IllustrationBreathNatural from '@/public/images/breath-natural.webp';
 import IllustrationFoodHut from '@/public/images/food-hut.webp';
@@ -65,6 +73,42 @@ export const SKILLS = [
   {
     label: 'Figma',
     icon: LogoFigma,
+  },
+  {
+    label: 'Vue.js',
+    icon: LogoVue,
+  },
+  {
+    label: 'Nuxt.js',
+    icon: LogoNuxt,
+  },
+  {
+    label: 'Astro',
+    icon: LogoAstro,
+  },
+  {
+    label: 'Vuetify',
+    icon: LogoVuetify,
+  },
+  {
+    label: 'Vite',
+    icon: LogoVite,
+  },
+  {
+    label: 'Qwik',
+    icon: LogoQwik,
+  },
+  {
+    label: 'NextJS',
+    icon: LogoNextjs,
+  },
+  {
+    label: 'Angular',
+    icon: LogoAngular,
+  },
+  {
+    label: 'Axios',
+    icon: LogoAxios,
   },
 ];
 
@@ -157,7 +201,7 @@ export const FOOTERLINKS = [
 export const BIT_OF_ME = [
   {
     emoji: '📚',
-    text: 'Sou um ávido leitor de novels chinesas e mangás, mergulhando em mundos fantásticos que expandem minha criatividade.',
+    text: 'Sou um ávido leitor de novels chinextas e mangás, mergulhando em mundos fantásticos que expandem minha criatividade.',
   },
   {
     emoji: '🎬',
@@ -173,7 +217,7 @@ export const BIT_OF_ME = [
   },
   {
     emoji: '🌙',
-    text: 'Nas horas vagas, gosto de relaxar com meus gatos, uma boa novel chinesa e uma xícara de café, equilibrando o mundo técnico com momentos de tranquilidade.',
+    text: 'Nas horas vagas, gosto de relaxar com meus gatos, uma boa novel chinexta e uma xícara de café, equilibrando o mundo técnico com momentos de tranquilidade.',
   },
   {
     emoji: '🎮',
