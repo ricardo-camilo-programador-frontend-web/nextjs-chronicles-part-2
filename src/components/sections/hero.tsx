@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Typography from '@/components/general/typography';
 import Social from '@/components/general/social';
 import { StarRating } from '@/components/StarRating';
-import Ricardo from '/public/images/Ricardo-Camilo - Frontend - Developer - Frontend - Engineer - Software - Engineer - Web - Developer - Vuejs - Vue - Reactjs - React - JavaScript - TypeScript.png';
+import Ricardo from '/public/images/ricardo-camilo-programador-frontend-web-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript.png';
 
 const Hero = () => {
   return (
