@@ -33,7 +33,13 @@ const Hero = () => {
           <Social variant="light" />
         </div>
         <div className="overflow-hidden rounded-[168px] rounded-bl max-lg:order-0 max-lg:rounded-[40px] max-lg:rounded-bl max-h-[450px] max-md:max-h-auto">
-          <Image src={Ricardo} alt="Riddhi's photo" width={400} />
+          <Image
+            src={Ricardo}
+            alt="Ricardo Camilo - Programador Frontend Web Developer"
+            title="Ricardo Camilo - Programador Frontend Web Developer"
+            width={400}
+            className="object-cover"
+          />
         </div>
       </div>
     </section>
