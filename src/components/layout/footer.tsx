@@ -47,7 +47,7 @@ const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
             </Link>{" "}
             with ❤️ by Riddhi Limbachiya |{" "}
             <Link
-              href="https://github.com/riddhilimbachiya/riddhilimbachiya.com"
+              href="https://github.com/ricardo-camilo-programador-frontend-web"
               variant={variant}
               withUnderline
               externalLink
