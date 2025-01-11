@@ -1,0 +1,35 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="128"
+  height="128"
+  viewBox="0 0 128 128"
+>
+  <style>
+    .left-part {
+      animation: pulse-left 2s infinite;
+      transform-origin: center;
+    }
+    .right-part {
+      animation: pulse-right 2s infinite;
+      transform-origin: center;
+    }
+    @keyframes pulse-left {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.95); opacity: 0.7; }
+    }
+    @keyframes pulse-right {
+      0%, 100% { transform: scale(0.95); opacity: 0.7; }
+      50% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+  <path
+    class="left-part"
+    fill="currentColor"
+    d="m34 43.978l27.38-22.913l.038 91.495l-9.32 7.74l-.153-76.091"
+  />
+  <path
+    class="right-part"
+    fill="currentColor"
+    d="m96.962 82.323l-27.38 22.912l-.038-91.495L78.863 6l.154 76.091"
+  />
+</svg>
