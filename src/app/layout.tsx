@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
 import "./globals.css";
 import Header from "@/components/layout/header";
+import Script from "next/script";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -107,6 +108,12 @@ export default function RootLayout({
           figmaOriginalDesign={process.env.FIGMA_ORIGINAL_DESIGN || ""}
         />
       </body>
+
+      <Script
+        src="https://cdn.counter.dev/script.js"
+        data-id={process.env.COUNTER_API_KEY}
+        data-utcoffset="-3"
+      ></Script>
     </html>
   );
 }
