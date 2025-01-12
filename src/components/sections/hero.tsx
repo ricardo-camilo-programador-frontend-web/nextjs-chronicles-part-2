@@ -17,7 +17,7 @@ const Hero = () => {
               </div>
               <Typography
                 variant="h1"
-                className="uppercase bg-gradient-to-r from-yellow-50 to-rose-100 bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
+                className="uppercase bg-gradient-to-r from-[#6de0ec] to-[#39757c] bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
                 RICARDO CAMILO
               </Typography>
             </div>
