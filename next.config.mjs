@@ -4,10 +4,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
     domains: [
-      'd2seqvvyy3b8p2.cloudfront.net',
-      'bs.plantnet.org'
+      'persona-nextjs-chronicles-part-2.netlify.app'
     ],
+    unoptimized: true,
   },
+  basePath: '/persona-nextjs-chronicles-part-2',
 };
 
 export default nextConfig;
