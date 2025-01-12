@@ -10,7 +10,7 @@
 ## 🔗 Quick Links
 - [Live Preview](https://persona-nextjs-chronicles-part-2.netlify.app/)
 - [GitHub Repository](https://github.com/ricardo-camilo-programador-frontend-web)
-- [Original Design](https://www.figma.com/community/file/1458512251907556084) by [@riddhilimbachiy](https://www.figma.com/@riddhilimbachiy)
+- [Original Design](https://www.figma.com/community/file/1458512251907556084/personal-portfolio-template-mobile-desktop) by [@riddhilimbachiy](https://www.figma.com/@riddhilimbachiy)
 
 <h2 id="english">English</h2>
 
