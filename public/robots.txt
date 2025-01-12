@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://persona-nextjs-chronicles-part-2.netlify.app/sitemap.xml

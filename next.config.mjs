@@ -8,15 +8,6 @@ const nextConfig = {
       'bs.plantnet.org'
     ],
   },
-  robots: {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-      },
-    ],
-    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL}/sitemap.xml`,
-  },
 };
 
 export default nextConfig;
