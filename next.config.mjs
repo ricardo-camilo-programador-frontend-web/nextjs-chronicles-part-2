@@ -6,7 +6,6 @@ const nextConfig = {
     domains: [
       'persona-nextjs-chronicles-part-2.netlify.app'
     ],
-    unoptimized: true,
   },
   basePath: '/persona-nextjs-chronicles-part-2',
 };
