@@ -71,18 +71,18 @@
     "title": "Experiências Memoráveis",
     "testimonial1": {
       "name": "Ricardo Camilo",
-      "company": "Fundador, Abyss Tech",
-      "testimonial": "\"Sou um desenvolvedor frontend com 4 anos de experiência, apaixonado por transformar ideias em interfaces excepcionais. Minha abordagem metódica e atenção aos detalhes me permitiram alcançar resultados significativos, como no projeto TippBank, onde consegui reduzir o tempo de carregamento em 40% através de otimizações de performance. Cada linha de código que escrevo reflete meu compromisso com a excelência e a experiência do usuário.\""
+      "company": "Desenvolvedor Frontend",
+      "testimonial": "Confie a criação da sua landing page às minhas habilidades! Com 4 anos de experiência, transformo ideias em interfaces excepcionais. Minha abordagem metódica já reduziu o tempo de carregamento em 40% em projetos anteriores. Posso implementar ferramentas de análise comportamental como Microsoft Clarity e Google Analytics para você tomar decisões baseadas em dados reais dos seus usuários.\""
     },
     "testimonial2": {
       "name": "Ricardo Camilo",
-      "company": "Especialista Frontend, Abyss Tech",
-      "testimonial": "\"Como fundador da Abyss Tech, lidero projetos que vão além do desenvolvimento de interfaces - criamos experiências memoráveis. Minha expertise em Vue.js e React.js me permite transformar visões em realidade digital. Tenho orgulho de dizer que meu compromisso com código limpo e performance já impactou milhares de usuários, especialmente na plataforma Loor.vc, um dos nossos casos de sucesso.\""
+      "company": "Especialista em Otimização Web",
+      "testimonial": "Precisa refatorar seu projeto ou atualizar seu sistema? Com expertise em Vue.js e React.js, posso modernizar sua aplicação mantendo a estabilidade. Especializado em otimização de performance e SEO, também posso personalizar seu e-commerce para maximizar conversões. Minha experiência inclui implementação de sistemas de pagamento, gestão de produtos e integrações com APIs.\""
     },
     "testimonial3": {
       "name": "Ricardo Camilo",
-      "company": "Desenvolvedor Frontend, Abyss Tech",
-      "testimonial": "\"Mantenho-me constantemente atualizado com as evoluções tecnológicas e as crescentes expectativas dos usuários. Como desenvolvedor, trago para cada projeto uma combinação única de experiência técnica e visão estratégica. Seja desenvolvendo uma landing page de alto impacto ou um e-commerce complexo, meu foco está em entregar não apenas código, mas resultados que verdadeiramente impulsionam negócios.\""
+      "company": "Consultor de Performance Web",
+      "testimonial": "Deixe-me ajudar com seu painel administrativo! Mantenho-me atualizado com as últimas tecnologias para entregar soluções modernas e eficientes. Posso otimizar seu site existente, implementar design responsivo e melhorar a experiência do usuário. Especializado em criar dashboards intuitivos, sistemas de gestão e interfaces que realmente impulsionam seu negócio.\""
     }
   },
   "metadata": {

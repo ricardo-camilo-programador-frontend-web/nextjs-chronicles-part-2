@@ -71,18 +71,18 @@
     "title": "Memorable Experiences",
     "testimonial1": {
       "name": "Ricardo Camilo",
-      "company": "Founder, Abyss Tech",
-      "testimonial": "\"As a frontend developer with 4 years of experience, I'm passionate about transforming ideas into exceptional interfaces. My methodical approach and attention to detail have allowed me to achieve significant results, such as in the TippBank project, where I managed to reduce loading time by 40% through performance optimizations. Every line of code I write reflects my commitment to excellence and user experience.\""
+      "company": "Frontend Developer",
+      "testimonial": "I stay constantly updated with technological evolutions and growing user expectations. As a developer, I bring to each project a unique combination of technical experience and strategic vision. Whether developing a high-impact landing page or a complex e-commerce, my focus is on delivering not just code, but results that truly drive business.\""
     },
     "testimonial2": {
       "name": "Ricardo Camilo",
-      "company": "Frontend Specialist, Abyss Tech",
-      "testimonial": "\"As the founder of Abyss Tech, I lead projects that go beyond interface development - we create memorable experiences. My expertise in Vue.js and React.js allows me to transform visions into digital reality. I'm proud to say that my commitment to clean code and performance has already impacted thousands of users, especially on the Loor.vc platform, one of our success cases.\""
+      "company": "Web Optimization Specialist",
+      "testimonial": "Need to refactor your project or update your system? With expertise in Vue.js and React.js, I can modernize your application while maintaining stability. Specialized in performance optimization and SEO, I can also customize your e-commerce to maximize conversions. My experience includes implementing payment systems, product management, and integrations with APIs.\""
     },
     "testimonial3": {
       "name": "Ricardo Camilo",
-      "company": "Frontend Developer, Abyss Tech",
-      "testimonial": "\"I stay constantly updated with technological evolutions and growing user expectations. As a developer, I bring to each project a unique combination of technical experience and strategic vision. Whether developing a high-impact landing page or a complex e-commerce, my focus is on delivering not just code, but results that truly drive business.\""
+      "company": "Web Performance Consultant",
+      "testimonial": "Let me help with your admin panel! I stay updated with the latest technologies to deliver modern and efficient solutions. I can optimize your existing site, implement responsive design, and improve user experience. I specialize in creating intuitive dashboards, management systems, and interfaces that truly drive your business.\""
     }
   },
   "metadata": {
