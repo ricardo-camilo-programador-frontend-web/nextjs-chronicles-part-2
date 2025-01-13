@@ -11,11 +11,9 @@ import { ArrowUpRight } from 'iconoir-react';
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
+import { PropertyColors } from '@/types/PropertyColors';
+import { CircularButton } from '@/components/CircularButton';
 
-interface PropertyColors {
-  borderColor?: string;
-  bgColor?: string;
-}
 interface ProjectDetailsProps {
   name: string;
   description: string;
@@ -106,9 +104,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
             colorClass.bgColor,
             colorClass.borderColor
           )}>
-          <div className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-sm group-hover:text-base transform transition">
-            <ArrowUpRight color={color.borderColor} strokeWidth={2.5} />
-          </div>
+          <CircularButton color={color} colorClass={colorClass} />
         </div>
       </div>
 
