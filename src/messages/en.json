@@ -39,5 +39,16 @@
   "work": {
     "title": "Featured Projects",
     "description": "Explore some of my recent work, where I transform ideas into digital experiences that captivate and inspire, using modern technologies and best practices to create memorable digital experiences."
+  },
+  "metadata": {
+    "title": "RICARDO CAMILO Programmer | Frontend Developer Specialist in React & Vue.js",
+    "description": "Frontend Developer with 4 years of experience in Jaú-SP, specialized in React, Vue.js and modern technologies. Creation of responsive interfaces, Landing Pages, optimized for performance. Remote service in Jaú and region.",
+    "creator": "Ricardo Camilo",
+    "jobTitle": "Frontend Developer",
+    "location": {
+      "city": "Jaú",
+      "state": "SP",
+      "country": "BR"
+    }
   }
 }

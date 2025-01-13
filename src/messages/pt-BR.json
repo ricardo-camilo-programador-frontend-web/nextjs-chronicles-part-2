@@ -39,5 +39,16 @@
   "work": {
     "title": "Projetos em Destaque",
     "description": "Conheça alguns dos meus trabalhos recentes, onde transformo ideias em experiências digitais que cativam e inspiram, utilizando tecnologias modernas e boas práticas para criar experiências digitais memoráveis."
+  },
+  "metadata": {
+    "title": "RICARDO CAMILO Programador | Programador Frontend Especialista em React & Vue.js",
+    "description": "Programador Frontend com 4 anos de experiência em Jaú-SP, especializado em React, Vue.js e tecnologias modernas. Criação de interfaces responsivas, Landing Pages, otimizadas para performance. Atendimento remoto e em Jaú e região.",
+    "creator": "Ricardo Camilo",
+    "jobTitle": "Programador Frontend",
+    "location": {
+      "city": "Jaú",
+      "state": "SP",
+      "country": "BR"
+    }
   }
 }
