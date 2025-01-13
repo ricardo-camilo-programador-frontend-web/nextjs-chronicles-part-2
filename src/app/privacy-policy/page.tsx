@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
           <p>
             Sua privacidade é importante para nós. É política da 🎭 Persona - NextJS Chronicles Part 2 respeitar sua privacidade em relação a qualquer informação que possamos coletar no site
             <a
-              href="https://food-hut-angular-chronicles-1.netlify.app/"
+              href={process.env.NEXT_PUBLIC_SITE_URL}
               target="_blank"
             >
               🎭 Persona - NextJS Chronicles Part 2
@@ -57,14 +57,14 @@ const PrivacyPolicy = () => {
             <a
               target="_BLANK"
               className="text-blue-600 dark:text-blue-400 hover:underline"
-              href="https://confiavel.com.br/https://food-hut-angular-chronicles-1.netlify.app/"
+              href={`https://confiavel.com.br/${process.env.NEXT_PUBLIC_SITE_URL}`}
               rel="noopener noreferrer"
             >Verificação</a
             >. A página verifica informações do site para identificar possíveis problemas de segurança. Navegação verificada pela &nbsp;
             <a
               target="_BLANK"
               className="text-blue-600 dark:text-blue-400 hover:underline"
-              href="https://transparencyreport.google.com/safe-browsing/search?url=https://food-hut-angular-chronicles-1.netlify.app/"
+              href={`https://transparencyreport.google.com/safe-browsing/search?url=${process.env.NEXT_PUBLIC_SITE_URL}`}
               rel="noopener noreferrer"
             >
               ferramenta de segurança do Google
