@@ -15,7 +15,11 @@ const Client = ({ name, avatar, testimonial, company }: ClientProps) => {
   return (
     <div className="w-full max-w-lg flex flex-col gap-6">
       <Image src={LogoClientLove} alt="Client love icon" />
-      <Typography variant="body1">{testimonial}</Typography>
+
+      <div className="flex flex-col gap-1 min-h-[14rem]">
+        <Typography variant="body1">{testimonial}</Typography>
+      </div>
+
       <div className="flex gap-6 items-center">
         <Image src={avatar} alt="" width={70} height={70} />
         <div className="flex flex-col">
