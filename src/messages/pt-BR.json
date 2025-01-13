@@ -3,5 +3,15 @@
     "experience": "4 anos de experiência",
     "specialization": "Desenvolvedor Frontend especializado em frameworks JavaScript",
     "tagline": "Transformando ideias em experiências digitais excepcionais"
+  },
+  "about": {
+    "greeting": "Olá! 👋",
+    "intro": "Sou Ricardo Camilo, desenvolvedor frontend apaixonado por criar experiências digitais memoráveis. 🚀",
+    "description": "Como um desenvolvedor com perfil investigador (93%), minha abordagem combina precisão técnica com criatividade. Acredito que cada linha de código é uma oportunidade de criar algo extraordinário, transformando ideias em interfaces que encantam e facilitam a vida das pessoas. ✨",
+    "education": "Formado em Gestão da Tecnologia da Informação pela FATEC, encontrei na programação frontend minha verdadeira vocação. Com 4 anos de experiência, especializo-me em React.js e Vue.js, sempre buscando as melhores práticas e soluções inovadoras. 💻",
+    "hobbies": "Quando não estou codificando, você me encontra mergulhado em novels chinesas, mangás ou acompanhado de meus cinco gatos, buscando inspiração para trazer ainda mais criatividade aos meus projetos. 📚🐱",
+    "aboutMeTitle": "Um pouco sobre mim",
+    "lifeBeliefTitle": "🧠 Crença de Vida",
+    "bruceQuote": "\"Seja água, meu amigo. Esvazie sua mente. Seja informe, sem forma, sem contorno, como a água. Quando você coloca água em um copo, ela se torna o copo. Quando você coloca água em uma garrafa, ela se torna a garrafa. Quando você a coloca em um bule, ela se torna o bule. A água pode fluir ou pode se chocar. Seja água, meu amigo.\" - Bruce Lee 🌊"
   }
 }
