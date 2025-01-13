@@ -33,9 +33,6 @@
     },
     "conclusion": "Acredito que o verdadeiro valor de um desenvolvedor está não apenas no código que escrevo, mas na capacidade de se tornar elegante e facil de dar manutenção."
   },
-  "testimonials": {
-    "title": "Experiências Memoráveis"
-  },
   "work": {
     "title": "Projetos em Destaque",
     "description": "Aqui estão alguns dos meus projetos recentes que demonstram minhas habilidades e experiência.",
@@ -71,7 +68,7 @@
     }
   },
   "testimonials": {
-    "title": "Depoimentos",
+    "title": "Experiências Memoráveis",
     "testimonial1": {
       "name": "Ricardo Camilo",
       "company": "Fundador, Abyss Tech",

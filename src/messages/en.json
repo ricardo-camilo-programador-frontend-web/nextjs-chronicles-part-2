@@ -33,9 +33,6 @@
     },
     "conclusion": "I believe that a developer's true value lies not just in the code I write, but in the ability to make it elegant and easy to maintain."
   },
-  "testimonials": {
-    "title": "Memorable Experiences"
-  },
   "work": {
     "title": "Featured Projects",
     "description": "Here are some of my recent projects that showcase my skills and experience.",
@@ -71,7 +68,7 @@
     }
   },
   "testimonials": {
-    "title": "Testimonials",
+    "title": "Memorable Experiences",
     "testimonial1": {
       "name": "Ricardo Camilo",
       "company": "Founder, Abyss Tech",
