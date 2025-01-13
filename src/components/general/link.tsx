@@ -1,4 +1,4 @@
-import * as React from 'react';
+import type { ReactNode } from 'react';
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
 
 import { twMerge } from 'tailwind-merge';
@@ -9,7 +9,7 @@ export interface LinkProps extends NextLinkProps {
   withUnderline?: boolean;
   href: string;
   variant?: 'light' | 'dark';
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
 const Link = ({
