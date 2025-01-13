@@ -112,27 +112,6 @@ export const SKILLS = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: 'Ricardo Camilo',
-    company: 'Fundador, Abyss Tech',
-    testimonial: `"Sou um desenvolvedor frontend com 4 anos de experiência, apaixonado por transformar ideias em interfaces excepcionais. Minha abordagem metódica e atenção aos detalhes me permitiram alcançar resultados significativos, como no projeto TippBank, onde consegui reduzir o tempo de carregamento em 40% através de otimizações de performance. Cada linha de código que escrevo reflete meu compromisso com a excelência e a experiência do usuário."`,
-    avatar: AvatarNoren,
-  },
-  {
-    name: 'Ricardo Camilo',
-    company: 'Especialista Frontend, Abyss Tech',
-    testimonial: `"Como fundador da Abyss Tech, lidero projetos que vão além do desenvolvimento de interfaces - criamos experiências memoráveis. Minha expertise em Vue.js e React.js me permite transformar visões em realidade digital. Tenho orgulho de dizer que meu compromisso com código limpo e performance já impactou milhares de usuários, especialmente na plataforma Loor.vc, um dos nossos casos de sucesso."`,
-    avatar: AvatarNoren,
-  },
-  {
-    name: 'Ricardo Camilo',
-    company: 'Desenvolvedor Frontend, Abyss Tech',
-    testimonial: `"Mantenho-me constantemente atualizado com as evoluções tecnológicas e as crescentes expectativas dos usuários. Como desenvolvedor, trago para cada projeto uma combinação única de experiência técnica e visão estratégica. Seja desenvolvendo uma landing page de alto impacto ou um e-commerce complexo, meu foco está em entregar não apenas código, mas resultados que verdadeiramente impulsionam negócios."`,
-    avatar: AvatarNoren,
-  },
-];
-
 export const FOOTERLINKS = [
   {
     label: 'GITHUB',

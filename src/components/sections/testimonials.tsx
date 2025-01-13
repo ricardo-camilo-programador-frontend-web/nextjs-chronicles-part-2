@@ -1,9 +1,9 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 
-import { TESTIMONIALS } from '@/lib/data';
 import Client from '@/components/general/client';
 import Typography from '@/components/general/typography';
+import AvatarNoren from '@/public/images/avatar-noren.png';
 
 const Testimonials = () => {
   const t = useTranslations('testimonials');
@@ -16,13 +16,13 @@ const Testimonials = () => {
         {t('title')}
       </Typography>
       <div className="flex gap-16 max-lg:flex-col">
-        {TESTIMONIALS.map((testimonial) => (
-          <React.Fragment key={testimonial.name}>
+        {[1, 2, 3].map((index) => (
+          <React.Fragment key={index}>
             <Client
-              name={testimonial.name}
-              testimonial={testimonial.testimonial}
-              avatar={testimonial.avatar}
-              company={testimonial.company}
+              name={t(`testimonial${index}.name`)}
+              testimonial={t(`testimonial${index}.testimonial`)}
+              avatar={AvatarNoren}
+              company={t(`testimonial${index}.company`)}
             />
           </React.Fragment>
         ))}
