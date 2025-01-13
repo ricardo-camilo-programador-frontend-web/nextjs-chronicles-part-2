@@ -62,7 +62,7 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
         <Link
           href={isHomePage ? '/beyond-bio' : '/'}
           className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
-          {isHomePage ? 'Além da bio' : 'Início'}
+          {isHomePage ? t('beyond-bio') : t('home')}
         </Link>
       </div>
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
@@ -84,7 +84,7 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
             <ul className="flex flex-col gap-2 max-lg:gap-4">
               <li className="py-4">
                 <Link href={isHomePage ? '/beyond-bio' : '/'}>
-                  {isHomePage ? 'Além da bio' : 'Início'}
+                  {isHomePage ? t('beyond-bio') : t('home')}
                 </Link>
               </li>
             </ul>
