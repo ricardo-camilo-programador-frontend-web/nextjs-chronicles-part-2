@@ -6,11 +6,12 @@ import { twMerge } from 'tailwind-merge';
 import { ArrowUpRight } from 'iconoir-react';
 
 interface CircularButtonProps {
+  id: string;
   color: PropertyColors;
   colorClass: PropertyColors;
 }
 
-export const CircularButton: FC<CircularButtonProps> = ({ color, colorClass }) => {
+export const CircularButton: FC<CircularButtonProps> = ({ id, color, colorClass }) => {
   const buttonRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
 
@@ -36,13 +37,16 @@ export const CircularButton: FC<CircularButtonProps> = ({ color, colorClass }) =
   };
 
   return (
-    <div className="relative w-[100px] h-[100px] group">
+    <div
+      id={id}
+      className="relative w-[100px] h-[100px] group"
+    >
       <div
         ref={textRef}
         className="absolute inset-0 w-full h-full transition-transform duration-700 ease-in-out"
         style={{ transformOrigin: 'center center' }}
       >
-        <svg viewBox="0 0 100 100" className="w-full h-full rotate-[-90deg]">
+        <svg viewBox="0 0 100 100" className="w-full h-full rotate-[-90deg] hidden group-hover:block">
           <path
             id="textCircle"
             d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
