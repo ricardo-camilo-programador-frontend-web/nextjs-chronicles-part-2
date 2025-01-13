@@ -1,12 +1,49 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 
-import { PROJECTS } from '@/lib/data';
 import ProjectDetails from '@/components/general/project-details';
 import Typography from '@/components/general/typography';
 
+import IllustrationBreathNatural from '@/public/images/breath-natural.webp';
+import IllustrationFoodHut from '@/public/images/food-hut.webp';
+
 const Work = () => {
   const t = useTranslations('work');
+
+  const projects = [
+    {
+      name: t('projects.breathNatural.name'),
+      description: t('projects.breathNatural.description'),
+      techs: t('projects.breathNatural.techs').split(','),
+      previewImage: IllustrationBreathNatural,
+      color: {
+        bgColor: t('projects.breathNatural.color.bgColor'),
+        borderColor: t('projects.breathNatural.color.borderColor'),
+      },
+      colorClass: {
+        bgColor: t('projects.breathNatural.colorClass.bgColor'),
+        borderColor: t('projects.breathNatural.colorClass.borderColor'),
+      },
+      isDescriptionOnLeft: false,
+      href: t('projects.breathNatural.href'),
+    },
+    {
+      name: t('projects.foodHut.name'),
+      description: t('projects.foodHut.description'),
+      techs: t('projects.foodHut.techs').split(','),
+      previewImage: IllustrationFoodHut,
+      color: {
+        bgColor: t('projects.foodHut.color.bgColor'),
+        borderColor: t('projects.foodHut.color.borderColor'),
+      },
+      colorClass: {
+        bgColor: t('projects.foodHut.colorClass.bgColor'),
+        borderColor: t('projects.foodHut.colorClass.borderColor'),
+      },
+      isDescriptionOnLeft: false,
+      href: t('projects.foodHut.href'),
+    },
+  ];
 
   return (
     <section
@@ -22,7 +59,7 @@ const Work = () => {
           </Typography>
         </div>
         <div className="flex gap-20 flex-wrap max-lg:justify-center">
-          {PROJECTS.map((project) => (
+          {projects.map((project) => (
             <React.Fragment key={project.name}>
               <ProjectDetails
                 name={project.name}

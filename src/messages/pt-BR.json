@@ -38,7 +38,37 @@
   },
   "work": {
     "title": "Projetos em Destaque",
-    "description": "Conheça alguns dos meus trabalhos recentes, onde transformo ideias em experiências digitais que cativam e inspiram, utilizando tecnologias modernas e boas práticas para criar experiências digitais memoráveis."
+    "description": "Aqui estão alguns dos meus projetos recentes que demonstram minhas habilidades e experiência.",
+    "projects": {
+      "breathNatural": {
+        "name": "🪴 Breath Natural - NextJS",
+        "description": "Aplicação desenvolvida como parte do NextJS Chronicles, demonstrando como um mockup pode ser expandido para um possivel e-commerce e se tornar mais atrativo com animações e interações.",
+        "techs": "TypeScript,NextJS,TailwindCSS,Figma",
+        "color": {
+          "bgColor": "#3cb371",
+          "borderColor": "#3cb371"
+        },
+        "colorClass": {
+          "bgColor": "bg-green-100",
+          "borderColor": "border-green-700"
+        },
+        "href": "https://breath-natural-nextjs-chronicles.netlify.app/"
+      },
+      "foodHut": {
+        "name": "🍽️ Food Hut - AngularJS",
+        "description": "Projeto desenvolvido como parte do Angular Chronicles, focado em demonstrar as melhores práticas de desenvolvimento frontend com Angular. Implementa um sistema de pedidos de comida com interface responsiva e moderna.",
+        "techs": "TypeScript,Angular,Figma",
+        "color": {
+          "bgColor": "#FF0000",
+          "borderColor": "#8B0000"
+        },
+        "colorClass": {
+          "bgColor": "bg-orange-100",
+          "borderColor": "border-orange-700"
+        },
+        "href": "https://food-hut-angular-chronicles-1.netlify.app/"
+      }
+    }
   },
   "metadata": {
     "title": "RICARDO CAMILO Programador | Programador Frontend Especialista em React & Vue.js",

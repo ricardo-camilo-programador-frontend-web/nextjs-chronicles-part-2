@@ -112,52 +112,6 @@ export const SKILLS = [
   },
 ];
 
-export const PROJECTS = [
-  {
-    name: '🪴Breath Natural - NextJS',
-    description:
-      'Aplicação desenvolvida como parte do NextJS Chronicles, demonstrando como um mockup pode ser expandido para um possivel e-commerce e se tornar mais atrativo com animações e interações.',
-    techs: [
-      'TypeScript',
-      'NextJS',
-      'TailwindCSS',
-      'Figma',
-    ],
-    previewImage: IllustrationBreathNatural,
-    color: {
-      bgColor: '#3cb371',
-      borderColor: '#3cb371',
-    },
-    colorClass: {
-      bgColor: 'bg-green-100',
-      borderColor: 'border-green-700',
-    },
-    isDescriptionOnLeft: false,
-    href: 'https://breath-natural-nextjs-chronicles.netlify.app/',
-  },
-  {
-    name: '🍽️ Food Hut - AngularJS',
-    description:
-      'Projeto desenvolvido como parte do Angular Chronicles, focado em demonstrar as melhores práticas de desenvolvimento frontend com Angular. Implementa um sistema de pedidos de comida com interface responsiva e moderna.',
-    techs: [
-      'TypeScript',
-      'Angular',
-      'Figma',
-    ],
-    previewImage: IllustrationFoodHut,
-    color: {
-      bgColor: '#FF0000',
-      borderColor: '#8B0000',
-    },
-    colorClass: {
-      bgColor: 'bg-orange-100',
-      borderColor: 'border-orange-700',
-    },
-    isDescriptionOnLeft: false,
-    href: 'https://food-hut-angular-chronicles-1.netlify.app/',
-  }
-];
-
 export const TESTIMONIALS = [
   {
     name: 'Ricardo Camilo',

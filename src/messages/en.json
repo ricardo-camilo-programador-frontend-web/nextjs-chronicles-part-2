@@ -38,7 +38,37 @@
   },
   "work": {
     "title": "Featured Projects",
-    "description": "Explore some of my recent work, where I transform ideas into digital experiences that captivate and inspire, using modern technologies and best practices to create memorable digital experiences."
+    "description": "Here are some of my recent projects that showcase my skills and experience.",
+    "projects": {
+      "breathNatural": {
+        "name": "🪴 Breath Natural - NextJS",
+        "description": "Application developed as part of NextJS Chronicles, demonstrating how a mockup can be expanded into a potential e-commerce and become more attractive with animations and interactions.",
+        "techs": "TypeScript,NextJS,TailwindCSS,Figma",
+        "color": {
+          "bgColor": "#3cb371",
+          "borderColor": "#3cb371"
+        },
+        "colorClass": {
+          "bgColor": "bg-green-100",
+          "borderColor": "border-green-700"
+        },
+        "href": "https://breath-natural-nextjs-chronicles.netlify.app/"
+      },
+      "foodHut": {
+        "name": "🍽️ Food Hut - AngularJS",
+        "description": "Project developed as part of Angular Chronicles, focused on demonstrating frontend development best practices with Angular. Implements a food ordering system with a responsive and modern interface.",
+        "techs": "TypeScript,Angular,Figma",
+        "color": {
+          "bgColor": "#FF0000",
+          "borderColor": "#8B0000"
+        },
+        "colorClass": {
+          "bgColor": "bg-orange-100",
+          "borderColor": "border-orange-700"
+        },
+        "href": "https://food-hut-angular-chronicles-1.netlify.app/"
+      }
+    }
   },
   "metadata": {
     "title": "RICARDO CAMILO Programmer | Frontend Developer Specialist in React & Vue.js",
