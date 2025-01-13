@@ -13,5 +13,16 @@
     "aboutMeTitle": "Um pouco sobre mim",
     "lifeBeliefTitle": "🧠 Crença de Vida",
     "bruceQuote": "\"Seja água, meu amigo. Esvazie sua mente. Seja informe, sem forma, sem contorno, como a água. Quando você coloca água em um copo, ela se torna o copo. Quando você coloca água em uma garrafa, ela se torna a garrafa. Quando você a coloca em um bule, ela se torna o bule. A água pode fluir ou pode se chocar. Seja água, meu amigo.\" - Bruce Lee 🌊"
+  },
+  "journey": {
+    "title": "Sobre minhas Crônicas",
+    "description": "Sou um desenvolvedor Frontend com 4 anos de experiência, atualmente em São Paulo, Brasil. Minha trajetória começou após me formar em Gestão da Tecnologia da Informação pela FATEC, onde descobri minha paixão por criar interfaces que impactam a vida das pessoas. Comecei desenvolvendo com Vue.js, passei por React, e varios outros frameworks javascript e hoje tenho orgulho de dominar múltiplos frameworks modernos que me permitem criar soluções robustas e escaláveis.",
+    "approach": "Abordo cada projeto com um olhar meticuloso e estratégico. Sou especialmente dedicado à criação de código limpo e otimizado, sempre buscando as melhores práticas de desenvolvimento.",
+    "technologies": "Tecnologias e frameworks que utilizo",
+    "funFact": {
+      "label": "Fato interessante:",
+      "description": "Como um desenvolvedor orientado a resultados (segundo perfil comportamental), estou sempre estudando novas tecnologias. Atualmente, estou aprofundando meus conhecimentos em Node.js, buscando expandir ainda mais minhas capacidades técnicas."
+    },
+    "conclusion": "Acredito que o verdadeiro valor de um desenvolvedor está não apenas no código que escrevo, mas na capacidade de se tornar elegante e facil de dar manutenção."
   }
 }
