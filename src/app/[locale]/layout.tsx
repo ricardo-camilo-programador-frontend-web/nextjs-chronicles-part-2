@@ -4,6 +4,7 @@ import IntroWarningModal from "@/blocks/IntroWarningModal";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Script from "next/script";
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -131,37 +132,41 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale }
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
+  const messages = useMessages();
+
   return (
-    <html lang="pt-BR">
+    <html lang={locale}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body
-        className={`${montserrat.className} flex justify-center w-full flex-col`}
-      >
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`}
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        <Header />
-        <main>{children}</main>
-        <IntroWarningModal
-          projectTitle={process.env.PROJECT_TITLE || ""}
-          githubUsername={process.env.GITHUB_USERNAME || ""}
-          linkedinUsername={process.env.LINKEDIN_USERNAME || ""}
-          figmaUsername={process.env.FIGMA_USERNAME || ""}
-          figmaOriginalDesign={process.env.FIGMA_ORIGINAL_DESIGN || ""}
-        />
+      <body className={`${montserrat.className} flex justify-center w-full flex-col`}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
+          <noscript>
+            <iframe
+              src={`https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`}
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          <Header />
+          <main>{children}</main>
+          <IntroWarningModal
+            projectTitle={process.env.PROJECT_TITLE || ""}
+            githubUsername={process.env.GITHUB_USERNAME || ""}
+            linkedinUsername={process.env.LINKEDIN_USERNAME || ""}
+            figmaUsername={process.env.FIGMA_USERNAME || ""}
+            figmaOriginalDesign={process.env.FIGMA_ORIGINAL_DESIGN || ""}
+          />
+        </NextIntlClientProvider>
       </body>
 
       <Script
