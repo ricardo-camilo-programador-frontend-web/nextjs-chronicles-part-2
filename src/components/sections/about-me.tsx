@@ -1,9 +1,17 @@
 import Typography from "@/components/general/typography";
-import { BIT_OF_ME } from "@/lib/data";
 import { useTranslations } from 'next-intl';
 
 const AboutMe = () => {
   const t = useTranslations('about');
+
+  const bitOfMe = [
+    { emoji: '📚', text: t('bitOfMe.reading') },
+    { emoji: '🎬', text: t('bitOfMe.movies') },
+    { emoji: '🐱', text: t('bitOfMe.cats') },
+    { emoji: '💻', text: t('bitOfMe.programming') },
+    { emoji: '🌙', text: t('bitOfMe.relaxing') },
+    { emoji: '🎮', text: t('bitOfMe.gaming') }
+  ];
 
   return (
     <section className="w-full pb-24 pt-16 border-b border-zinc-200 flex justify-center px-4 max-md:py-10">
@@ -28,7 +36,7 @@ const AboutMe = () => {
               {t('aboutMeTitle')}
             </Typography>
             <ul className="flex flex-col gap-2">
-              {BIT_OF_ME.map((point) => (
+              {bitOfMe.map((point) => (
                 <li className="flex gap-2" key={point.emoji}>
                   <span>{point.emoji}</span>
                   <Typography variant="body1">{point.text}</Typography>

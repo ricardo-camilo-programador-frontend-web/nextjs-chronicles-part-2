@@ -198,33 +198,6 @@ export const FOOTERLINKS = [
   },
 ];
 
-export const BIT_OF_ME = [
-  {
-    emoji: '📚',
-    text: 'Sou um ávido leitor de novels chinextas e mangás, mergulhando em mundos fantásticos que expandem minha criatividade.',
-  },
-  {
-    emoji: '🎬',
-    text: 'Apaixonado por ficção científica, encontro inspiração para inovação através de filmes e séries que exploram os limites da tecnologia e imaginação.',
-  },
-  {
-    emoji: '🐱',
-    text: 'Tenho cinco gatos: Hercules, Johan, Lady, Princesa e Aladin. Cada um com sua personalidade única, trazendo alegria e companheirismo ao meu dia a dia.',
-  },
-  {
-    emoji: '💻',
-    text: 'Como desenvolvedor, encontro na programação uma forma de criar experiências digitais tão fascinantes quanto as histórias que leio.',
-  },
-  {
-    emoji: '🌙',
-    text: 'Nas horas vagas, gosto de relaxar com meus gatos, uma boa novel chinexta e uma xícara de café, equilibrando o mundo técnico com momentos de tranquilidade.',
-  },
-  {
-    emoji: '🎮',
-    text: 'Apreciador de narrativas bem construídas, seja em livros, mangás ou jogos, sempre buscando histórias que me inspirem tanto pessoal quanto profissionalmente.',
-  }
-];
-
 export const SOCIAL_LINKS = [
   {
     label: 'Github',

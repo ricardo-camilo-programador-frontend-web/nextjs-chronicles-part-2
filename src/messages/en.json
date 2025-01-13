@@ -12,7 +12,15 @@
     "hobbies": "When I'm not coding, you'll find me immersed in Chinese novels, manga, or accompanied by my five cats, seeking inspiration to bring even more creativity to my projects. 📚🐱",
     "aboutMeTitle": "A bit about me",
     "lifeBeliefTitle": "🧠 Life Belief",
-    "bruceQuote": "\"Be water, my friend. Empty your mind. Be formless, shapeless, like water. When you put water into a cup, it becomes the cup. When you put water into a bottle, it becomes the bottle. When you put water into a teapot, it becomes the teapot. Water can flow or it can crash. Be water, my friend.\" - Bruce Lee 🌊"
+    "bruceQuote": "\"Be water, my friend. Empty your mind. Be formless, shapeless, like water. When you put water into a cup, it becomes the cup. When you put water into a bottle, it becomes the bottle. When you put water into a teapot, it becomes the teapot. Water can flow or it can crash. Be water, my friend.\" - Bruce Lee 🌊",
+    "bitOfMe": {
+      "reading": "I'm an avid reader of Chinese novels and manga, immersing myself in fantastic worlds that expand my creativity.",
+      "movies": "Passionate about science fiction, I find inspiration for innovation through movies and series that explore the limits of technology and imagination.",
+      "cats": "I have five cats: Hercules, Johan, Lady, Princesa, and Aladin. Each with their unique personality, bringing joy and companionship to my daily life.",
+      "programming": "As a developer, I find in programming a way to create digital experiences as fascinating as the stories I read.",
+      "relaxing": "In my spare time, I like to relax with my cats, a good Chinese novel, and a cup of coffee, balancing the technical world with moments of tranquility.",
+      "gaming": "An appreciator of well-constructed narratives, whether in books, manga, or games, always seeking stories that inspire me both personally and professionally."
+    }
   },
   "journey": {
     "title": "About my Chronicles",
