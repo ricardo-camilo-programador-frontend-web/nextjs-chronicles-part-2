@@ -254,8 +254,10 @@ const PrivacyPolicy = () => {
           </p>
         </div>
         <p className="text-sm mt-8">
-          Esta política é efetiva a partir de
-          <strong>Jan</strong>/<strong>2025</strong>.
+          Esta política é efetiva a partir de{' '}
+          <time dateTime="2025-01-01">
+            Janeiro de 2025
+          </time>.
         </p>
       </section>
     </main>
