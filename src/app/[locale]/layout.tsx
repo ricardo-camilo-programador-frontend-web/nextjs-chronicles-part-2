@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
@@ -134,7 +135,7 @@ export default function RootLayout({
   children,
   params: { locale }
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
   params: { locale: string };
 }) {
   const messages = useMessages();
