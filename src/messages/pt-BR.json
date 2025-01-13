@@ -24,5 +24,8 @@
       "description": "Como um desenvolvedor orientado a resultados (segundo perfil comportamental), estou sempre estudando novas tecnologias. Atualmente, estou aprofundando meus conhecimentos em Node.js, buscando expandir ainda mais minhas capacidades técnicas."
     },
     "conclusion": "Acredito que o verdadeiro valor de um desenvolvedor está não apenas no código que escrevo, mas na capacidade de se tornar elegante e facil de dar manutenção."
+  },
+  "testimonials": {
+    "title": "Experiências Memoráveis"
   }
 }

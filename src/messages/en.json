@@ -24,5 +24,8 @@
       "description": "As a results-oriented developer (according to behavioral profile), I'm always studying new technologies. Currently, I'm deepening my knowledge in Node.js, seeking to expand my technical capabilities even further."
     },
     "conclusion": "I believe that a developer's true value lies not just in the code I write, but in the ability to make it elegant and easy to maintain."
+  },
+  "testimonials": {
+    "title": "Memorable Experiences"
   }
 }
