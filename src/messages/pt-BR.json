@@ -40,6 +40,7 @@
       "breathNatural": {
         "name": "🪴 Breath Natural - NextJS",
         "description": "Aplicação desenvolvida como parte do NextJS Chronicles, demonstrando como um mockup pode ser expandido para um possivel e-commerce e se tornar mais atrativo com animações e interações.",
+        "seeMore": "Ver detalhes",
         "techs": "TypeScript,NextJS,TailwindCSS,Figma",
         "color": {
           "bgColor": "#3cb371",
@@ -54,6 +55,7 @@
       "foodHut": {
         "name": "🍽️ Food Hut - AngularJS",
         "description": "Projeto desenvolvido como parte do Angular Chronicles, focado em demonstrar as melhores práticas de desenvolvimento frontend com Angular. Implementa um sistema de pedidos de comida com interface responsiva e moderna.",
+        "seeMore": "Ver detalhes",
         "techs": "TypeScript,Angular,Figma",
         "color": {
           "bgColor": "#FF0000",
