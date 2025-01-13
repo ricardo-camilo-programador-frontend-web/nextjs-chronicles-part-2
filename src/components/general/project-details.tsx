@@ -12,6 +12,8 @@ import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
 import { PropertyColors } from '@/types/PropertyColors';
 import { CircularButton } from '@/components/CircularButton';
+import { ArrowRightIcon } from 'lucide-react';
+import { text } from 'stream/consumers';
 
 interface ProjectDetailsProps {
   id: string;
@@ -23,6 +25,7 @@ interface ProjectDetailsProps {
   color: PropertyColors;
   colorClass: PropertyColors;
   href: string;
+  seeMore: string;
   children?: ReactNode;
 }
 
@@ -73,6 +76,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   color,
   colorClass,
   href,
+  seeMore
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState<any[]>([]);
 
@@ -124,6 +128,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           </Typography>
           <Typography variant="body1">{description}</Typography>
         </div>
+
+        <div className={twMerge('flex justify-end w-full items-center gap-2 text-sm group-hover:underline text-[${color.bgColor}]')}>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {seeMore}
+          </a>
+          <ArrowRightIcon
+            className={`w-4 h-4 transition-all duration-300 group-hover:translate-x-2`}
+          />
+        </div>
+
         <div className="flex gap-2 flex-wrap">
           {filteredTechs.map((tech: any) => (
             <Fragment key={tech.label}>
