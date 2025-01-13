@@ -1,6 +1,7 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "hero": {
+    "experience": "4 years of experience",
+    "specialization": "Frontend Developer specialized in JavaScript frameworks",
+    "tagline": "Transforming ideas into exceptional digital experiences"
   }
 }

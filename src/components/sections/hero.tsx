@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 import Typography from '@/components/general/typography';
 import Social from '@/components/general/social';
@@ -6,6 +7,8 @@ import { StarRating } from '@/components/StarRating';
 import Ricardo from '@/public/images/ricardo-camilo-programador-frontend-web-developer-frontend-engineer-software-engineer-web-developer-vuejs-vue-reactjs-react-javascript-typescript.png';
 
 const Hero = () => {
+  const t = useTranslations('hero');
+
   return (
     <section className="w-full pb-24 pt-16 flex justify-center max-lg:py-16 max-lg:pt-0">
       <div className="w-full max-w-[1120px] px-8 flex justify-between items-center max-lg:max-full max-lg:flex-col max-lg:p-4 max-lg:pt-0 max-xl:w-full gap-8">
@@ -13,7 +16,7 @@ const Hero = () => {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <StarRating rating={5} /> | 4 anos de experiência
+                <StarRating rating={5} /> | {t('experience')}
               </div>
               <Typography
                 variant="h1"
@@ -23,10 +26,10 @@ const Hero = () => {
             </div>
             <div className="flex gap-1 flex-col max-w-2xl">
               <Typography variant="body1" className="font-medium">
-                Programador Frontend especializado em frameworks JavaScript
+                {t('specialization')}
               </Typography>
               <Typography variant="body1" className="font-medium">
-                Transformando ideias em experiências digitais excepcionais
+                {t('tagline')}
               </Typography>
             </div>
           </div>
