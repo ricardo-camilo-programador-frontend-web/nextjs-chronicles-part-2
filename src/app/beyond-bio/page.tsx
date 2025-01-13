@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { ArrowLeft } from 'iconoir-react';
 
 import Footer from '@/components/layout/footer';
