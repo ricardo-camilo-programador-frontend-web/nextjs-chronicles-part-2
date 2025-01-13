@@ -1,10 +1,13 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 import { PROJECTS } from '@/lib/data';
 import ProjectDetails from '@/components/general/project-details';
 import Typography from '@/components/general/typography';
 
 const Work = () => {
+  const t = useTranslations('work');
+
   return (
     <section
       className="py-24 w-full flex justify-center max-md:py-16"
@@ -12,10 +15,10 @@ const Work = () => {
       <div className="flex flex-col gap-24 max-w-[952px] px-4 w-full">
         <div className="flex flex-col gap-2 max-lg:items-center">
           <Typography variant="h2" component="h2">
-            Projetos em Destaque
+            {t('title')}
           </Typography>
           <Typography variant="body1" className="max-lg:text-center">
-            Conheça alguns dos meus trabalhos recentes, onde transformo ideias em experiências digitais que cativam e inspiram, utilizando tecnologias modernas e boas práticas para criar experiências digitais memoráveis.
+            {t('description')}
           </Typography>
         </div>
         <div className="flex gap-20 flex-wrap max-lg:justify-center">

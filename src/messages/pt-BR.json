@@ -27,5 +27,9 @@
   },
   "testimonials": {
     "title": "Experiências Memoráveis"
+  },
+  "work": {
+    "title": "Projetos em Destaque",
+    "description": "Conheça alguns dos meus trabalhos recentes, onde transformo ideias em experiências digitais que cativam e inspiram, utilizando tecnologias modernas e boas práticas para criar experiências digitais memoráveis."
   }
 }
