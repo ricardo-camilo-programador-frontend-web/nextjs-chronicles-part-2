@@ -98,5 +98,13 @@
       "state": "SP",
       "country": "BR"
     }
+  },
+  "navigation": {
+    "journey": "Jornada",
+    "work": "Trabalhos",
+    "testimonials": "Depoimentos",
+    "contact": "Contato",
+    "beyond-bio": "Além da bio",
+    "home": "Início"
   }
 }

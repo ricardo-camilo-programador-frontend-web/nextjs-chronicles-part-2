@@ -98,5 +98,13 @@
       "state": "SP",
       "country": "BR"
     }
+  },
+  "navigation": {
+    "journey": "Journey",
+    "work": "Work",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "beyond-bio": "Beyond Bio",
+    "home": "Home"
   }
 }
