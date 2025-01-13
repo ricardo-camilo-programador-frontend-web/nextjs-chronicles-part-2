@@ -14,6 +14,7 @@ const Work = () => {
     {
       name: t('projects.breathNatural.name'),
       description: t('projects.breathNatural.description'),
+      seeMore: t('projects.breathNatural.seeMore'),
       techs: t('projects.breathNatural.techs').split(','),
       previewImage: IllustrationBreathNatural,
       color: {
@@ -30,6 +31,7 @@ const Work = () => {
     {
       name: t('projects.foodHut.name'),
       description: t('projects.foodHut.description'),
+      seeMore: t('projects.foodHut.seeMore'),
       techs: t('projects.foodHut.techs').split(','),
       previewImage: IllustrationFoodHut,
       color: {
@@ -71,6 +73,7 @@ const Work = () => {
                 color={project.color}
                 colorClass={project.colorClass}
                 href={project.href}
+                seeMore={project.seeMore}
               />
             </React.Fragment>
           ))}
