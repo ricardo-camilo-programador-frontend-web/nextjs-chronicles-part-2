@@ -6,7 +6,6 @@ import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 
 import { twMerge } from 'tailwind-merge';
-import { ArrowUpRight } from 'iconoir-react';
 
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
@@ -15,6 +14,7 @@ import { PropertyColors } from '@/types/PropertyColors';
 import { CircularButton } from '@/components/CircularButton';
 
 interface ProjectDetailsProps {
+  id: string;
   name: string;
   description: string;
   techs?: string[];
@@ -65,6 +65,7 @@ const Shape: FC<PropertyColors & { children?: ReactNode }> = ({ bgColor, borderC
 };
 
 const ProjectDetails: FC<ProjectDetailsProps> = ({
+  id,
   name,
   description,
   techs,
@@ -104,7 +105,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
             colorClass.bgColor,
             colorClass.borderColor
           )}>
-          <CircularButton color={color} colorClass={colorClass} />
+          <CircularButton id={id} color={color} colorClass={colorClass} />
         </div>
       </div>
 
