@@ -14,11 +14,14 @@ import {
 } from '@/components/general/drawer';
 import Link, { LinkProps } from '@/components/general/link';
 import { NAV_LINKS } from '@/lib/data';
+import { LanguageSwitcher } from '@/components/LanguageSwitcher';
+import { locales } from '@/config/i18n-config';
 
 const Header = () => {
-  const router = useRouter();
   const pathname = usePathname();
-  const isHomePage = pathname === '/';
+
+  const homePaths = ['/', ...locales.map(locale => `/${locale}`)];
+  const isHomePage = homePaths.includes(pathname);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -38,18 +41,25 @@ const Header = () => {
     <>
       <header className="flex p-8 justify-center max-lg:px-4 sticky top-0 bg-white z-50">
         <div className="flex max-w-7xl w-full justify-between">
-          <p
+          <a
+            href="/"
             className="text-xl font-medium uppercase text-zinc-900 tracking-[1px] cursor-pointer"
-            onClick={() => router.push('/')}>
+            rel="home"
+            aria-label="Ricardo Camilo"
+          >
             RICARDO CAMILO
-          </p>
+          </a>
 
           {isHomePage && (
             <ul className="flex gap-8 max-md:hidden max-lg:gap-4">
               {renderHomePageSectionNavLinks()}
             </ul>
           )}
-          <div className="flex gap-8">
+          <div className="flex gap-8 items-center">
+            <div className="my-auto">
+              <LanguageSwitcher />
+            </div>
+
             <Link
               href={isHomePage ? '/beyond-bio' : '/'}
               className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
