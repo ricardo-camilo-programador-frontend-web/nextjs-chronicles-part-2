@@ -8,7 +8,6 @@ export const routing = defineRouting({
 
   // Used when no locale matches
   defaultLocale: "pt-BR",
-  localePrefix: "as-needed",
 });
 
 // Lightweight wrappers around Next.js' navigation APIs
