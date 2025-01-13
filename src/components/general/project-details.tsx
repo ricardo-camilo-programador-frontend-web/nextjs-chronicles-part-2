@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { useEffect, useState } from 'react';
+import type { FC , ReactNode } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 
@@ -25,10 +25,10 @@ interface ProjectDetailsProps {
   color: PropertyColors;
   colorClass: PropertyColors;
   href: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
 }
 
-const Shape = ({ bgColor, borderColor, children }: PropertyColors & { children?: React.ReactNode }) => {
+const Shape: FC<PropertyColors & { children?: ReactNode }> = ({ bgColor, borderColor, children }) => {
   return (
     <div className="relative w-[418px] h-[298px] rounded-lg">
       <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full"/>
@@ -66,7 +66,7 @@ const Shape = ({ bgColor, borderColor, children }: PropertyColors & { children?:
   );
 };
 
-const ProjectDetails = ({
+const ProjectDetails: FC<ProjectDetailsProps> = ({
   name,
   description,
   techs,
@@ -75,7 +75,7 @@ const ProjectDetails = ({
   colorClass,
   href,
 }: ProjectDetailsProps) => {
-  const [filteredTechs, setFilteredTechs] = useState([]);
+  const [filteredTechs, setFilteredTechs] = useState<any[]>([]);
 
   const renderTechs = () => {
     let filteredTechsLocal = [] as any;
@@ -129,9 +129,9 @@ const ProjectDetails = ({
         </div>
         <div className="flex gap-2 flex-wrap">
           {filteredTechs.map((tech: any) => (
-            <React.Fragment key={tech.label}>
+            <Fragment key={tech.label}>
               <Skill label={tech.label} icon={tech.icon} variant="sm" />
-            </React.Fragment>
+            </Fragment>
           ))}
         </div>
       </div>
