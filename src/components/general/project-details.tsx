@@ -126,7 +126,9 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           <Typography variant="h3" component="h3">
             {name}
           </Typography>
+          <div className="flex flex-col gap-1 md:min-h-[8rem]">
           <Typography variant="body1">{description}</Typography>
+          </div>
         </div>
 
         <div className={twMerge('flex justify-end w-full items-center gap-2 text-sm group-hover:underline text-[${color.bgColor}]')}>
