@@ -59,9 +59,10 @@ const Work = () => {
           </Typography>
         </div>
         <div className="flex gap-20 flex-wrap max-lg:justify-center">
-          {projects.map((project) => (
+          {projects.map((project, index) => (
             <React.Fragment key={project.name}>
               <ProjectDetails
+                id={project.name + index}
                 name={project.name}
                 description={project.description}
                 isDescriptionOnLeft={project.isDescriptionOnLeft}
