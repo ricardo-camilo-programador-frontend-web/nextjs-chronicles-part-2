@@ -114,5 +114,45 @@
     "allowAnalytics": "Allow Analytics Tools",
     "designCredits": "Design Credits:",
     "viewOriginalDesign": "View original design"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": {
+      "p1": "Your privacy is important to us. It is 🎭 Persona - NextJS Chronicles Part 2's policy to respect your privacy regarding any information we may collect from you on the {websiteLink} website, and other sites we own and operate.",
+      "p2": "We only request personal information when we truly need it to provide you with a service. We collect it through fair and lawful means, with your knowledge and consent. We also inform you why we're collecting it and how it will be used.",
+      "p3": "We only retain collected information for as long as necessary to provide the requested service. We protect the stored data using commercially acceptable means to prevent loss and theft, as well as unauthorized access, disclosure, copying, use, or modification.",
+      "p4": "We don't share personally identifying information publicly or with third parties, except when required by law.",
+      "p5": "Our website may link to external sites that we don't operate. Please be aware that we have no control over the content and practices of these sites and cannot accept responsibility for their respective {privacyLink}.",
+      "p6": "You are free to refuse our request for personal information, understanding that we may be unable to provide some of your desired services.",
+      "p7": "Your continued use of our website will be considered as acceptance of our practices around privacy and personal information. If you have any questions about how we handle user data and personal information, please contact us."
+    },
+    "security": {
+      "title": "Security and Trust of 🎭 Persona - NextJS Chronicles Part 2 Website",
+      "description": "The website is reliable and safe for user navigation as confirmed by {verificationLink}. The page verifies website information to identify potential security issues. Navigation verified by {googleLink} shows that the site is secure."
+    },
+    "cookies": {
+      "title": "Cookie Policy 🎭 Persona - NextJS Chronicles Part 2",
+      "whatAre": {
+        "title": "What are cookies?",
+        "description": "As is common practice with almost all professional websites, this site uses cookies, which are small files downloaded to your computer, to improve your experience. This page describes what information they collect, how we use it, and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored, however, this may downgrade or 'break' certain elements of the site's functionality."
+      }
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy",
+      "description": "This Privacy Policy describes how your personal information is collected, used, and shared when you visit or make a purchase from {websiteLink} (the 'Service')."
+    },
+    "userCommitment": {
+      "title": "User Commitment",
+      "description": "The user commits to using the content and information provided by 🎭 Persona - NextJS Chronicles Part 2 on the site in an uninfringed manner, without any of the following:"
+    },
+    "blockCookies": {
+      "title": "Block cookies:",
+      "description": "You can prevent cookies from being set by adjusting the settings of your browser (see the Help section of your browser for how to do this). Be aware that disabling cookies may affect the functionality and features of this and many other sites that you visit. Disabling cookies generally results in the deactivation of certain functionalities and features of this site."
+    },
+    "moreInformation": {
+      "title": "More Information",
+      "description": "Hopefully, this has clarified things for you and as mentioned before, if there is something that you aren't sure whether you need or not, it's usually safer to leave cookies enabled in case they interact with one of the features you use on our site. This policy is effective as of &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
+    },
+    "effectiveDate": "This policy is effective as of &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
   }
 }

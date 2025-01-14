@@ -114,5 +114,45 @@
     "allowAnalytics": "Permitir Ferramentas de Análise",
     "designCredits": "Créditos de Design:",
     "viewOriginalDesign": "Ver design original"
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "intro": {
+      "p1": "Sua privacidade é importante para nós. É política do 🎭 Persona - NextJS Chronicles Part 2 respeitar sua privacidade em relação a qualquer informação que possamos coletar de você no site {websiteLink} e em outros sites que possuímos e operamos.",
+      "p2": "Solicitamos informações pessoais apenas quando realmente precisamos delas para fornecer um serviço a você. Coletamos por meios justos e legais, com seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.",
+      "p3": "Retemos informações coletadas apenas pelo tempo necessário para fornecer o serviço solicitado. Protegemos os dados armazenados usando meios comercialmente aceitáveis para evitar perda e roubo, bem como acesso não autorizado, divulgação, cópia, uso ou modificação.",
+      "p4": "Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.",
+      "p5": "Nosso site pode conter links para sites externos que não operamos. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas {privacyLink}.",
+      "p6": "Você tem o direito de recusar nossa solicitação de informações pessoais, entendendo que podemos ser incapazes de fornecer alguns dos serviços desejados.",
+      "p7": "Seu uso contínuo de nosso site será considerado como aceitação de nossas práticas em relação à privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados de usuários e informações pessoais, entre em contato conosco."
+    },
+    "security": {
+      "title": "Segurança e Confiança do Site 🎭 Persona - NextJS Chronicles Part 2",
+      "description": "O site é confiável e seguro para a navegação do usuário, conforme confirmado por {verificationLink}. A página verifica as informações do site para identificar possíveis problemas de segurança. A navegação verificada por {googleLink} mostra que o site é seguro."
+    },
+    "cookies": {
+      "title": "Política de Cookies 🎭 Persona - NextJS Chronicles Part 2",
+      "whatAre": {
+        "title": "O que são cookies?",
+        "description": "Como é prática comum em quase todos os sites profissionais, este site usa cookies, que são pequenos arquivos baixados em seu computador, para melhorar sua experiência. Esta página descreve quais informações eles coletam, como as usamos e por que às vezes precisamos armazenar esses cookies. Também compartilharemos como você pode evitar que esses cookies sejam armazenados, no entanto, isso pode reduzir ou 'quebrar' certos elementos da funcionalidade do site."
+      }
+    },
+    "privacyPolicy": {
+      "title": "Política de Privacidade",
+      "description": "Esta Política de Privacidade descreve como suas informações pessoais são coletadas, usadas e compartilhadas quando você visita ou faz uma compra em {websiteLink} (o 'Serviço')."
+    },
+    "userCommitment": {
+      "title": "Compromisso do Usuário",
+      "description": "O usuário se compromete a usar o conteúdo e as informações fornecidas pelo 🎭 Persona - NextJS Chronicles Part 2 no site de maneira não infringente, sem nenhum dos seguintes:"
+    },
+    "blockCookies": {
+      "title": "Bloquear cookies:",
+      "description": "Você pode impedir que os cookies sejam definidos ajustando as configurações do seu navegador (consulte a seção de Ajuda do seu navegador para saber como fazer isso). Esteja ciente de que desativar os cookies pode afetar a funcionalidade e recursos deste e de muitos outros sites que você visita. Desativar os cookies geralmente resulta na desativação de certas funcionalidades e recursos deste site."
+    },
+    "moreInformation": {
+      "title": "Mais Informações",
+      "description": "Esperamos que isso tenha esclarecido as coisas para você e, como mencionado anteriormente, se houver algo de que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso eles interajam com um dos recursos que você usa em nosso site. Esta política é eficaz a partir de &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
+    },
+    "effectiveDate": "Esta política é eficaz a partir de &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
   }
 }
