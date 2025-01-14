@@ -128,6 +128,11 @@ export const FOOTERLINKS = [
 
 export const SOCIAL_LINKS = [
   {
+    label: 'Instagram',
+    icon: Instagram,
+    href: `https://www.instagram.com/${process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME}`,
+  },
+  {
     label: 'Github',
     icon: Github,
     href: `https://github.com/${process.env.GITHUB_USERNAME}`,
@@ -141,10 +146,5 @@ export const SOCIAL_LINKS = [
     label: 'Linkedin',
     icon: Linkedin,
     href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
-  },
-  {
-    label: 'Instagram',
-    icon: Instagram,
-    href: `https://www.instagram.com/${process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME}`,
   },
 ];
