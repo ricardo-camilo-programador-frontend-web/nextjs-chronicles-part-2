@@ -1,13 +1,13 @@
 {
   "hero": {
-    "experience": "4+ anos transformando desafios em soluções digitais",
-    "specialization": "Desenvolvedor Frontend especialista em Vue.js e React | Disponível para início imediato",
-    "tagline": "Criando interfaces de alta performance com foco em resultados mensuráveis"
+    "experience": "4+ anos transformando desafios empresariais em soluções digitais de alto impacto",
+    "specialization": "Desenvolvedor Frontend especializado em impulsionar resultados de negócio através de interfaces intuitivas | Disponível para seu projeto",
+    "tagline": "Transformando sua visão em realidade digital com interfaces que convertem"
   },
   "about": {
     "greeting": "Olá! 👋",
-    "intro": "Sou Ricardo Camilo, desenvolvedor frontend especializado em transformar desafios complexos em soluções elegantes e eficientes. 🚀",
-    "description": "Como desenvolvedor com perfil investigador (93%), tenho um histórico comprovado de otimização de performance, alcançando melhorias de até 40% em tempo de carregamento. Minha abordagem analítica e metódica garante código limpo, manutenível e escalável, sempre seguindo as melhores práticas do mercado. ✨",
+    "intro": "Sou Ricardo Camilo, um desenvolvedor frontend focado em criar soluções que geram resultados reais para o seu negócio. 🚀",
+    "description": "Como desenvolvedor analítico e metódico, já ajudei diversas empresas a aumentarem suas conversões através de interfaces otimizadas. Minhas soluções já alcançaram melhorias de até 40% em performance, resultando em maior engajamento e satisfação dos usuários. ✨",
     "education": "Graduado em Gestão da Tecnologia da Informação pela FATEC, com especialização em desenvolvimento frontend moderno. Domino Vue.js e React.js, tendo implementado soluções robustas para fintechs e plataformas de investimento. Disponível para início imediato. 💻",
     "hobbies": "Quando não estou codificando, você me encontra mergulhado em novels chinesas, mangás ou acompanhado de meus cinco gatos, buscando inspiração para trazer ainda mais criatividade aos meus projetos. 📚🐱",
     "aboutMeTitle": "Um pouco sobre mim",
@@ -23,9 +23,9 @@
     }
   },
   "journey": {
-    "title": "Impacto & Resultados",
-    "description": "Desenvolvedor Frontend com histórico comprovado de entregas de alto impacto em São Paulo. Especializado em arquiteturas modernas e desenvolvimento orientado a componentes, com experiência em fintech e plataformas de investimento.",
-    "approach": "Minha metodologia garante resultados mensuráveis: redução média de 40% no tempo de carregamento, implementação de CI/CD para deploys mais seguros, e desenvolvimento de componentes reutilizáveis que aceleram o tempo de desenvolvimento em até 60%.",
+    "title": "Como posso ajudar seu negócio",
+    "description": "Especialista em transformar desafios complexos em soluções que geram resultados. Minha experiência em fintech e plataformas de investimento me permite entender profundamente as necessidades do seu negócio e entregar interfaces que realmente funcionam.",
+    "approach": "Meu compromisso com resultados se traduz em números reais: sites até 40% mais rápidos, processos de desenvolvimento 60% mais eficientes e interfaces que seus usuários realmente adoram usar.",
     "technologies": "Tecnologias e frameworks que utilizo",
     "funFact": {
       "label": "Disponibilidade:",
@@ -34,8 +34,8 @@
     "conclusion": "Acredito que o verdadeiro valor de um desenvolvedor está não apenas no código que escrevo, mas na capacidade de se tornar elegante e facil de dar manutenção."
   },
   "work": {
-    "title": "Soluções & Resultados",
-    "description": "Portfólio selecionado demonstrando soluções técnicas com impacto mensurável no negócio.",
+    "title": "Resultados que entrego",
+    "description": "Conheça alguns casos reais de como venho ajudando empresas a alcançarem seus objetivos através de soluções técnicas eficientes.",
     "projects": {
       "breathNatural": {
         "name": "🪴 Breath Natural - NextJS",
@@ -70,21 +70,21 @@
     }
   },
   "testimonials": {
-    "title": "Resultados Comprovados",
+    "title": "O que posso fazer pelo seu projeto",
     "testimonial1": {
       "name": "Ricardo Camilo",
       "company": "Desenvolvedor Frontend",
-      "testimonial": "Especialista em otimização de performance web, com histórico de redução de 40% no tempo de carregamento. Implemento ferramentas de análise comportamental para decisões baseadas em dados, resultando em melhor experiência do usuário e maiores taxas de conversão."
+      "testimonial": "Seu site está lento? Posso ajudar a melhorar a experiência dos seus usuários com otimizações que já reduziram em 40% o tempo de carregamento em outros projetos. Implemento análises detalhadas para tomar decisões baseadas em dados, resultando em mais conversões para seu negócio."
     },
     "testimonial2": {
       "name": "Ricardo Camilo",
       "company": "Especialista em Otimização Web",
-      "testimonial": "Precisa refatorar seu projeto ou atualizar seu sistema? Com expertise em Vue.js e React.js, posso modernizar sua aplicação mantendo a estabilidade. Especializado em otimização de performance e SEO, também posso personalizar seu e-commerce para maximizar conversões. Minha experiência inclui implementação de sistemas de pagamento, gestão de produtos e integrações com APIs.\""
+      "testimonial": "Precisa modernizar seu sistema sem quebrar o que já funciona? Com experiência em Vue.js e React.js, posso trazer seu projeto para as tecnologias mais recentes mantendo tudo funcionando perfeitamente. Especializado em e-commerce, posso ajudar a aumentar suas vendas com otimizações focadas em conversão."
     },
     "testimonial3": {
       "name": "Ricardo Camilo",
       "company": "Consultor de Performance Web",
-      "testimonial": "Deixe-me ajudar com seu painel administrativo! Mantenho-me atualizado com as últimas tecnologias para entregar soluções modernas e eficientes. Posso otimizar seu site existente, implementar design responsivo e melhorar a experiência do usuário. Especializado em criar dashboards intuitivos, sistemas de gestão e interfaces que realmente impulsionam seu negócio.\""
+      "testimonial": "Procurando uma solução personalizada para gestão do seu negócio? Posso criar painéis administrativos intuitivos que facilitam seu dia a dia. Com foco em usabilidade e eficiência, desenvolvo interfaces que seus colaboradores vão adorar usar."
     }
   },
   "metadata": {
