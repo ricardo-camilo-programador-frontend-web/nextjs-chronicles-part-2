@@ -105,5 +105,14 @@
     "contact": "Contact",
     "beyond-bio": "Beyond Bio",
     "home": "Home"
+  },
+  "IntroWarningModal": {
+    "welcome": "Welcome to Portfolio - v1.0! 🚀",
+    "description": "This is a demonstration of my frontend development skills, focusing on modern web technologies and best practices.",
+    "connectLinkedIn": "Connect with me on LinkedIn",
+    "checkGitHub": "Check my GitHub",
+    "allowAnalytics": "Allow Analytics Tools",
+    "designCredits": "Design Credits:",
+    "viewOriginalDesign": "View original design"
   }
 }
