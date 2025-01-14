@@ -1,4 +1,4 @@
-import { Linkedin, Github, X } from 'iconoir-react';
+import { Linkedin, Github, X, Instagram } from 'iconoir-react';
 
 import LogoJavaScript from '@/public/icons/icon-javascript.svg';
 import LogoTypeScript from '@/public/icons/icon-typescript.svg';
@@ -16,11 +16,6 @@ import LogoVite from '@/public/icons/icon-vite.svg';
 import LogoQwik from '@/public/icons/icon-qwik.svg';
 import LogoAngular from '@/public/icons/icon-angular.svg';
 import LogoAxios from '@/public/icons/icon-axios.svg';
-
-import IllustrationBreathNatural from '@/public/images/breath-natural.webp';
-import IllustrationFoodHut from '@/public/images/food-hut.webp';
-
-import AvatarNoren from '@/public/images/avatar-noren.png';
 
 export const NAV_LINKS = [
   {
@@ -146,5 +141,10 @@ export const SOCIAL_LINKS = [
     label: 'Linkedin',
     icon: Linkedin,
     href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
+  },
+  {
+    label: 'Instagram',
+    icon: Instagram,
+    href: `https://www.instagram.com/${process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME}`,
   },
 ];
