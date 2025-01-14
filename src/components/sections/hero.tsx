@@ -12,11 +12,14 @@ const Hero = () => {
   return (
     <section className="w-full pb-24 pt-16 flex justify-center max-lg:py-16 max-lg:pt-0">
       <div className="w-full max-w-[1120px] px-8 flex justify-between items-center max-lg:max-full max-lg:flex-col max-lg:p-4 max-lg:pt-0 max-xl:w-full gap-8">
-        <div className="flex flex-col gap-12 max-lg:order-1">
+        <div className="flex flex-col gap-12 max-lg:order-1 max-w-prose">
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-2">
-                <StarRating rating={5} /> | {t('experience')}
+                <StarRating rating={5} /> |
+                <Typography variant="body1" className="text-xs">
+                  {t('experience')}
+                </Typography>
               </div>
               <Typography
                 variant="h1"
