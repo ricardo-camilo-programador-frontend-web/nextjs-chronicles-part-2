@@ -370,7 +370,7 @@ export default function PrivacyPolicy() {
           </p>
         </div>
         <p className="text-sm mt-8">
-          This policy is effective as of
+          This policy is effective as of &nbsp;
           <strong>Jan</strong>/<strong>2025</strong>.
         </p>
       </section>
