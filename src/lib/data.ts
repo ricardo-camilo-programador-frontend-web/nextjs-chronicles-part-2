@@ -133,6 +133,11 @@ export const SOCIAL_LINKS = [
     href: `https://www.instagram.com/${process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME}`,
   },
   {
+    label: 'Linkedin',
+    icon: Linkedin,
+    href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
+  },
+  {
     label: 'Github',
     icon: Github,
     href: `https://github.com/${process.env.GITHUB_USERNAME}`,
@@ -141,10 +146,5 @@ export const SOCIAL_LINKS = [
     label: 'X',
     icon: X,
     href: `https://x.com/${process.env.X_USERNAME}`,
-  },
-  {
-    label: 'Linkedin',
-    icon: Linkedin,
-    href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
   },
 ];
