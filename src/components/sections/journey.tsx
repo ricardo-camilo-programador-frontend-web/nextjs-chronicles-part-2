@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from 'react';
 import { useTranslations } from 'next-intl';
 
 import Typography from "@/components/general/typography";
@@ -26,9 +26,9 @@ const Journey = () => {
             {t('technologies')}:
             <div className="flex gap-3 flex-wrap">
               {skills.map((skill) => (
-                <React.Fragment key={skill.label}>
+                <Fragment key={skill.label}>
                   <Skill icon={skill.icon} label={skill.label} variant="md" />
-                </React.Fragment>
+                </Fragment>
               ))}
             </div>
           </div>
