@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { useTranslations } from 'next-intl';
 
 import ProjectDetails from '@/components/general/project-details';
@@ -62,7 +62,7 @@ const Work = () => {
         </div>
         <div className="flex gap-20 flex-wrap max-lg:justify-center">
           {projects.map((project, index) => (
-            <React.Fragment key={project.name}>
+            <Fragment key={project.name}>
               <ProjectDetails
                 id={project.name + index}
                 name={project.name}
@@ -75,7 +75,7 @@ const Work = () => {
                 href={project.href}
                 seeMore={project.seeMore}
               />
-            </React.Fragment>
+            </Fragment>
           ))}
         </div>
       </div>
