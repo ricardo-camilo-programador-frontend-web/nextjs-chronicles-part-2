@@ -1,6 +1,7 @@
+import type { HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface TypographyProps extends React.HTMLAttributes<HTMLHeadingElement> {
+interface TypographyProps extends HTMLAttributes<HTMLHeadingElement> {
   variant: string;
   component?: string;
 }
