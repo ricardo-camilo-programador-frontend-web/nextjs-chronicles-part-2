@@ -1,7 +1,10 @@
 import Typography from "@/components/general/typography";
 import Link from "@/components/general/link";
+import { useTranslations } from 'next-intl';
 
 const Companies = () => {
+  const t = useTranslations('contact');
+
   return (
     <div
       className="bg-zinc-950 w-full flex flex-col justify-center"
@@ -10,8 +13,8 @@ const Companies = () => {
       <div className="py-24 flex flex-col items-center gap-24 max-md:py-16">
         <div className="flex flex-col gap-8 justify-center items-center">
           <Typography variant="h2" className="text-white text-center">
-            Vamos criar algo <br />
-            extraordinário juntos!
+            {t('title.line1')} <br />
+            {t('title.line2')}
           </Typography>
 
           <div className="flex flex-col gap-4 items-center">
@@ -19,9 +22,7 @@ const Companies = () => {
               variant="body1"
               className="text-white text-center max-w-prose"
             >
-              &quot;Como desenvolvedor metódico e dedicado, transformo ideias em
-              experiências digitais memoráveis. Cada projeto é uma oportunidade
-              de criar algo verdadeiramente significativo.&quot;
+              {t('description')}
             </Typography>
           </div>
 
