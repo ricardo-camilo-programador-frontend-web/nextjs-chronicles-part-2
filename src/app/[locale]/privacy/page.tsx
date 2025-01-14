@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
           <p>
             Our website may link to external sites that we don't operate. Please
             be aware that we have no control over the content and practices of
-            these sites and cannot accept responsibility for their respective
+            these sites and cannot accept responsibility for their respective &nbsp;
             <a
               href="https://privacidade.me/"
               target="_BLANK"
