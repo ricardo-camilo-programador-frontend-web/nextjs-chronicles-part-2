@@ -113,7 +113,8 @@
     "checkGitHub": "Confira meu GitHub",
     "allowAnalytics": "Permitir Ferramentas de Análise",
     "designCredits": "Créditos de Design:",
-    "viewOriginalDesign": "Ver design original"
+    "viewOriginalDesign": "Ver design original",
+    "privacyPolicy": "Política de Privacidade"
   },
   "privacy": {
     "title": "Política de Privacidade",

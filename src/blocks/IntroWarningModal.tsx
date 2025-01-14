@@ -157,22 +157,35 @@ export default function IntroWarningModal({
           </a>
         </div>
 
-        <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-          <span className="text-gray-700">
-            {t('allowAnalytics')}
-          </span>
-          <button
-            onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
-            className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${analyticsEnabled ? "bg-green-600" : "bg-gray-200"
-              }`}
-            role="switch"
-            aria-checked={analyticsEnabled}
-          >
-            <span
-              className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${analyticsEnabled ? "translate-x-6" : "translate-x-1"
+        <div className="flex flex-col items-center justify-between p-4 bg-gray-50 rounded-lg">
+          <div className="flex items-center gap-2">
+            <span className="text-gray-700">
+              {t('allowAnalytics')}
+            </span>
+            <button
+              onClick={() => setAnalyticsEnabled(!analyticsEnabled)}
+              className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 ${analyticsEnabled ? "bg-green-600" : "bg-gray-200"
                 }`}
-            />
-          </button>
+              role="switch"
+              aria-checked={analyticsEnabled}
+            >
+              <span
+                className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${analyticsEnabled ? "translate-x-6" : "translate-x-1"
+                  }`}
+              />
+            </button>
+          </div>
+
+          <a
+            href="/privacy"
+            className="flex items-center justify-center gap-2 p-1 py-2 transition-colors rounded-lg bg-gray-50 text-blue-500 hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="font-medium">
+              {t('privacyPolicy')}
+            </span>
+          </a>
         </div>
 
         <div className="border-t pt-4 mt-4">

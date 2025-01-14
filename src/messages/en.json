@@ -113,7 +113,8 @@
     "checkGitHub": "Check my GitHub",
     "allowAnalytics": "Allow Analytics Tools",
     "designCredits": "Design Credits:",
-    "viewOriginalDesign": "View original design"
+    "viewOriginalDesign": "View original design",
+    "privacyPolicy": "Privacy Policy"
   },
   "privacy": {
     "title": "Privacy Policy",
