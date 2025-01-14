@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import { useTranslations } from 'next-intl';
 
 import Client from '@/components/general/client';
@@ -38,14 +38,14 @@ const Testimonials = () => {
       </Typography>
       <div className="flex gap-16 max-lg:flex-col">
         {testimonials.map((testimonial) => (
-          <React.Fragment key={testimonial.name}>
+          <Fragment key={testimonial.name}>
             <Client
               name={testimonial.name}
               testimonial={testimonial.testimonial}
               avatar={testimonial.avatar}
               company={testimonial.company}
             />
-          </React.Fragment>
+          </Fragment>
         ))}
       </div>
     </section>
