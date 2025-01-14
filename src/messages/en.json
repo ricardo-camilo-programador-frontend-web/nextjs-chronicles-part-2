@@ -155,5 +155,18 @@
       "description": "Hopefully, this has clarified things for you and as mentioned before, if there is something that you aren't sure whether you need or not, it's usually safer to leave cookies enabled in case they interact with one of the features you use on our site. This policy is effective as of &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
     },
     "effectiveDate": "This policy is effective as of &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
+  },
+  "Footer": {
+    "copyright": "Copyright",
+    "designedWith": "Designed with",
+    "developedWith": "Developed with",
+    "by": "by"
+  },
+  "contact": {
+    "title": {
+      "line1": "Let's create something",
+      "line2": "extraordinary together!"
+    },
+    "description": "As a methodical and dedicated developer, I transform ideas into memorable digital experiences. Each project is an opportunity to create something truly meaningful."
   }
 }

@@ -155,5 +155,18 @@
       "description": "Esperamos que isso tenha esclarecido as coisas para você e, como mencionado anteriormente, se houver algo de que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso eles interajam com um dos recursos que você usa em nosso site. Esta política é eficaz a partir de &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
     },
     "effectiveDate": "Esta política é eficaz a partir de &nbsp; <strong>Jan</strong>/<strong>2025</strong>."
+  },
+  "Footer": {
+    "copyright": "Direitos Autorais",
+    "designedWith": "Projetado com",
+    "developedWith": "Desenvolvido com",
+    "by": "por"
+  },
+  "contact": {
+    "title": {
+      "line1": "Vamos criar algo",
+      "line2": "extraordinário juntos!"
+    },
+    "description": "Como desenvolvedor metódico e dedicado, transformo ideias em experiências digitais memoráveis. Cada projeto é uma oportunidade de criar algo verdadeiramente significativo."
   }
 }
