@@ -1,46 +1,46 @@
 {
   "hero": {
-    "experience": "4 years of experience",
-    "specialization": "Frontend Developer specialized in JavaScript frameworks",
-    "tagline": "Transforming ideas into exceptional digital experiences"
+    "experience": "4+ years transforming challenges into digital solutions",
+    "specialization": "Frontend Developer specializing in Vue.js and React | Available for immediate start",
+    "tagline": "Creating high-performance interfaces with a focus on measurable results"
   },
-    "about": {
+  "about": {
     "greeting": "Hello! 👋",
-    "intro": "I'm Ricardo Camilo, a frontend developer passionate about creating memorable digital experiences. 🚀",
-    "description": "As a developer with an investigative profile (93%), my approach combines technical precision with creativity. I believe that each line of code is an opportunity to create something extraordinary, transforming ideas into interfaces that delight and make people's lives easier. ✨",
-    "education": "Graduated in Information Technology Management from FATEC, I found my true calling in frontend programming. With 4 years of experience, I specialize in React.js and Vue.js, always seeking best practices and innovative solutions. 💻",
-    "hobbies": "When I'm not coding, you'll find me immersed in Chinese novels, manga, or accompanied by my five cats, seeking inspiration to bring even more creativity to my projects. 📚🐱",
+    "intro": "I'm Ricardo Camilo, a frontend developer specialized in turning complex challenges into elegant and efficient solutions. 🚀",
+    "description": "As a developer with an investigative profile (93%), I have a proven track record of performance optimization, achieving improvements of up to 40% in loading time. My analytical and methodical approach ensures clean, maintainable, and scalable code, always following the best market practices. ✨",
+    "education": "Graduated in Information Technology Management from FATEC, with a specialization in modern frontend development. Proficient in Vue.js and React.js, having implemented robust solutions for fintechs and investment platforms. Available for immediate start. 💻",
+    "hobbies": "When I'm not coding, you can find me immersed in Chinese novels, manga, or accompanied by my five cats, seeking inspiration to bring even more creativity to my projects. 📚🐱",
     "aboutMeTitle": "A bit about me",
     "lifeBeliefTitle": "🧠 Life Belief",
-    "bruceQuote": "\"Be water, my friend. Empty your mind. Be formless, shapeless, like water. When you put water into a cup, it becomes the cup. When you put water into a bottle, it becomes the bottle. When you put water into a teapot, it becomes the teapot. Water can flow or it can crash. Be water, my friend.\" - Bruce Lee 🌊",
+    "bruceQuote": "\"Do not get set into one form, adapt it and build your own, and let it grow, be like water. Empty your mind, be formless, shapeless — like water. Now you put water in a cup, it becomes the cup; You put water into a bottle it becomes the bottle; You put it in a teapot it becomes the teapot. Now water can flow or it can crash. Be water, my friend.\" - Bruce Lee 🌊",
     "bitOfMe": {
-      "reading": "I'm an avid reader of Chinese novels and manga, immersing myself in fantastic worlds that expand my creativity.",
+      "reading": "I am an avid reader of Chinese novels and manga, diving into fantastic worlds that expand my creativity.",
       "movies": "Passionate about science fiction, I find inspiration for innovation through movies and series that explore the limits of technology and imagination.",
       "cats": "I have five cats: Hercules, Johan, Lady, Princesa, and Aladin. Each with their unique personality, bringing joy and companionship to my daily life.",
       "programming": "As a developer, I find in programming a way to create digital experiences as fascinating as the stories I read.",
-      "relaxing": "In my spare time, I like to relax with my cats, a good Chinese novel, and a cup of coffee, balancing the technical world with moments of tranquility.",
+      "relaxing": "In my spare time, I enjoy relaxing with my cats, a good Chinese novel, and a cup of coffee, balancing the technical world with moments of tranquility.",
       "gaming": "An appreciator of well-constructed narratives, whether in books, manga, or games, always seeking stories that inspire me both personally and professionally."
     }
   },
   "journey": {
-    "title": "About my Chronicles",
-    "description": "I'm a Frontend developer with 4 years of experience, currently based in São Paulo, Brazil. My journey began after graduating in Information Technology Management from FATEC, where I discovered my passion for creating interfaces that impact people's lives. I started developing with Vue.js, moved to React, and various other JavaScript frameworks, and today I'm proud to master multiple modern frameworks that allow me to create robust and scalable solutions.",
-    "approach": "I approach each project with a meticulous and strategic eye. I'm especially dedicated to creating clean and optimized code, always seeking the best development practices.",
+    "title": "Impact & Results",
+    "description": "Frontend Developer with a proven track record of high-impact deliveries in São Paulo. Specialized in modern architectures and component-oriented development, with experience in fintech and investment platforms.",
+    "approach": "My methodology ensures measurable results: average reduction of 40% in loading time, implementation of CI/CD for safer deploys, and development of reusable components that accelerate development time by up to 60%.",
     "technologies": "Technologies and frameworks I use",
     "funFact": {
-      "label": "Fun fact:",
-      "description": "As a results-oriented developer (according to behavioral profile), I'm always studying new technologies. Currently, I'm deepening my knowledge in Node.js, seeking to expand my technical capabilities even further."
+      "label": "Availability:",
+      "description": "I am available for immediate start and seeking an opportunity to add value with my technical skills and commitment to excellence. Currently expanding knowledge in Node.js for full-stack development."
     },
-    "conclusion": "I believe that a developer's true value lies not just in the code I write, but in the ability to make it elegant and easy to maintain."
+    "conclusion": "I believe the true value of a developer lies not only in the code I write but in the ability to become elegant and easy to maintain."
   },
   "work": {
-    "title": "Featured Projects",
-    "description": "Here are some of my recent projects that showcase my skills and experience.",
+    "title": "Solutions & Results",
+    "description": "Selected portfolio showcasing technical solutions with measurable business impact.",
     "projects": {
       "breathNatural": {
         "name": "🪴 Breath Natural - NextJS",
-        "description": "Application developed as part of NextJS Chronicles, demonstrating how a mockup can be expanded into a potential e-commerce and become more attractive with animations and interactions.",
-        "seeMore": "See Details",
+        "description": "My first dive into the NextJS universe! I developed this plant e-commerce with a focus on sustainability, turning a minimalist design into an engaging and modern shopping experience. Even though it was my first project with NextJS, I managed to implement advanced features like SSR (Server-Side Rendering), automatic image optimization, and dynamic routes. The result is an application with exceptional performance, achieving 90+ on Lighthouse, with smooth animations and a premium user experience. This project demonstrates my ability to quickly master new technologies and deliver professional results even during the learning curve.",
+        "seeMore": "See details",
         "techs": "TypeScript,NextJS,TailwindCSS,Figma",
         "color": {
           "bgColor": "#3cb371",
@@ -54,8 +54,8 @@
       },
       "foodHut": {
         "name": "🍽️ Food Hut - AngularJS",
-        "description": "Project developed as part of Angular Chronicles, focused on demonstrating frontend development best practices with Angular. Implements a food ordering system with a responsive and modern interface.",
-        "seeMore": "See Details",
+        "description": "My journey of discovery in the Angular ecosystem! This food ordering system represents my first dive into the framework, where I turned challenges into learning opportunities. I implemented robust features like a dynamic shopping cart, real-time search system, and state management with Services. Even though it was my first experience with Angular, the project demonstrates mastery of fundamental concepts like Dependency Injection, Observables, and Component Lifecycle. The result is a professional application that not only works flawlessly but also demonstrates my adaptability and rapid evolution in new technologies.",
+        "seeMore": "See details",
         "techs": "TypeScript,Angular,Figma",
         "color": {
           "bgColor": "#FF0000",
@@ -70,26 +70,26 @@
     }
   },
   "testimonials": {
-    "title": "Memorable Experiences",
+    "title": "Proven Results",
     "testimonial1": {
       "name": "Ricardo Camilo",
       "company": "Frontend Developer",
-      "testimonial": "I stay constantly updated with technological evolutions and growing user expectations. As a developer, I bring to each project a unique combination of technical experience and strategic vision. Whether developing a high-impact landing page or a complex e-commerce, my focus is on delivering not just code, but results that truly drive business.\""
+      "testimonial": "Specialist in web performance optimization, with a track record of 40% reduction in loading time. I implement behavioral analysis tools for data-driven decisions, resulting in a better user experience and higher conversion rates."
     },
     "testimonial2": {
       "name": "Ricardo Camilo",
       "company": "Web Optimization Specialist",
-      "testimonial": "Need to refactor your project or update your system? With expertise in Vue.js and React.js, I can modernize your application while maintaining stability. Specialized in performance optimization and SEO, I can also customize your e-commerce to maximize conversions. My experience includes implementing payment systems, product management, and integrations with APIs.\""
+      "testimonial": "Need to refactor your project or update your system? With expertise in Vue.js and React.js, I can modernize your application while maintaining stability. Specialized in performance optimization and SEO, I can also customize your e-commerce to maximize conversions. My experience includes implementing payment systems, product management, and API integrations.\""
     },
     "testimonial3": {
       "name": "Ricardo Camilo",
       "company": "Web Performance Consultant",
-      "testimonial": "Let me help with your admin panel! I stay updated with the latest technologies to deliver modern and efficient solutions. I can optimize your existing site, implement responsive design, and improve user experience. I specialize in creating intuitive dashboards, management systems, and interfaces that truly drive your business.\""
+      "testimonial": "Let me help with your admin panel! I stay up to date with the latest technologies to deliver modern and efficient solutions. I can optimize your existing site, implement responsive design, and improve the user experience. Specialized in creating intuitive dashboards, management systems, and interfaces that truly drive your business.\""
     }
   },
   "metadata": {
     "title": "RICARDO CAMILO Programmer | Frontend Developer Specialist in React & Vue.js",
-    "description": "Frontend Developer with 4 years of experience in Jaú-SP, specialized in React, Vue.js and modern technologies. Creation of responsive interfaces, Landing Pages, optimized for performance. Remote service in Jaú and region.",
+    "description": "Frontend Programmer with 4 years of experience in Jaú-SP, specialized in React, Vue.js, and modern technologies. Creating responsive interfaces, Landing Pages, optimized for performance. Remote and on-site service in Jaú and surrounding areas.",
     "creator": "Ricardo Camilo",
     "jobTitle": "Frontend Developer",
     "location": {
