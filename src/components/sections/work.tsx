@@ -6,7 +6,7 @@ import Typography from '@/components/general/typography';
 
 import IllustrationBreathNatural from '@/public/images/breath-natural.webp';
 import IllustrationFoodHut from '@/public/images/food-hut.webp';
-
+import IllustrationSavana from '@/public/images/savana.webp';
 const Work = () => {
   const t = useTranslations('work');
 
@@ -44,6 +44,23 @@ const Work = () => {
       },
       isDescriptionOnLeft: false,
       href: t('projects.foodHut.href'),
+    },
+    {
+      name: t('projects.savana.name'),
+      description: t('projects.savana.description'),
+      seeMore: t('projects.savana.seeMore'),
+      techs: t('projects.savana.techs').split(','),
+      previewImage: IllustrationSavana,
+      color: {
+        bgColor: t('projects.savana.color.bgColor'),
+        borderColor: t('projects.savana.color.borderColor'),
+      },
+      colorClass: {
+        bgColor: t('projects.savana.colorClass.bgColor'),
+        borderColor: t('projects.savana.colorClass.borderColor'),
+      },
+      isDescriptionOnLeft: false,
+      href: t('projects.savana.href'),
     },
   ];
 

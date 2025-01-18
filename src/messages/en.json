@@ -66,6 +66,21 @@
           "borderColor": "border-orange-700"
         },
         "href": "https://food-hut-angular-chronicles-1.netlify.app/"
+      },
+      "savana": {
+        "name": "🦁 Savana - NuxtJS",
+        "description": "Exploring the power of Nuxt 3! I developed this modern e-commerce with a focus on scalability and performance. The project implements advanced features such as internationalization (i18n), GTM and Microsoft Clarity integration for behavior analysis, and a robust TypeScript-based architecture. Highlights include responsive design with Tailwind CSS and SEO optimization, demonstrating my ability to build complete and professional commercial applications.",
+        "seeMore": "See details",
+        "techs": "TypeScript,Nuxt3,TailwindCSS,i18n",
+        "color": {
+          "bgColor": "#FFD700",
+          "borderColor": "#DAA520"
+        },
+        "colorClass": {
+          "bgColor": "bg-yellow-100",
+          "borderColor": "border-yellow-700"
+        },
+        "href": "https://savana-nuxtjs-chronicles-part-1.netlify.app/en"
       }
     }
   },
