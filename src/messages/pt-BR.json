@@ -69,7 +69,7 @@
       },
       "savana": {
         "name": "🦁 Savana - NuxtJS",
-        "description": "Explorando o poder do Nuxt 3! Desenvolvi este e-commerce moderno com foco em escalabilidade e performance. O projeto implementa recursos avançados como internacionalização (i18n), integração com GTM e Microsoft Clarity para análise de comportamento, e uma arquitetura robusta baseada em TypeScript. Destaque para o design responsivo com Tailwind CSS e otimização SEO, demonstrando minha capacidade de construir aplicações comerciais completas e profissionais.",
+        "description": "Explorando o poder do Nuxt 3! Projeto em andamento, com foco em escalabilidade e performance.",
         "seeMore": "Ver detalhes",
         "techs": "TypeScript,Nuxt3,TailwindCSS,i18n",
         "color": {
