@@ -39,6 +39,7 @@
     "projects": {
       "breathNatural": {
         "name": "🪴 Breath Natural - NextJS",
+        "video": "https://youtu.be/cKmv-1xcKDk",
         "description": "My first immersion in the NextJS universe! I developed this plant e-commerce with a focus on sustainability, turning a minimalist design into an engaging and modern shopping experience. Even though it was my first project with NextJS, I managed to implement advanced features like SSR (Server-Side Rendering), automatic image optimization, and dynamic routes. The result is an application with exceptional performance, achieving 90+ on Lighthouse, with smooth animations and a premium user experience. This project demonstrates my ability to quickly master new technologies and deliver professional results even during the learning curve.",
         "seeMore": "See details",
         "techs": "TypeScript,NextJS,TailwindCSS,Figma",
@@ -54,6 +55,7 @@
       },
       "foodHut": {
         "name": "🍽️ Food Hut - AngularJS",
+        "video": "https://youtu.be/PdmQUfxKFRY",
         "description": "My journey of discovery in the Angular ecosystem! This food ordering system represents my first dive into the framework, where I turned challenges into learning opportunities. I implemented robust features like a dynamic shopping cart, real-time search system, and state management with Services. Even though it was my first experience with Angular, the project demonstrates mastery of fundamental concepts like Dependency Injection, Observables, and Component Lifecycle. The result is a professional application that not only works perfectly but also demonstrates my ability to adapt and evolve quickly in new technologies.",
         "seeMore": "See details",
         "techs": "TypeScript,Angular,Figma",
@@ -69,6 +71,7 @@
       },
       "savana": {
         "name": "🦁 Savana - NuxtJS",
+        "video": "https://youtu.be/cFdw2yfFPKw",
         "description": "Exploring the power of Nuxt 3! On going project, ",
         "seeMore": "See details",
         "techs": "TypeScript,Nuxt3,TailwindCSS,i18n",
