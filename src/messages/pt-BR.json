@@ -41,7 +41,7 @@
         "name": "🪴 Breath Natural - NextJS",
         "video": "https://youtu.be/cKmv-1xcKDk",
         "description": "Minha primeira imersão no universo NextJS! Desenvolvi este e-commerce de plantas com foco em sustentabilidade, transformando um design minimalista em uma experiência de compra envolvente e moderna. Mesmo sendo meu primeiro projeto com NextJS, consegui implementar recursos avançados como SSR (Server-Side Rendering), otimização de imagens automática e rotas dinâmicas. O resultado é uma aplicação com performance excepcional, atingindo 90+ no Lighthouse, com animações fluidas e uma experiência de usuário premium. Este projeto demonstra minha capacidade de dominar rapidamente novas tecnologias e entregar resultados profissionais mesmo durante a curva de aprendizado.",
-        "seeMore": "Ver detalhes",
+        "seeMore": "Acessar projeto",
         "techs": "TypeScript,NextJS,TailwindCSS,Figma",
         "color": {
           "bgColor": "#3cb371",
@@ -57,7 +57,7 @@
         "name": "🍽️ Food Hut - AngularJS",
         "video": "https://youtu.be/PdmQUfxKFRY",
         "description": "Minha jornada de descoberta no ecossistema Angular! Este sistema de pedidos de comida representa meu primeiro mergulho no framework, onde transformei desafios em oportunidades de aprendizado. Implementei funcionalidades robustas como carrinho de compras dinâmico, sistema de busca em tempo real e gestão de estado com Services. Mesmo sendo minha primeira experiência com Angular, o projeto demonstra domínio de conceitos fundamentais como Dependency Injection, Observables e Component Lifecycle. O resultado é uma aplicação profissional que não só funciona perfeitamente, mas também demonstra minha capacidade de adaptação e rápida evolução em novas tecnologias.",
-        "seeMore": "Ver detalhes",
+        "seeMore": "Acessar projeto",
         "techs": "TypeScript,Angular,Figma",
         "color": {
           "bgColor": "#FF0000",
@@ -73,7 +73,7 @@
         "name": "🦁 Savana - NuxtJS",
         "video": "https://youtu.be/cFdw2yfFPKw",
         "description": "Explorando o poder do Nuxt 3! Projeto em andamento, com foco em escalabilidade e performance.",
-        "seeMore": "Ver detalhes",
+        "seeMore": "Acessar projeto",
         "techs": "TypeScript,Nuxt3,TailwindCSS,i18n",
         "color": {
           "bgColor": "#FFD700",
