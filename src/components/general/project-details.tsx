@@ -93,7 +93,8 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   return (
     <div
       className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full cursor-pointer group"
-      onClick={() => window.open(href, '_blank')}>
+      onClick={() => window.open(href, '_blank')}
+    >
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
         <Shape borderColor={color.borderColor}>
           <Image
