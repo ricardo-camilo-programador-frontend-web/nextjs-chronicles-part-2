@@ -13,6 +13,7 @@ const Work = () => {
   const projects = [
     {
       name: t('projects.breathNatural.name'),
+      video: t('projects.breathNatural.video'),
       description: t('projects.breathNatural.description'),
       seeMore: t('projects.breathNatural.seeMore'),
       techs: t('projects.breathNatural.techs').split(','),
@@ -30,6 +31,7 @@ const Work = () => {
     },
     {
       name: t('projects.foodHut.name'),
+      video: t('projects.foodHut.video'),
       description: t('projects.foodHut.description'),
       seeMore: t('projects.foodHut.seeMore'),
       techs: t('projects.foodHut.techs').split(','),
@@ -47,6 +49,7 @@ const Work = () => {
     },
     {
       name: t('projects.savana.name'),
+      video: t('projects.savana.video'),
       description: t('projects.savana.description'),
       seeMore: t('projects.savana.seeMore'),
       techs: t('projects.savana.techs').split(','),
@@ -83,6 +86,7 @@ const Work = () => {
               <ProjectDetails
                 id={project.name + index}
                 name={project.name}
+                video={project.video}
                 description={project.description}
                 isDescriptionOnLeft={project.isDescriptionOnLeft}
                 image={project.previewImage}
