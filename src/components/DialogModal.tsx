@@ -28,6 +28,7 @@ const DialogModal: FC<Props> = ({
   close,
 }: Props) => {
   const router = useRouter();
+  const currentScroll = window.scrollY;
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -52,10 +53,15 @@ const DialogModal: FC<Props> = ({
     close();
   };
 
+  const lockScroll = (): void => {
+    window.scrollTo(0, currentScroll);
+  };
+
   useEffect(() => {
     const dialog = document.getElementById(uniqueId) as HTMLDialogElement;
     if (isOpen && dialog) {
       dialog.showModal();
+      lockScroll();
     } else if (!isOpen && dialog) {
       dialog.close();
     }
@@ -67,7 +73,7 @@ const DialogModal: FC<Props> = ({
         <dialog
           id={uniqueId}
           data-modal
-          className={`relative z-50 bg-transparent overflow-hidden border border-gray-50 text-secondary rounded-xl shadow-md overflow-y-auto ${className}`}
+          className={`relative z-50 bg-transparent overflow-hidden text-secondary rounded-xl overflow-y-auto ${className}`}
           style={style}
         >
           <div className="flex justify-center align-center index-over-ride m-auto relative z-50">
