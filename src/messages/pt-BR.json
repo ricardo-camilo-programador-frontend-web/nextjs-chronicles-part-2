@@ -74,7 +74,7 @@
         "video": "https://youtu.be/cFdw2yfFPKw",
         "description": "Explorando os limites do Nuxt 3! Um projeto ambicioso em desenvolvimento que prioriza escalabilidade. Implementando recursos avançados como internacionalização (i18n) e otimizações de SEO, esta plataforma demonstra o poder do desenvolvimento moderno com Vue.js. O foco em performance e experiência do usuário resulta em uma aplicação que se destaca pela velocidade e usabilidade.",
         "seeMore": "Acessar projeto",
-        "techs": "TypeScript,Nuxt3,TailwindCSS,i18n",
+        "techs": "TypeScript,Nuxt.js,TailwindCSS,i18n,Figma",
         "color": {
           "bgColor": "#FFD700",
           "borderColor": "#DAA520"
