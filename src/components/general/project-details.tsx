@@ -31,7 +31,7 @@ interface ProjectDetailsProps {
   children?: ReactNode;
 }
 
-const Shape: FC<PropertyColors & { children?: ReactNode, href: string, className: string }> = ({ bgColor, borderColor, children, href, className }) => {
+const Shape: FC<PropertyColors & { children?: ReactNode, href: string, className?: string }> = ({ bgColor, borderColor, children, href, className }) => {
   return (
     <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group ", className)}>
       <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
@@ -124,11 +124,9 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   }, []);
 
   return (
-    <div
-      className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group"
-    >
+    <div className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group">
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
-        <Shape borderColor={color.borderColor} href={href} className="group">
+        <Shape borderColor={color.borderColor} href={href}>
           <Image
             src={image}
             alt={`${name} project screenshot`}
@@ -140,27 +138,29 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           />
 
           {currentVideo.link && (
-            <VideoPlayer
-              className="rounded-xl w-full h-full hidden group-hover:block mt-0 z-[999]"
-              src={currentVideo.link}
-              params={{
-                controls: true,
-                autoplay: true,
-                loop: true,
-                muted: true,
-              }}
-              title={currentVideo.name}
-            />
+            <div className="absolute inset-0 z-30">
+              <VideoPlayer
+                className="rounded-xl w-full h-full hidden group-hover:block mt-0"
+                src={currentVideo.link}
+                params={{
+                  controls: true,
+                  autoplay: true,
+                  loop: true,
+                  muted: true,
+                }}
+                title={currentVideo.name}
+              />
+            </div>
           )}
         </Shape>
 
         <Link href={href}
           className={twMerge(
-            'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2 z-[50]',
+            'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2 z-40 bg-white',
             colorClass.bgColor,
             colorClass.borderColor
           )}>
-          <CircularButton id={id} color={color} colorClass={colorClass} className="group">
+          <CircularButton id={id} color={color} colorClass={colorClass} className="group bg-white rounded-full h-16 w-16">
             <div
               className={twMerge(
                 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
