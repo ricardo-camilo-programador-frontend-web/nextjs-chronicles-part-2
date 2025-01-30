@@ -6,6 +6,7 @@ import DialogModal from "@/components/DialogModal";
 import VideoPlayer from "@/components/VideoPlayer";
 import type { Videos } from '@/types/Videos';
 import { PlayIcon } from '@heroicons/react/24/outline';
+import { PropertyColors } from '@/types/PropertyColors';
 
 interface Props {
   video: Videos | null;
@@ -15,9 +16,10 @@ const WorkVideoPlayer: FC<Props> = ({ video }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <>
+    <div className="flex justify-center items-center relative">
       <PlayIcon
-        className="w-4 h-4 cursor-pointer"
+        className="w-6 h-6 cursor-pointer scale-150"
+        title="Play Video"
         onClick={() => setIsModalOpen(true)}
       >
       </PlayIcon>
@@ -25,8 +27,9 @@ const WorkVideoPlayer: FC<Props> = ({ video }) => {
       {isModalOpen && video && (
         <DialogModal
           isOpen={isModalOpen}
+          showCloseButton={false}
           uniqueId={`${video.name}-${video.id}-work-video-player`}
-          className="rounded-xl absolute bg-white"
+          className="rounded-xl fixed inset-0 m-auto h-fit max-h-[90vh] w-fit border-none shadow-none"
           close={() => setIsModalOpen(false)}
         >
           <div className="flex flex-col min-w-[50vw] w-full">
@@ -36,7 +39,7 @@ const WorkVideoPlayer: FC<Props> = ({ video }) => {
                 src={video.link}
                 params={{
                   controls: true,
-                  autoplay: false,
+                  autoplay: true,
                 }}
                 title={video.name}
               />
@@ -44,7 +47,7 @@ const WorkVideoPlayer: FC<Props> = ({ video }) => {
           </div>
         </DialogModal>
       )}
-    </>
+    </div>
   );
 };
 
