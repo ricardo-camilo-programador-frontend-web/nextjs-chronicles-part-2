@@ -11,6 +11,7 @@ interface Props {
   isOpen: boolean;
   children?: ReactNode;
   className?: string;
+  style?: React.CSSProperties;
   showCloseButton?: boolean;
   closeOnClickOutside?: boolean;
   close: () => void;
@@ -23,6 +24,7 @@ const DialogModal: FC<Props> = ({
   children,
   showCloseButton = true,
   closeOnClickOutside = true,
+  style,
   close,
 }: Props) => {
   const router = useRouter();
@@ -66,12 +68,14 @@ const DialogModal: FC<Props> = ({
           id={uniqueId}
           data-modal
           className={`relative z-50 bg-transparent overflow-hidden border border-gray-50 text-secondary rounded-xl shadow-md overflow-y-auto ${className}`}
+          style={style}
         >
           <div className="flex justify-center align-center index-over-ride m-auto relative z-50">
             <div className="grid w-full px-2 md:px-8">
               {showCloseButton && (
                 <button
-                  className="w-auto ml-auto h-[0.5rem] absolute top-0 right-0 bg-transparent rounded-none border-none hover:bg-transparent hover:text-secondary text-end shadow-none p-4 z-auto"
+                  className="absolute bg-transparent bg-white border-none flex h-14 hover:bg-gray-100 hover:text-bold hover:text-red-500 hover:text-secondary items-center justify-center ml-auto p-4 right-0 rounded-full shadow-none text-4xl top-0 w-10 w-auto z-auto"
+                  title="Close"
                   onClick={handleWithCloseAction}
                 >
                   <XMarkIcon className="w-6 h-6 text-secondary text-xl hover:text-primary" />
