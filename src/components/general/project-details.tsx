@@ -109,7 +109,10 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           <Image
             src={image}
             alt={`${name} project screenshot`}
-            className="object-fill w-full h-full"
+            className="object-scale-down object-center w-full h-full"
+            style={{
+              backgroundColor: `${color.bgColor}20`,
+            }}
             priority
           />
         </Shape>
@@ -133,7 +136,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
       </div>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center h-10 border-b mb-2">
             <Typography variant="h3" component="h3">
               {name}
             </Typography>
