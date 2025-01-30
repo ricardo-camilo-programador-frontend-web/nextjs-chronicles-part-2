@@ -14,6 +14,7 @@ import { ArrowRightIcon, ArrowUpRight } from 'lucide-react';
 import { Videos } from '@/types/Videos';
 import WorkVideoPlayer from '@/blocks/work/workVideoPlayer';
 import Link from "@/components/general/link";
+import VideoPlayer from '../VideoPlayer';
 
 interface ProjectDetailsProps {
   id: string;
@@ -30,10 +31,10 @@ interface ProjectDetailsProps {
   children?: ReactNode;
 }
 
-const Shape: FC<PropertyColors & { children?: ReactNode, href: string }> = ({ bgColor, borderColor, children, href }) => {
+const Shape: FC<PropertyColors & { children?: ReactNode, href: string, className: string }> = ({ bgColor, borderColor, children, href, className }) => {
   return (
-    <Link href={href} className="relative w-[418px] h-[298px] rounded-lg group cursor-pointer">
-      <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
+    <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group ", className)}>
+      <div className="absolute cursor-pointer -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
@@ -85,7 +86,7 @@ const Shape: FC<PropertyColors & { children?: ReactNode, href: string }> = ({ bg
       <div className="absolute inset-0 overflow-hidden">
         {children}
       </div>
-    </Link>
+    </div>
   );
 };
 
@@ -127,21 +128,35 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
       className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group"
     >
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
-        <Shape borderColor={color.borderColor} href={href}>
+        <Shape borderColor={color.borderColor} href={href} className="group">
           <Image
             src={image}
             alt={`${name} project screenshot`}
-            className="object-scale-down object-center w-full h-full"
+            className="object-scale-down object-center w-full h-full group-hover:hidden"
             style={{
               backgroundColor: `${color.bgColor}20`,
             }}
             priority
           />
+
+          {currentVideo.link && (
+            <VideoPlayer
+              className="rounded-xl w-full h-full hidden group-hover:block mt-0 z-[60]"
+              src={currentVideo.link}
+              params={{
+                controls: true,
+                autoplay: true,
+                loop: true,
+                muted: true,
+              }}
+              title={currentVideo.name}
+            />
+          )}
         </Shape>
 
-        <div
+        <Link href={href}
           className={twMerge(
-            'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2 z-[3]',
+            'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2 z-[50]',
             colorClass.bgColor,
             colorClass.borderColor
           )}>
@@ -160,7 +175,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
               </div>
             </div>
           </CircularButton>
-        </div>
+        </Link>
       </div>
 
       <div
@@ -177,11 +192,6 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
             <Typography variant="h3" component="h3">
               {name}
             </Typography>
-            <div className="flex gap-2 relative cursor-pointer">
-                <WorkVideoPlayer
-                  video={currentVideo}
-                />
-            </div>
           </div>
           <div className="flex flex-col gap-1 md:min-h-[8rem]">
             <Typography variant="body1">{description}</Typography>
