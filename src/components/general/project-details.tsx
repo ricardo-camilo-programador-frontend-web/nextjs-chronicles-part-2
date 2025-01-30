@@ -4,9 +4,7 @@ import type { FC , ReactNode } from 'react';
 import { Fragment, useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
-
 import { twMerge } from 'tailwind-merge';
-
 import { SKILLS } from '@/lib/data';
 import Typography from '@/components/general/typography';
 import Skill from '@/components/general/skill';
@@ -15,7 +13,6 @@ import { CircularButton } from '@/components/CircularButton';
 import { ArrowRightIcon } from 'lucide-react';
 import { Videos } from '@/types/Videos';
 import WorkVideoPlayer from '@/blocks/work/workVideoPlayer';
-
 
 interface ProjectDetailsProps {
   id: string;
