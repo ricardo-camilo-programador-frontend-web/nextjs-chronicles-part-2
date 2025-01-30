@@ -6,7 +6,6 @@ import DialogModal from "@/components/DialogModal";
 import VideoPlayer from "@/components/VideoPlayer";
 import type { Videos } from '@/types/Videos';
 import { PlayIcon } from '@heroicons/react/24/outline';
-import { PropertyColors } from '@/types/PropertyColors';
 
 interface Props {
   video: Videos | null;
@@ -29,7 +28,6 @@ const WorkVideoPlayer: FC<Props> = ({ video }) => {
           isOpen={isModalOpen}
           showCloseButton={false}
           uniqueId={`${video.name}-${video.id}-work-video-player`}
-          className="rounded-xl fixed inset-0 m-auto h-fit max-h-[90vh] w-fit border-none shadow-none"
           close={() => setIsModalOpen(false)}
         >
           <div className="flex flex-col min-w-[50vw] w-full">
