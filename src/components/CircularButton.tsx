@@ -1,5 +1,3 @@
-import { useRef } from "react";
-
 import type { FC } from 'react';
 import { PropertyColors } from '@/types/PropertyColors';
 import { twMerge } from 'tailwind-merge';
