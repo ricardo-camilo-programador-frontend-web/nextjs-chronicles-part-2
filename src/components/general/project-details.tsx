@@ -68,7 +68,7 @@ const Shape: FC<PropertyColors & { children?: ReactNode }> = ({ bgColor, borderC
         <circle 
           r="4" 
           fill={borderColor}
-          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 scale-150">
           <animateMotion
             dur="10s"
             repeatCount="indefinite"
