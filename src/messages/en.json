@@ -72,7 +72,7 @@
       "savana": {
         "name": "🦁 Savana - NuxtJS",
         "video": "https://youtu.be/cFdw2yfFPKw",
-        "description": "Exploring the power of Nuxt 3! On going project, ",
+        "description": "Exploring the power of Nuxt 3! On going project, with a focus on scalability and performance. Implementing advanced features like internationalization (i18n) and SEO optimizations, this platform demonstrates the power of modern development with Vue.js. The focus on performance and user experience results in an application that stands out for its speed and usability.",
         "seeMore": "See details",
         "techs": "TypeScript,Nuxt3,TailwindCSS,i18n",
         "color": {
