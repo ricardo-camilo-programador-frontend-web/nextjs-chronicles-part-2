@@ -73,8 +73,11 @@ const DialogModal: FC<Props> = ({
         <dialog
           id={uniqueId}
           data-modal
-          className={`relative z-50 bg-transparent overflow-hidden text-secondary rounded-xl overflow-y-auto ${className}`}
-          style={style}
+          className={`relative z-50 bg-transparent overflow-hidden text-secondary appearance-none border-none rounded-xl overflow-y-auto ${className}`}
+          style={{
+            ...style,
+            marginTop: `${currentScroll}px`,
+          }}
         >
           <div className="flex justify-center align-center index-over-ride m-auto relative z-50">
             <div className="grid w-full px-2 md:px-8">
