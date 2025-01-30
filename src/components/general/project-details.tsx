@@ -34,7 +34,7 @@ interface ProjectDetailsProps {
 const Shape: FC<PropertyColors & { children?: ReactNode, href: string, className: string }> = ({ bgColor, borderColor, children, href, className }) => {
   return (
     <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group ", className)}>
-      <div className="absolute cursor-pointer -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
+      <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
@@ -141,7 +141,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
 
           {currentVideo.link && (
             <VideoPlayer
-              className="rounded-xl w-full h-full hidden group-hover:block mt-0 z-[60]"
+              className="rounded-xl w-full h-full hidden group-hover:block mt-0 z-[999]"
               src={currentVideo.link}
               params={{
                 controls: true,
