@@ -9,9 +9,10 @@ interface CircularButtonProps {
   id: string;
   color: PropertyColors;
   colorClass: PropertyColors;
+  message?: string;
 }
 
-export const CircularButton: FC<CircularButtonProps> = ({ id, color, colorClass }) => {
+export const CircularButton: FC<CircularButtonProps> = ({ id, color, colorClass, message = 'See More • Click to visit the project •' }) => {
   return (
     <div
       id={id}
@@ -30,7 +31,7 @@ export const CircularButton: FC<CircularButtonProps> = ({ id, color, colorClass 
           />
           <text className="text-[13px] uppercase">
             <textPath href="#textCircle" startOffset="0%">
-              See More • Click to visit the project •
+              {message}
             </textPath>
           </text>
         </svg>
