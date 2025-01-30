@@ -1,6 +1,6 @@
 'use client';
 
-import type { FC , ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import { Fragment, useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
@@ -32,9 +32,9 @@ interface ProjectDetailsProps {
 const Shape: FC<PropertyColors & { children?: ReactNode }> = ({ bgColor, borderColor, children }) => {
   return (
     <div className="relative w-[418px] h-[298px] rounded-lg">
-      <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full"/>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
+      <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
         width="100%"
         height="100%"
         fill="none"
@@ -60,6 +60,11 @@ const Shape: FC<PropertyColors & { children?: ReactNode }> = ({ bgColor, borderC
           mask={`url(#${bgColor})`}
         />
       </svg>
+
+      <div className="bg-white absolute h-6 w-6 right-[3.7rem] -top-[0.7rem] rounded-full z-[3]"></div>
+
+      <div className="bg-white absolute h-6 w-6 -right-[1rem] top-[3rem] rounded-full z-[3]"></div>
+
       <div className="absolute inset-0 overflow-hidden">
         {children}
       </div>
@@ -147,7 +152,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
             </div>
           </div>
           <div className="flex flex-col gap-1 md:min-h-[8rem]">
-          <Typography variant="body1">{description}</Typography>
+            <Typography variant="body1">{description}</Typography>
           </div>
         </div>
 
