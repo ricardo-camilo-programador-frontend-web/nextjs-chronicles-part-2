@@ -13,11 +13,14 @@ import Skill from '@/components/general/skill';
 import { PropertyColors } from '@/types/PropertyColors';
 import { CircularButton } from '@/components/CircularButton';
 import { ArrowRightIcon } from 'lucide-react';
-import { text } from 'stream/consumers';
+import { Videos } from '@/types/Videos';
+import WorkVideoPlayer from '@/blocks/work/workVideoPlayer';
+
 
 interface ProjectDetailsProps {
   id: string;
   name: string;
+  video: string;
   description: string;
   techs?: string[];
   isDescriptionOnLeft: boolean;
@@ -70,15 +73,21 @@ const Shape: FC<PropertyColors & { children?: ReactNode }> = ({ bgColor, borderC
 const ProjectDetails: FC<ProjectDetailsProps> = ({
   id,
   name,
+  video,
   description,
   techs,
   image,
   color,
   colorClass,
   href,
-  seeMore
+  seeMore,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState<any[]>([]);
+  const currentVideo: Videos = {
+    id: id,
+    name: name,
+    link: video,
+  };
 
   const renderTechs = () => {
     let filteredTechsLocal = [] as any;
@@ -88,12 +97,15 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
 
   useEffect(() => {
     renderTechs();
+  }, [video]);
+
+  useEffect(() => {
+    renderTechs();
   }, []);
 
   return (
     <div
-      className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full cursor-pointer group"
-      onClick={() => window.open(href, '_blank')}
+      className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group"
     >
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
         <Shape borderColor={color.borderColor}>
@@ -124,9 +136,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
       </div>
       <div className="flex flex-col gap-6">
         <div className="flex flex-col gap-1">
-          <Typography variant="h3" component="h3">
-            {name}
-          </Typography>
+          <div className="flex justify-between items-center">
+            <Typography variant="h3" component="h3">
+              {name}
+            </Typography>
+            <div className="flex gap-2">
+              <WorkVideoPlayer
+                video={currentVideo}
+              />
+            </div>
+          </div>
           <div className="flex flex-col gap-1 md:min-h-[8rem]">
           <Typography variant="body1">{description}</Typography>
           </div>
