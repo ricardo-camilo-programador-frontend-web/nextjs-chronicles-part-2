@@ -22,7 +22,7 @@ export const CircularButton: FC<CircularButtonProps> = ({ id, color, className, 
         className="absolute inset-0 w-full h-full transition-all duration-700 ease-in-out opacity-0 group-hover:opacity-100"
         style={{ transformOrigin: 'center center' }}
       >
-        <svg viewBox="0 0 100 100" className="w-full h-full transform-gpu rotate-[-90deg] animate-spin duration-1000 ease-in-out">
+        <svg viewBox="0 0 100 100" className="w-full transition-all duration-1000 ease-in-out h-full animate-spin">
           <path
             id="textCircle"
             d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
