@@ -190,7 +190,10 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
             'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2 z-40 bg-white',
             colorClass.bgColor,
             colorClass.borderColor
-          )}>
+          )}
+          rel="noopener noreferrer"
+          title={seeMore}
+        >
           <CircularButton id={id} color={color} colorClass={colorClass} className="group bg-white rounded-full h-16 w-16">
             <div
               className={twMerge(

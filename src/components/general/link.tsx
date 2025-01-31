@@ -9,6 +9,8 @@ export interface LinkProps extends NextLinkProps {
   withUnderline?: boolean;
   href: string;
   variant?: 'light' | 'dark';
+  rel?: string;
+  title?: string;
   children: ReactNode;
 }
 
@@ -19,6 +21,8 @@ const Link: FC<LinkProps> = ({
   className,
   withUnderline,
   externalLink,
+  rel,
+  title,
 }: LinkProps) => {
   return (
     <NextLink
@@ -31,7 +35,10 @@ const Link: FC<LinkProps> = ({
           : 'text-white hover:underline hover:text-zinc-200 hover:underline-offset-4 hover:decoration-zinc-200 active:text-white',
         withUnderline && 'underline underline-offset-4',
         className
-      )}>
+      )}
+      rel={rel}
+      title={title}
+    >
       {children}
     </NextLink>
   );
