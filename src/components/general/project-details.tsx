@@ -12,7 +12,6 @@ import { PropertyColors } from '@/types/PropertyColors';
 import { CircularButton } from '@/components/CircularButton';
 import { ArrowRightIcon, ArrowUpRight } from 'lucide-react';
 import { Videos } from '@/types/Videos';
-import WorkVideoPlayer from '@/blocks/work/workVideoPlayer';
 import Link from "@/components/general/link";
 import VideoPlayer from '../VideoPlayer';
 
@@ -31,7 +30,20 @@ interface ProjectDetailsProps {
   children?: ReactNode;
 }
 
-const Shape: FC<PropertyColors & { children?: ReactNode, href: string, className?: string }> = ({ bgColor, borderColor, children, href, className }) => {
+interface ShapeProps {
+  bgColor: string | undefined;
+  borderColor: string | undefined;
+  children?: ReactNode;
+  href: string;
+  className?: string;
+}
+
+const Shape: FC<ShapeProps> = ({
+  bgColor,
+  borderColor,
+  children,
+  className
+}) => {
   return (
     <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group ", className)}>
       <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
@@ -53,7 +65,6 @@ const Shape: FC<PropertyColors & { children?: ReactNode, href: string, className
         </mask>
 
         <path
-          fill={bgColor}
           className="z-[3]"
           fillRule="evenodd"
           d="M327.134 0c6.308 0 10.359 7.185 8.773 13.29a47.05 47.05 0 0 0-1.509 11.857c0 25.957 21.043 47 47 47 6.671 0 13.016-1.39 18.763-3.895C407.079 65.237 418 69.747 418 77.293V290a8 8 0 0 1-8 8H8a8 8 0 0 1-8-8V8a8 8 0 0 1 8-8h319.134Z"
@@ -126,7 +137,11 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   return (
     <div className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group">
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
-        <Shape borderColor={color.borderColor} href={href}>
+        <Shape
+          bgColor={color.bgColor}
+          borderColor={color.borderColor}
+          href={href}
+        >
           <Image
             src={image}
             alt={`${name} project screenshot`}
