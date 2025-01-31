@@ -114,10 +114,18 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   seeMore,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState<any[]>([]);
-  const currentVideo: Videos = {
+  const [currentVideo, setCurrentVideo] = useState<Videos>({
     id: id,
     name: name,
     link: video,
+  });
+
+  const handleVideoClick = (video: string) => {
+    setCurrentVideo({
+      id: id,
+      name: name,
+      link: video,
+    });
   };
 
   const renderTechs = () => {
@@ -135,7 +143,15 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   }, []);
 
   return (
-    <div className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group">
+    <div
+      className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group"
+      onMouseEnter={() => handleVideoClick(video)}
+      onMouseLeave={() => setCurrentVideo({
+        id: id,
+        name: name,
+        link: '',
+      })}
+    >
       <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
         <Shape
           bgColor={color.bgColor}
