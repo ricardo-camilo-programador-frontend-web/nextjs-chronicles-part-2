@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { FC, ReactNode } from 'react';
 import NextLink, { LinkProps as NextLinkProps } from 'next/link';
 
 import { twMerge } from 'tailwind-merge';
@@ -12,7 +12,7 @@ export interface LinkProps extends NextLinkProps {
   children: ReactNode;
 }
 
-const Link = ({
+const Link: FC<LinkProps> = ({
   children,
   href,
   variant = 'light',
