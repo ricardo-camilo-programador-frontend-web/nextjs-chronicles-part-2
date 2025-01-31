@@ -45,7 +45,7 @@ const Shape: FC<ShapeProps> = ({
   className
 }) => {
   return (
-    <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group ", className)}>
+    <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out", className)}>
       <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
