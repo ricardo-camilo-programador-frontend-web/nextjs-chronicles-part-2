@@ -3,11 +3,11 @@ import type { StaticImageData } from 'next/image';
 
 import Typography from '@/components/general/typography';
 
-type SkillProps = {
-  variant?: 'sm' | 'md';
+interface SkillProps {
   label: string;
-  icon: StaticImageData;
-};
+  icon: StaticImageData | string;
+  variant?: 'sm' | 'lg';
+}
 
 const Skill = ({ variant = 'sm', label, icon }: SkillProps) => {
   return (
