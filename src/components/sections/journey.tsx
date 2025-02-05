@@ -27,7 +27,12 @@ const Journey = () => {
             <div className="flex gap-3 flex-wrap">
               {skills.map((skill) => (
                 <Fragment key={skill.label}>
-                  <Skill icon={skill.icon} label={skill.label} variant="md" />
+                  <Skill
+                    icon={skill.icon}
+                    label={skill.label}
+                    variant="sm"
+                    id={`skill-${skill.label}-${skill.icon}`}
+                  />
                 </Fragment>
               ))}
             </div>
