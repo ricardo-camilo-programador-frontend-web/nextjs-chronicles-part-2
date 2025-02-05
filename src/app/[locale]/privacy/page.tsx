@@ -9,7 +9,7 @@ export default function PrivacyPolicy() {
         <div className="prose dark:prose-invert max-w-none space-y-6">
           <p>
             Your privacy is important to us. It is 🎭 Persona - NextJS Chronicles
-            Part 2's policy to respect your privacy regarding any information
+            Part 2&apos;s policy to respect your privacy regarding any information
             we may collect from you on the
             <a
               href={`${process.env.NEXT_PUBLIC_URL}/`}
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
           <p>
             We only request personal information when we truly need it to
             provide you with a service. We collect it through fair and lawful
-            means, with your knowledge and consent. We also inform you why we're
+            means, with your knowledge and consent. We also inform you why we&apos;re
             collecting it and how it will be used.
           </p>
           <p>
@@ -32,11 +32,11 @@ export default function PrivacyPolicy() {
             unauthorized access, disclosure, copying, use, or modification.
           </p>
           <p>
-            We don't share personally identifying information publicly or with
+            We don&apos;t share personally identifying information publicly or with
             third parties, except when required by law.
           </p>
           <p>
-            Our website may link to external sites that we don't operate. Please
+            Our website may link to external sites that we don&apos;t operate. Please
             be aware that we have no control over the content and practices of
             these sites and cannot accept responsibility for their respective &nbsp;
             <a
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
               href={`https://transparencyreport.google.com/safe-browsing/search?url=${process.env.NEXT_PUBLIC_URL}`}
               rel="noopener noreferrer"
             >
-              Google's security tool
+              Google&apos;s security tool
             </a>
             shows that the site is secure.
           </p>
@@ -111,7 +111,7 @@ export default function PrivacyPolicy() {
               information they collect, how we use it, and why we sometimes need
               to store these cookies. We will also share how you can prevent
               these cookies from being stored, however, this may downgrade or
-              'break' certain elements of the site's functionality.
+              &apos;break&apos; certain elements of the site&apos;s functionality.
             </p>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function PrivacyPolicy() {
               our users appreciate the most.
             </li>
             <li>
-              As we sell products, it's important for us to understand
+              As we sell products, it&apos;s important for us to understand
               statistics about how many visitors our site actually buys and,
               therefore, this is the type of data these cookies track. This is
               important for you because it means we can make accurate business
@@ -364,8 +364,8 @@ export default function PrivacyPolicy() {
         <div className="prose dark:prose-invert max-w-none">
           <p>
             Hopefully, this has clarified things for you and as mentioned
-            before, if there is something that you aren't sure whether you need
-            or not, it's usually safer to leave cookies enabled in case they
+            before, if there is something that you aren&apos;t sure whether you need
+            or not, it&apos;s usually safer to leave cookies enabled in case they
             interact with one of the features you use on our site.
           </p>
         </div>
