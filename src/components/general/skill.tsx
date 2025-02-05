@@ -19,7 +19,7 @@ const Skill = ({ variant = 'sm', label, icon, id }: SkillProps) => {
 
       <div
         id={rippleId}
-        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 hover:bg-zinc-100 active:bg-zinc-200 overflow-hidden hover:border-[#6de0ec] shadow-xs hover:shadow-sm hover:shadow-[#6de0ec]'}
+        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 hover:bg-zinc-100 active:bg-zinc-200 overflow-hidden hover:border-[#6de0ec] shadow-xs hover:shadow-sm hover:shadow-[#6de0ec] transition-all duration-300 ease-in-out'}
         title={label}
         aria-label={label}
       >
