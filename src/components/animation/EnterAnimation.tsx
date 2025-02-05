@@ -8,9 +8,10 @@ interface EnterAnimationProps {
   children: React.ReactNode;
   duration?: number;
   visualDuration?: number;
+  bounce?: number;
 }
 
-const EnterAnimation = ({ id, className, children, duration = 0.4, visualDuration = 0.4 }: EnterAnimationProps) => {
+const EnterAnimation = ({ id, className, children, duration = 0.4, visualDuration = 0.4, bounce = 0.5 }: EnterAnimationProps) => {
   const rippleId = `ripple-${id}`
 
   return (
@@ -20,7 +21,7 @@ const EnterAnimation = ({ id, className, children, duration = 0.4, visualDuratio
       animate={{ opacity: 1, scale: 1 }}
       transition={{
         duration: duration,
-        scale: { type: "spring", visualDuration: visualDuration, bounce: 0.5 },
+        scale: { type: "spring", visualDuration: visualDuration, bounce: bounce },
       }}
       className={className}
     >
