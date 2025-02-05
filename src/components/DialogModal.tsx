@@ -1,10 +1,9 @@
 'use client';
 
 import type { FC, ReactNode } from "react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { isClickOutsideElement } from "@/utils/isClickOutsideElement";
-import { useRouter } from "next/navigation";
 
 interface Props {
   uniqueId: string;
@@ -27,7 +26,6 @@ const DialogModal: FC<Props> = ({
   style,
   close,
 }: Props) => {
-  const router = useRouter();
   const currentScroll = window.scrollY;
 
   useEffect(() => {
