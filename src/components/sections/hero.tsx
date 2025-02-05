@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
+import RippleEffect from '@/components/RippleEffect';
 import Typography from '@/components/general/typography';
 import Social from '@/components/general/social';
 import { StarRating } from '@/components/StarRating';
@@ -10,7 +11,9 @@ const Hero = () => {
   const t = useTranslations('hero');
 
   return (
-    <section className="w-full pb-24 pt-16 flex justify-center max-lg:py-16 max-lg:pt-0">
+    <section
+      className="w-full pb-24 pt-16 flex justify-center max-lg:py-16 max-lg:pt-0"
+    >
       <div className="w-full max-w-[1120px] px-8 flex justify-between items-center max-lg:max-full max-lg:flex-col max-lg:p-4 max-lg:pt-0 max-xl:w-full gap-8">
         <div className="flex flex-col gap-12 max-lg:order-1 max-w-prose">
           <div className="flex flex-col gap-8">
@@ -38,13 +41,19 @@ const Hero = () => {
           </div>
           <Social variant="light" />
         </div>
-        <div className="overflow-hidden rounded-[168px] rounded-bl max-lg:order-0 max-lg:rounded-[40px] max-lg:rounded-bl max-h-[450px] max-md:max-h-auto">
+
+        <RippleEffect id="hero-ricardo-camilo" />
+  
+        <div
+          id="hero-ricardo-camilo"
+          className="overflow-hidden rounded-[168px] rounded-bl max-lg:order-0 max-lg:rounded-[40px] max-lg:rounded-bl max-h-[450px] max-md:max-h-auto"
+        >
           <Image
             src={Ricardo}
             alt="Ricardo Camilo - Programador Frontend Web Developer"
             title="Ricardo Camilo - Programador Frontend Web Developer"
             width={400}
-            className="object-cover"
+            className="object-cover relative"
           />
         </div>
       </div>
