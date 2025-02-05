@@ -1,67 +1,61 @@
 'use client';
 
 import type { FC } from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 interface Props {
   className?: string;
   src: string;
-  params?: Record<string, any>;
+  params?: Record<string, string | number>;
   title?: string;
 }
 
 interface VideoOption {
   reg: RegExp;
   url: string;
-  params: Record<string, any>;
+  params: Record<string, string | number>;
 }
 
 const EmbedVimeo: FC<Props> = ({ className, src, params = {}, title }) => {
   const [valid, setValid] = useState(false);
   const [url, setUrl] = useState("");
-  const videoOptions: VideoOption[] = [
-    {
-      // eslint-disable-next-line no-useless-escape
-      reg: /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/i,
-      url: "https://www.youtube.com/embed/$5",
-      params: {
-        "picture-in-picture": 1,
-        accelerometer: 1,
-        gyroscope: 1,
-      },
-    },
-    {
-      reg: /^.*vimeo.com\/(\d+)($|\/|\b)/i,
-      url: "https://player.vimeo.com/video/$1",
-      params: {
-        title: 0,
-        byline: 0,
-        portrait: 0,
-      },
-    },
-    {
-      // eslint-disable-next-line no-useless-escape
-      reg: /^.*(?:\/video|dai.ly)\/([A-Za-z0-9]+)([^#\&\?]*).*/i,
-      url: "https://www.dailymotion.com/embed/video/$1",
-      params: {
-        autoplay: 0,
-      },
-    },
-    {
-      // eslint-disable-next-line no-useless-escape
-      reg: /^.*coub.com\/(?:embed|view)\/([A-Za-z0-9]+)([^#\&\?]*).*/i,
-      url: "https://coub.com/embed/$1",
-      params: {
-        autoplay: 0,
-      },
-    },
-  ];
 
-  useEffect(() => {
-    videoLinkIsValid();
-  }, [src]);
+  const videoLinkIsValid = useCallback(() => {
+    const videoOptions: VideoOption[] = [
+      {
+        reg: /^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$/i,
+        url: "https://www.youtube.com/embed/$5",
+        params: {
+          "picture-in-picture": 1,
+          accelerometer: 1,
+          gyroscope: 1,
+        },
+      },
+      {
+        reg: /^.*vimeo.com\/(\d+)($|\/|\b)/i,
+        url: "https://player.vimeo.com/video/$1",
+        params: {
+          title: 0,
+          byline: 0,
+          portrait: 0,
+        },
+      },
+      {
+        reg: /^.*(?:\/video|dai.ly)\/([A-Za-z0-9]+)([^#\&\?]*).*/i,
+        url: "https://www.dailymotion.com/embed/video/$1",
+        params: {
+          autoplay: 0,
+        },
+      },
+      {
+        reg: /^.*coub.com\/(?:embed|view)\/([A-Za-z0-9]+)([^#\&\?]*).*/i,
+        url: "https://coub.com/embed/$1",
+        params: {
+          autoplay: 0,
+        },
+      },
+    ];
 
-  const videoLinkIsValid = () => {
     if (src) {
       for (const option of videoOptions) {
         const video = option;
@@ -75,14 +69,16 @@ const EmbedVimeo: FC<Props> = ({ className, src, params = {}, title }) => {
           const and = video.url.indexOf("?") >= 0 ? "&" : "?";
           setUrl(src.replace(video.reg, video.url) + and + query);
           setValid(true);
-
           return;
         }
       }
     }
-
     setValid(false);
-  };
+  }, [src, params]);
+
+  useEffect(() => {
+    videoLinkIsValid();
+  }, [src, videoLinkIsValid]);
 
   return valid ? (
     <div
