@@ -134,7 +134,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   };
 
   const renderTechs = () => {
-    const filteredTechsLocal = SKILLS.filter((skill) => 
+    const filteredTechsLocal = SKILLS.filter((skill) =>
       techs?.includes(skill.label)
     ) as Skill[];
     setFilteredTechs(filteredTechsLocal);
@@ -196,9 +196,9 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           rel="noopener noreferrer"
           title={seeMore}
         >
-          <CircularButton 
-            id={id} 
-            color={color} 
+          <CircularButton
+            id={id}
+            color={color}
             className="group bg-white rounded-full h-16 w-16"
           >
             <div
@@ -250,7 +250,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
         <div className="flex gap-2 flex-wrap">
           {filteredTechs.map((tech: Skill) => (
             <Fragment key={tech.label}>
-              <Skill label={tech.label} icon={tech.icon} variant="sm" />
+              <Skill
+              label={tech.label}
+              icon={tech.icon}
+              variant="sm"
+              id={`skill-${tech.label}-${id}-${tech.icon}`}
+            />
             </Fragment>
           ))}
         </div>
