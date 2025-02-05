@@ -14,7 +14,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from '@/components/general/drawer';
-import Link, { LinkProps } from '@/components/general/link';
+import Link from '@/components/general/link';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { locales } from '@/config/i18n-config';
 
