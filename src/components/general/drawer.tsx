@@ -1,4 +1,4 @@
-import type { FC, ComponentPropsWithoutRef, RefObject } from 'react';
+import type { FC, ComponentPropsWithoutRef } from 'react';
 import { forwardRef } from 'react';
 import * as DrawerPrimitive from '@radix-ui/react-dialog';
 
@@ -11,7 +11,7 @@ const DrawerClose = DrawerPrimitive.Close;
 const DrawerOverlay: FC<ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>> = forwardRef<
   HTMLDivElement,
   ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
->(({ className, ...props }, ref) => (
+>(({ ...props }, ref) => (
   <DrawerPrimitive.Overlay
     className={'fixed inset-0 z-50 bg-gray-900/10 opacity-100 backdrop-blur-sm'}
     {...props}
@@ -20,13 +20,12 @@ const DrawerOverlay: FC<ComponentPropsWithoutRef<typeof DrawerPrimitive.Overlay>
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
-interface DrawerContentProps
-  extends ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> {}
+type DrawerContentProps = ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>;
 
 const DrawerContent = forwardRef<
   HTMLDivElement,
   DrawerContentProps
->(({ className, children, ...props }, ref) => (
+>(({ children, ...props }, ref) => (
   <DrawerPrimitive.Portal>
     <DrawerOverlay />
     <DrawerPrimitive.Content
