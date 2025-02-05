@@ -1,7 +1,9 @@
+import type { FC } from 'react';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Typography from '@/components/general/typography';
-import RippleEffect from '@/components/RippleEffect';
+import EnterAnimation from '@/components/animation/EnterAnimation';
+import RippleEffect from '@/components/animation/RippleEffect';
 
 interface SkillProps {
   label: string;
@@ -10,16 +12,16 @@ interface SkillProps {
   variant?: 'sm' | 'lg';
 }
 
-const Skill = ({ variant = 'sm', label, icon, id }: SkillProps) => {
+const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id }) => {
   const rippleId = `ripple-${id}`
 
   return (
-    <>
+    <EnterAnimation id={`skill-${id}-${rippleId}-enter-${icon}`}>
       <RippleEffect id={rippleId} />
 
       <div
         id={rippleId}
-        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 hover:bg-zinc-100 active:bg-zinc-200 overflow-hidden hover:border-[#6de0ec] shadow-xs hover:shadow-sm hover:shadow-[#6de0ec] transition-all duration-300 ease-in-out'}
+        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 overflow-hidden shadow-xs transition-all duration-300 ease-in-out hover:z-10 hover:border-primary'}
         title={label}
         aria-label={label}
       >
@@ -28,7 +30,7 @@ const Skill = ({ variant = 'sm', label, icon, id }: SkillProps) => {
           {label}
         </Typography>
       </div>
-    </>
+    </EnterAnimation>
   );
 };
 
