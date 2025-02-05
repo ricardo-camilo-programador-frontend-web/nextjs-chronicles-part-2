@@ -5,7 +5,9 @@ import IntroWarningModal from "@/blocks/IntroWarningModal";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Script from "next/script";
-import { NextIntlClientProvider, useMessages } from 'next-intl';
+import { createTranslator } from 'next-intl';
+import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -94,7 +96,7 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: title,
-    locale: "pt_BR",
+    locale: "en",
     images: [
       {
         url: "/images/open-graph-ricardo.png",
@@ -131,14 +133,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+async function getMessages(locale: string) {
+  try {
+    return (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
+}
+
+export default async function RootLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: {
   children: ReactNode;
   params: { locale: string };
 }) {
-  const messages = useMessages();
+  const isValidLocale = locale.includes(locale);
+  if (!isValidLocale) notFound();
+  const messages = await getMessages(locale);
+  const t = await createTranslator({ locale, messages });
 
   return (
     <html lang={locale}>
@@ -149,15 +162,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${montserrat.className} flex justify-center w-full flex-col`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <noscript>
-            <iframe
-              src={`https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`}
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            ></iframe>
-          </noscript>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           <main>{children}</main>
           <IntroWarningModal
@@ -174,7 +179,7 @@ export default function RootLayout({
         src="https://cdn.counter.dev/script.js"
         data-id={process.env.COUNTER_API_KEY}
         data-utcoffset="-3"
-      ></Script>
+      />
     </html>
   );
 }
