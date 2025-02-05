@@ -19,7 +19,9 @@ const Skill = ({ variant = 'sm', label, icon, id }: SkillProps) => {
 
       <div
         id={rippleId}
-        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 hover:bg-zinc-100 active:bg-zinc-200 overflow-hidden'}
+        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 hover:bg-zinc-100 active:bg-zinc-200 overflow-hidden hover:border-[#6de0ec] shadow-xs hover:shadow-sm hover:shadow-[#6de0ec]'}
+        title={label}
+        aria-label={label}
       >
         <Image src={icon} alt={label} className="w-6 h-6" />
         <Typography variant={variant === 'sm' ? 'body2' : 'body1'}>
