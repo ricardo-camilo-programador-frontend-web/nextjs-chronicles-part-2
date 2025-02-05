@@ -38,6 +38,11 @@ interface ShapeProps {
   className?: string;
 }
 
+interface Skill {
+  label: string;
+  icon: StaticImageData | string;
+}
+
 const Shape: FC<ShapeProps> = ({
   bgColor,
   borderColor,
@@ -113,7 +118,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   href,
   seeMore,
 }: ProjectDetailsProps) => {
-  const [filteredTechs, setFilteredTechs] = useState<any[]>([]);
+  const [filteredTechs, setFilteredTechs] = useState<Skill[]>([]);
   const [currentVideo, setCurrentVideo] = useState<Videos>({
     id: id,
     name: name,
@@ -129,18 +134,15 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   };
 
   const renderTechs = () => {
-    let filteredTechsLocal = [] as any;
-    filteredTechsLocal = SKILLS.filter((skill) => techs?.includes(skill.label));
+    const filteredTechsLocal = SKILLS.filter((skill) => 
+      techs?.includes(skill.label)
+    ) as Skill[];
     setFilteredTechs(filteredTechsLocal);
   };
 
   useEffect(() => {
     renderTechs();
-  }, [video]);
-
-  useEffect(() => {
-    renderTechs();
-  }, []);
+  }, [video, techs]);
 
   return (
     <div
@@ -174,10 +176,10 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                 className="rounded-xl w-full h-full hidden group-hover:block mt-0"
                 src={currentVideo.link}
                 params={{
-                  controls: true,
-                  autoplay: true,
-                  loop: true,
-                  muted: true,
+                  controls: "1",
+                  autoplay: "1",
+                  loop: "1",
+                  muted: "1",
                 }}
                 title={currentVideo.name}
               />
@@ -194,7 +196,11 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           rel="noopener noreferrer"
           title={seeMore}
         >
-          <CircularButton id={id} color={color} colorClass={colorClass} className="group bg-white rounded-full h-16 w-16">
+          <CircularButton 
+            id={id} 
+            color={color} 
+            className="group bg-white rounded-full h-16 w-16"
+          >
             <div
               className={twMerge(
                 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2',
@@ -242,7 +248,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
         </div>
 
         <div className="flex gap-2 flex-wrap">
-          {filteredTechs.map((tech: any) => (
+          {filteredTechs.map((tech: Skill) => (
             <Fragment key={tech.label}>
               <Skill label={tech.label} icon={tech.icon} variant="sm" />
             </Fragment>
