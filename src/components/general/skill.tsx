@@ -18,7 +18,6 @@ const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id }) => {
 
   return (
     <EnterAnimation
-      id={`skill-${id}-${rippleId}-enter-${icon}`}
       duration={0.4 + randomFromZeroToNinetnine * 0.1}
       visualDuration={0.4 + randomFromZeroToNinetnine * 0.2}
     >
