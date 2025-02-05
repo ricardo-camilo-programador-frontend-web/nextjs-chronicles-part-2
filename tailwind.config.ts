@@ -18,6 +18,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: '#6de0ec',
         purple: {
           100: '#EBE5ED',
           700: '#C6B3CF',
