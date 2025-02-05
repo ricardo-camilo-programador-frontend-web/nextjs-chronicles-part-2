@@ -15,7 +15,7 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
       {SOCIAL_LINKS.map((link) => (
         <Fragment key={link.href}>
           <Link
-            className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-[#6de0ec] hover:scale-150"
+            className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-primary hover:scale-150"
             variant={variant}
             href={link.href}
             externalLink>
