@@ -33,17 +33,17 @@ export default function IntroWarningModal({
   const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
 
   const clearLocalStorageAfterOneHour = () => {
-      const lastVisit = getItemFromLocalStorage("last-visit");
+    const lastVisit = getItemFromLocalStorage("last-visit");
 
-      if (lastVisit) {
-        const lastVisitDate = new Date(lastVisit);
+    if (lastVisit) {
+      const lastVisitDate = new Date(lastVisit);
 
-        if (lastVisitDate < oneHourAgo) {
-          removeItemFromLocalStorage("last-visit");
-          removeItemFromLocalStorage("intro-warning-modal");
-          removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
-        }
+      if (lastVisitDate < oneHourAgo) {
+        removeItemFromLocalStorage("last-visit");
+        removeItemFromLocalStorage("intro-warning-modal");
+        removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
       }
+    }
   };
 
   useEffect(() => {
@@ -54,35 +54,34 @@ export default function IntroWarningModal({
     setIsMounted(true);
     const userHasChosenToNotSeeAgain =
       getItemFromLocalStorage("intro-warning-modal") === "true";
-      saveItemOnLocalStorage("last-visit", new Date().toISOString());
+    saveItemOnLocalStorage("last-visit", new Date().toISOString());
 
     if (!getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME)) {
       saveItemOnLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME, "true");
+      setAnalyticsEnabled(true);
+    } else {
+      setAnalyticsEnabled(
+        getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME) === "true"
+      );
     }
-
-    setAnalyticsEnabled(
-      getItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME) === "true"
-    );
 
     const timer = setTimeout(() => {
       if (userHasChosenToNotSeeAgain) {
         setIsOpen(false);
-        saveItemOnLocalStorage("intro-warning-modal", "true");
-        saveItemOnLocalStorage(
-          ANALYTICS_LOCAL_STORAGE_NAME,
-          analyticsEnabled.toString()
-        );
       } else {
         setIsOpen(true);
-        saveItemOnLocalStorage("intro-warning-modal", "false");
-        saveItemOnLocalStorage(
-          ANALYTICS_LOCAL_STORAGE_NAME,
-          analyticsEnabled.toString()
-        );
       }
+      saveItemOnLocalStorage("intro-warning-modal", userHasChosenToNotSeeAgain.toString());
     }, 1000);
 
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    saveItemOnLocalStorage(
+      ANALYTICS_LOCAL_STORAGE_NAME,
+      analyticsEnabled.toString()
+    );
   }, [analyticsEnabled]);
 
   const handleCloseModal = () => {
