@@ -5,7 +5,6 @@ import IntroWarningModal from "@/blocks/IntroWarningModal";
 import "./globals.css";
 import Header from "@/components/layout/header";
 import Script from "next/script";
-import { createTranslator } from 'next-intl';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 
@@ -143,15 +142,13 @@ async function getMessages(locale: string) {
 
 export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: {
   children: ReactNode;
   params: { locale: string };
 }) {
-  const isValidLocale = locale.includes(locale);
-  if (!isValidLocale) notFound();
+  const locale = await params.locale;
   const messages = await getMessages(locale);
-  const t = await createTranslator({ locale, messages });
 
   return (
     <html lang={locale}>
@@ -162,7 +159,7 @@ export default async function RootLayout({
         />
       </head>
       <body className={`${montserrat.className} flex justify-center w-full flex-col`}>
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider messages={messages} locale={locale}>
           <Header />
           <main>{children}</main>
           <IntroWarningModal
@@ -174,7 +171,6 @@ export default async function RootLayout({
           />
         </NextIntlClientProvider>
       </body>
-
       <Script
         src="https://cdn.counter.dev/script.js"
         data-id={process.env.COUNTER_API_KEY}
