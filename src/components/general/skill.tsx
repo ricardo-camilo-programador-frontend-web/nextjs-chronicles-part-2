@@ -14,9 +14,14 @@ interface SkillProps {
 
 const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id }) => {
   const rippleId = `ripple-${id}`
+  const randomFromZeroToNinetnine = Math.floor(Math.random() * 10)
 
   return (
-    <EnterAnimation id={`skill-${id}-${rippleId}-enter-${icon}`}>
+    <EnterAnimation
+      id={`skill-${id}-${rippleId}-enter-${icon}`}
+      duration={0.4 + randomFromZeroToNinetnine * 0.1}
+      visualDuration={0.4 + randomFromZeroToNinetnine * 0.2}
+    >
       <RippleEffect id={rippleId} />
 
       <div
