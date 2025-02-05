@@ -18,7 +18,7 @@ const variantsMapping: KeyValuePairProps = {
   body2: 'text-xs text-gray-900',
 };
 
-let elementMapping: KeyValuePairProps = {
+const elementMapping: KeyValuePairProps = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
