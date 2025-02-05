@@ -5,13 +5,12 @@ import { twMerge } from 'tailwind-merge';
 interface CircularButtonProps {
   id: string;
   color: PropertyColors;
-  colorClass: PropertyColors;
   className?: string;
   children?: ReactNode;
   message?: string;
 }
 
-export const CircularButton: FC<CircularButtonProps> = ({ id, color, className, colorClass, children, message = 'See More • Click to visit the project •' }) => {
+export const CircularButton: FC<CircularButtonProps> = ({ id, color, className, children, message = 'See More • Click to visit the project •' }) => {
   return (
     <div
       id={id}
