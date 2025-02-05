@@ -249,14 +249,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
 
         <div className="flex gap-2 flex-wrap">
           {filteredTechs.map((tech: Skill) => (
-            <Fragment key={tech.label}>
-              <Skill
+            <Skill
               label={tech.label}
               icon={tech.icon}
               variant="sm"
-              id={`skill-${tech.label}-${id}-${tech.icon}`}
+              id={`skill-${id}-${tech.label}`}
             />
-            </Fragment>
           ))}
         </div>
       </div>
