@@ -7,7 +7,6 @@ import { SOCIAL_LINKS } from '@/lib/data';
 import EnterAnimation from '@/components/animation/EnterAnimation';
 
 const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
-  const randomFromZeroToNinetnine = Math.floor(Math.random() * 10)
   return (
     <div
       className={twMerge(
