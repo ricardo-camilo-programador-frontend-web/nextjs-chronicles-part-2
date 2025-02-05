@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import RippleEffect from '@/components/RippleEffect';
+import RippleEffect from '@/components/animation/RippleEffect';
 import Typography from '@/components/general/typography';
 import Social from '@/components/general/social';
 import { StarRating } from '@/components/StarRating';
@@ -26,7 +26,7 @@ const Hero = () => {
               </div>
               <Typography
                 variant="h1"
-                className="uppercase bg-gradient-to-r from-[#6de0ec] to-[#39757c] bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
+                className="uppercase bg-gradient-to-r from-primary to-[#39757c] bg-[length:100%_14px] bg-no-repeat bg-bottom w-fit">
                 RICARDO CAMILO
               </Typography>
             </div>
