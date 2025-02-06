@@ -28,6 +28,7 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
               rel="noopener noreferrer"
               title={link.label}
               aria-label={link.label}
+              withUnderline={false}
             >
               <link.icon />
             </Link>

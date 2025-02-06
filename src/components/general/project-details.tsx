@@ -239,10 +239,10 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           </div>
         </div>
 
-        <div className={twMerge('flex justify-end w-full items-center gap-2 text-sm group-hover:underline text-[${color.bgColor}]')}>
-          <a href={href} target="_blank" rel="noopener noreferrer">
+        <div className={twMerge('flex justify-end w-full items-center gap-2 text-sm text-[${color.bgColor}]')}>
+          <Link href={href} externalLink>
             {seeMore}
-          </a>
+          </Link>
           <ArrowRightIcon
             className={`w-4 h-4 transition-all duration-300 group-hover:translate-x-2`}
           />

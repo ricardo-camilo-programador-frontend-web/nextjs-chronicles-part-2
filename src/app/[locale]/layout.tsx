@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
 import "./globals.css";
 import "@/assets/css/scrollDriven.css";
+import "@/assets/css/animatedUnderline.css";
 import Header from "@/components/layout/header";
 import Script from "next/script";
 import { NextIntlClientProvider } from 'next-intl';

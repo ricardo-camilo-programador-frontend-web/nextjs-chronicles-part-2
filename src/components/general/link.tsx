@@ -19,7 +19,7 @@ const Link: FC<LinkProps> = ({
   href,
   variant = 'light',
   className,
-  withUnderline,
+  withUnderline = true,
   externalLink,
   rel,
   title,
@@ -31,9 +31,9 @@ const Link: FC<LinkProps> = ({
       className={twMerge(
         'w-max text-base',
         variant === 'light'
-          ? 'text-zinc-950 hover:underline hover:text-zinc-950 hover:underline-offset-4 hover:decoration-zinc-200 active:text-zinc-950'
-          : 'text-white hover:underline hover:text-zinc-200 hover:underline-offset-4 hover:decoration-zinc-200 active:text-white',
-        withUnderline && 'underline underline-offset-4',
+          ? 'text-zinc-950 hover:text-zinc-950 hover:decoration-zinc-200 active:text-zinc-950'
+          : 'text-white hover:text-zinc-200 hover:decoration-zinc-200 active:text-white',
+        withUnderline && 'animate-underline',
         className
       )}
       rel={rel}
