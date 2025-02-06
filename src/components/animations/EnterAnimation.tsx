@@ -9,22 +9,24 @@ interface EnterAnimationProps {
   visualDuration?: number;
   bounce?: number;
   grabEnabled?: boolean;
+  hoverEnabled?: boolean;
 }
 
 const EnterAnimation = ({
-  className,
+  className = "w-full",
   children,
   duration = 0.4,
   visualDuration = 0.4,
   bounce = 0.5,
   grabEnabled = true,
+  hoverEnabled = false,
 }: EnterAnimationProps) => {
 
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
-      whileHover={grabEnabled ? { scale: 1.05 } : undefined}
+      whileHover={hoverEnabled ? { scale: 1.6 } : undefined}
       whileTap={grabEnabled ? { scale: 0.95 } : undefined}
       drag={grabEnabled}
       dragConstraints={{
