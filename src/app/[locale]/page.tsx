@@ -6,8 +6,6 @@ import Hero from "@/components/sections/hero";
 import Testimonials from "@/components/sections/testimonials";
 import Work from "@/components/sections/work";
 import Companies from "@/components/general/companies";
-import ScrollReveal from "@/components/animations/ScrollReveal";
-import EnterAnimation from "@/components/animations/EnterAnimation";
 
 export default function Home() {
   return (
@@ -16,37 +14,17 @@ export default function Home() {
         <meta property="og:image" content="/images/open-graph-ricardo.png" />
       </Head>
 
-      <EnterAnimation>
-        <Hero />
-      </EnterAnimation>
+      <Hero />
 
-      <ScrollReveal direction="left">
-        <EnterAnimation>
-          <AboutMe />
-        </EnterAnimation>
-      </ScrollReveal>
+      <AboutMe />
 
-      <ScrollReveal direction="right">
-        <EnterAnimation>
-          <Work />
-        </EnterAnimation>
-      </ScrollReveal>
+      <Work />
 
-      <ScrollReveal direction="left">
-        <EnterAnimation>
-          <Testimonials />
-        </EnterAnimation>
-      </ScrollReveal>
+      <Testimonials />
 
-      <ScrollReveal direction="right">
-        <EnterAnimation>
-          <Companies />
-        </EnterAnimation>
-      </ScrollReveal>
+      <Companies />
 
-      <EnterAnimation>
-        <Footer />
-      </EnterAnimation>
+      <Footer />
     </main>
   );
 }
