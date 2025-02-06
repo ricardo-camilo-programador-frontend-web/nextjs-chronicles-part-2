@@ -20,7 +20,7 @@ export default function Home() {
       />
 
       <Head>
-        <meta property="og:image" content="/images/open-graph-ricardo.png" />
+        <meta property="og:image" content={openGraphImage.src} />
       </Head>
 
       <Hero />
