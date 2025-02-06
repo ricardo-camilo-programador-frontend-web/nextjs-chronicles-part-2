@@ -51,7 +51,7 @@ const Shape: FC<ShapeProps> = ({
   className
 }) => {
   return (
-    <div className={twMerge("relative w-[418px] h-[298px] rounded-lg group shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out", className)}>
+    <div className={twMerge("relative rounded-lg group shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out min-w-full", className)}>
       <div className="absolute -top-6 -right-4 overflow-hidden h-24 w-24 bg-white z-[2] rounded-full" />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
         link: '',
       })}
     >
-      <div className="w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
+      <div className="min-w-full w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
         <Shape
           bgColor={color.bgColor}
           borderColor={color.borderColor}
@@ -190,7 +190,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
 
         <Link href={href}
           className={twMerge(
-            'w-[70px] h-[70px] rounded-full flex items-center justify-center absolute -top-2.5 right-0.5 border-2 z-40 bg-white',
+            'w-[70px] h-[70px] rounded-full flex items-center justify-center !absolute -top-2.5 right-0.5 border-2 z-40 bg-white',
             colorClass.bgColor,
             colorClass.borderColor
           )}

@@ -69,7 +69,7 @@ const Work = () => {
 
   return (
     <section
-      className="py-24 w-full flex justify-center max-md:py-16"
+      className="py-24 w-full grid justify-center max-md:py-16"
       id="work">
       <div className="flex flex-col gap-24 max-w-[952px] px-4 w-full">
         <div className="flex flex-col gap-2 max-lg:items-center">
