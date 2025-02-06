@@ -17,13 +17,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     locales.forEach((lang) => {
       const langPrefix = lang === defaultLocale ? '' : `/${lang}`
-
-      languageAlternates[lang] = `${baseUrl}${langPrefix}${urlPath}`
+      const fullUrl = `${baseUrl}${langPrefix}${urlPath}`.trim()
+      
+      languageAlternates[lang] = fullUrl
     })
 
     sitemap.push({
-      url: `${baseUrl}${urlPath}`,
-      lastModified: new Date(),
+      url: `${baseUrl}${urlPath}`.trim(),
+      lastModified: new Date().toISOString(),
       changeFrequency: 'daily',
       priority: route === '' ? 1 : 0.8,
       alternates: {
@@ -32,5 +33,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  return sitemap
+  return sitemap.map(entry => ({
+    ...entry,
+    _prettyXml: true
+  }))
 } 
