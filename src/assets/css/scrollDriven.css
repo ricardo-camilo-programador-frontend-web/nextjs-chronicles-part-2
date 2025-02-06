@@ -10,6 +10,12 @@
   animation-timeline: scroll();
 }
 
+img {
+  animation: reveal 2s ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
 section {
   opacity: 0;
   transform: translateY(50px) rotate(-5deg) scale(0.9);
@@ -37,5 +43,16 @@ section {
   to {
     opacity: 1;
     translate: 0 0;
+  }
+}
+
+@keyframes reveal {
+  from {
+    scale: 0.9;
+    opacity: 0;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
   }
 }
