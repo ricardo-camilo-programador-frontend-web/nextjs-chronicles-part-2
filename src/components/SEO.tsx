@@ -5,6 +5,7 @@ interface SEOProps {
   title: string;
   description: string;
   url: string;
+  keywords?: string;
   image?: string;
   type?: string;
   siteName?: string;
@@ -13,7 +14,8 @@ interface SEOProps {
 
 export const SEO: FC<SEOProps> = ({
   title,
-  description,
+  description = 'Ricardo Camilo - Programador Frontend Web Developer - Freelancer - Open To Work',
+  keywords = 'Ricardo Camilo, Programador Frontend, Web Developer, Freelancer, Open To Work, Landing Page, Portfolio, CV, Resume, About Me, Work, Testimonials, Companies, React, Next, Nuxt, Angular, Astrojs, Qwikjs',
   image = '/images/open-graph-ricardo.png',
   url,
   type = 'website',
@@ -29,6 +31,7 @@ export const SEO: FC<SEOProps> = ({
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <link rel="canonical" href={url} />
       
       {/* OpenGraph / Facebook */}
