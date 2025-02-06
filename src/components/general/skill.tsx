@@ -2,8 +2,8 @@ import type { FC } from 'react';
 import type { StaticImageData } from 'next/image';
 import Image from 'next/image';
 import Typography from '@/components/general/typography';
-import EnterAnimation from '@/components/animation/EnterAnimation';
-import RippleEffect from '@/components/animation/RippleEffect';
+import EnterAnimation from '@/components/animations/EnterAnimation';
+import RippleEffect from '@/components/animations/RippleEffect';
 
 interface SkillProps {
   label: string;
@@ -20,6 +20,7 @@ const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id }) => {
     <EnterAnimation
       duration={0.4 + randomFromZeroToNinetnine * 0.1}
       visualDuration={0.4 + randomFromZeroToNinetnine * 0.2}
+      className="w-auto"
     >
       <RippleEffect id={rippleId} />
 
