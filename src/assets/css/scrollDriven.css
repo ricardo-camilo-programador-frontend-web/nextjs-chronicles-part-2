@@ -16,7 +16,7 @@ img {
   animation-range: entry 20% cover 30%;
 }
 
-section {
+.scroll-reveal, section {
   opacity: 0;
   transform: translateY(50px) rotate(-5deg) scale(0.9);
   animation: scroll-reveal 2s ease-out forwards;
