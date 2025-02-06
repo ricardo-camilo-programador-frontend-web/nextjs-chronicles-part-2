@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Head from 'next/head';
+import openGraphImage from '@/assets/images/open-graph-ricardo.png';    
 
 interface SEOProps {
   title: string;
@@ -16,7 +17,7 @@ export const SEO: FC<SEOProps> = ({
   title,
   description = 'Ricardo Camilo - Programador Frontend Web Developer - Freelancer - Open To Work',
   keywords = 'Ricardo Camilo, Programador Frontend, Web Developer, Freelancer, Open To Work, Landing Page, Portfolio, CV, Resume, About Me, Work, Testimonials, Companies, React, Next, Nuxt, Angular, Astrojs, Qwikjs',
-  image = '/images/open-graph-ricardo.png',
+  image = openGraphImage.src,
   url,
   type = 'website',
   siteName = 'Ricardo Camilo - Programador Frontend Web Developer',
