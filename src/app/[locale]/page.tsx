@@ -1,4 +1,3 @@
-import Head from "next/head";
 import AboutMe from "@/components/sections/journey";
 import Footer from "@/components/layout/footer";
 import Hero from "@/components/sections/hero";
@@ -18,10 +17,6 @@ export default function Home() {
         image={openGraphImage.src}
         url={process.env.NEXT_PUBLIC_SITE_URL || ''}
       />
-
-      <Head>
-        <meta property="og:image" content={openGraphImage.src} />
-      </Head>
 
       <Hero />
 
