@@ -4,7 +4,7 @@ import { Fragment } from 'react';
 import { twMerge } from 'tailwind-merge';
 import Link from '@/components/general/link';
 import { SOCIAL_LINKS } from '@/lib/data';
-import EnterAnimation from '@/components/animation/EnterAnimation';
+import EnterAnimation from '@/components/animations/EnterAnimation';
 
 const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
   return (
@@ -18,12 +18,17 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
           <EnterAnimation
             duration={0.4 + index * 0.1}
             visualDuration={0.4 + index * 0.2}
+            hoverEnabled
           >
             <Link
               className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-primary hover:scale-150"
               variant={variant}
               href={link.href}
-              externalLink>
+              externalLink
+              rel="noopener noreferrer"
+              title={link.label}
+              aria-label={link.label}
+            >
               <link.icon />
             </Link>
           </EnterAnimation>
