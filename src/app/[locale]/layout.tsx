@@ -172,6 +172,7 @@ export default async function RootLayout({
             figmaOriginalDesign={process.env.FIGMA_ORIGINAL_DESIGN || ""}
           />
         </NextIntlClientProvider>
+        <div className="scroll-indicator"></div>
       </body>
       <Script
         src="https://cdn.counter.dev/script.js"
