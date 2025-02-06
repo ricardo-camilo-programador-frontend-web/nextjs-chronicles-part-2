@@ -14,6 +14,7 @@ export interface LinkProps extends NextLinkProps {
   variant?: 'light' | 'dark';
   rel?: string;
   title?: string;
+  animate?: boolean;
   children: ReactNode;
 }
 
@@ -28,6 +29,7 @@ const LinkComponent: FC<LinkProps> = ({
   externalLink,
   rel,
   title,
+  animate = true,
   ...props
 }: LinkProps) => {
   const router = useRouter();
@@ -40,7 +42,7 @@ const LinkComponent: FC<LinkProps> = ({
     const sleepTime = 500;
     const body = document.querySelector('body');
 
-    if (body) {
+    if (body && animate) {
       body.classList.add('page-transition');
   
       await sleep(sleepTime);
@@ -49,7 +51,7 @@ const LinkComponent: FC<LinkProps> = ({
 
     router.push(href);
 
-    if (body) {
+    if (body && animate) {
       await sleep(sleepTime);
 
       body.classList.remove('page-transition');
