@@ -248,9 +248,12 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           />
         </div>
 
-        <div className="flex gap-2 flex-wrap sm:flex-nowrap items-center justify-center">
+        <div className="flex gap-2 flex-wrap sm:flex-nowrap items-center justify-start">
           {filteredTechs.map((tech: Skill) => (
-            <EnterAnimation key={tech.label}>
+            <EnterAnimation
+              key={tech.label}
+              className="w-auto"
+            >
               <Skill
                 label={tech.label}
                 icon={tech.icon}
