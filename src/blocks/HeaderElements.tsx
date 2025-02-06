@@ -8,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import { Menu, Xmark } from 'iconoir-react';
 import { twMerge } from 'tailwind-merge';
 
+import EnterAnimation from '@/components/animation/EnterAnimation';
 import {
   Drawer,
   DrawerClose,
@@ -35,10 +36,17 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const renderHomePageSectionNavLinks = () => {
+    const randomFromZeroToNinetnine = Math.floor(Math.random() * 5)
+
     return navLinks.map((link) => (
-      <li key={link.label}>
-        <Link href={link.href}>{t(link.label)}</Link>
-      </li>
+      <EnterAnimation
+        duration={0.4 + randomFromZeroToNinetnine * 0.1}
+        visualDuration={0.4 + randomFromZeroToNinetnine * 0.2}
+      >
+        <li key={link.label}>
+          <Link href={link.href}>{t(link.label)}</Link>
+        </li>
+      </EnterAnimation>
     ));
   };
 
