@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
-import RippleEffect from '@/components/animation/RippleEffect';
+import RippleEffect from '@/components/animations/RippleEffect';
 import Typography from '@/components/general/typography';
 import Social from '@/components/general/social';
 import { StarRating } from '@/components/StarRating';
@@ -39,7 +39,10 @@ const Hero = () => {
               </Typography>
             </div>
           </div>
-          <Social variant="light" />
+
+          <div className="flex justify-start">
+            <Social variant="light" />
+          </div>
         </div>
 
         <RippleEffect id="hero-ricardo-camilo" />
