@@ -39,7 +39,7 @@ const LinkComponent: FC<LinkProps> = ({
 
     e.preventDefault();
 
-    const sleepTime = 500;
+    const sleepTime = 300;
     const body = document.querySelector('body');
 
     if (body && animate) {
