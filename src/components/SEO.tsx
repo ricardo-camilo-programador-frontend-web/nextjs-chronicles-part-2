@@ -14,13 +14,15 @@ interface SEOProps {
 export const SEO: FC<SEOProps> = ({
   title,
   description,
-  image = 'src/assets/images/open-graph-ricardo.png',
+  image = '/images/open-graph-ricardo.png',
   url,
   type = 'website',
   siteName = 'Ricardo Camilo - Programador Frontend Web Developer',
   locale = 'en',
 }) => {
-  const absoluteImageUrl = image;
+  const absoluteImageUrl = image.startsWith('http') 
+    ? image 
+    : `${process.env.NEXT_PUBLIC_SITE_URL}${image}`;
 
   return (
     <Head>
