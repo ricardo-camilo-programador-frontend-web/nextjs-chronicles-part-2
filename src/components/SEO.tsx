@@ -4,8 +4,8 @@ import Head from 'next/head';
 interface SEOProps {
   title: string;
   description: string;
-  image: string;
   url: string;
+  image?: string;
   type?: string;
   siteName?: string;
   locale?: string;
@@ -14,7 +14,7 @@ interface SEOProps {
 export const SEO: FC<SEOProps> = ({
   title,
   description,
-  image,
+  image = 'src/assets/images/open-graph-ricardo.png',
   url,
   type = 'website',
   siteName = 'Ricardo Camilo - Programador Frontend Web Developer',

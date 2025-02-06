@@ -6,15 +6,12 @@ import Work from "@/components/sections/work";
 import Companies from "@/components/general/companies";
 import { SEO } from '@/components/SEO';
 
-import openGraphImage from '@/assets/images/open-graph-ricardo.png';
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between"> 
       <SEO
         title="Ricardo Camilo - Programador Frontend Web Developer"
         description="Ricardo Camilo - Programador Frontend Web Developer"
-        image={openGraphImage.src}
         url={process.env.NEXT_PUBLIC_SITE_URL || ''}
       />
 
