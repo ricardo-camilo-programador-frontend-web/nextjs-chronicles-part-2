@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC } from 'react';
-import { useEffect, useState, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Link, { LinkProps as NextLinkProps } from 'next/link';
 import { useRouter } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
