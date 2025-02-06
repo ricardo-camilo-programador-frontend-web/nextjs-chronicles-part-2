@@ -23,6 +23,7 @@ interface HeaderProps {
   navLinks: Array<{
     label: string;
     href: string;
+    animate: boolean;
   }>;
 }
 
@@ -45,7 +46,9 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
         visualDuration={0.4 + randomFromZeroToNinetnine * 0.2}
       >
         <li>
-          <Link href={link.href}>{t(link.label)}</Link>
+          <Link href={link.href} animate={link.animate}>
+            {t(link.label)}
+          </Link>
         </li>
       </EnterAnimation>
     ));

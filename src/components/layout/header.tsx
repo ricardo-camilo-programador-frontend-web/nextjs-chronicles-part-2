@@ -3,10 +3,10 @@ import Link from "@/components/general/link";
 
 const Header = () => {
   const navLinks = [
-    { label: 'journey', href: '#journey' },
-    { label: 'work', href: '#work' },
-    { label: 'testimonials', href: '#testimonials' },
-    { label: 'contact', href: '#contact' },
+    { label: 'journey', href: '#journey', animate: false },
+    { label: 'work', href: '#work', animate: false },
+    { label: 'testimonials', href: '#testimonials', animate: false },
+    { label: 'contact', href: '#contact', animate: false },
   ];
 
   return (
