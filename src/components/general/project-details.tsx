@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC, ReactNode } from 'react';
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 import { twMerge } from 'tailwind-merge';
@@ -14,6 +14,7 @@ import { ArrowRightIcon, ArrowUpRight } from 'lucide-react';
 import { Videos } from '@/types/Videos';
 import Link from "@/components/general/link";
 import VideoPlayer from '../VideoPlayer';
+import EnterAnimation from '@/components/animations/EnterAnimation';
 
 interface ProjectDetailsProps {
   id: string;
@@ -247,14 +248,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           />
         </div>
 
-        <div className="flex gap-2 flex-wrap">
+        <div className="flex gap-2 flex-wrap sm:flex-nowrap items-center justify-center">
           {filteredTechs.map((tech: Skill) => (
-            <Skill
-              label={tech.label}
-              icon={tech.icon}
-              variant="sm"
-              id={`skill-${id}-${tech.label}`}
-            />
+            <EnterAnimation key={tech.label}>
+              <Skill
+                label={tech.label}
+                icon={tech.icon}
+                variant="sm"
+                id={`skill-${id}-${tech.label}`}
+              />
+            </EnterAnimation>
           ))}
         </div>
       </div>
