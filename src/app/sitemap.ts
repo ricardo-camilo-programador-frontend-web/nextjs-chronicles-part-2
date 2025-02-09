@@ -3,9 +3,18 @@ import { locales, defaultLocale } from "@/config/i18n-config";
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
-const routes = [
+const staticRoutes = [
   '',
-  'beyond-bio',
+]
+
+const dynamicRoutes = locales.flatMap((locale) => [
+  `/${locale}`,
+  `/${locale}/beyond-bio`,
+]);
+
+const routes = [
+  ...staticRoutes,
+  ...dynamicRoutes
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -18,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     locales.forEach((lang) => {
       const langPrefix = lang === defaultLocale ? '' : `/${lang}`
       const fullUrl = `${baseUrl}${langPrefix}${urlPath}`.trim()
-      
+
       languageAlternates[lang] = fullUrl
     })
 
@@ -37,4 +46,4 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...entry,
     _prettyXml: true
   }))
-} 
+}
