@@ -8,8 +8,8 @@ const staticRoutes = [
 ]
 
 const dynamicRoutes = locales.flatMap((locale) => [
-  `/${locale}`,
-  `/${locale}/beyond-bio`,
+  `${locale}`,
+  `${locale}/beyond-bio`,
 ]);
 
 const routes = [
@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = []
 
   routes.forEach((route) => {
-    const urlPath = route ? `/${route}` : ''
+    const urlPath = route ? `${route}` : ''
     const languageAlternates: { [key: string]: string } = {}
 
     locales.forEach((lang) => {
@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     sitemap.push({
       url: `${baseUrl}${urlPath}`.trim(),
       lastModified: new Date().toISOString(),
-      changeFrequency: 'daily',
+      changeFrequency: 'monthly',
       priority: route === '' ? 1 : 0.8,
       alternates: {
         languages: languageAlternates
