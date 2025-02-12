@@ -2,7 +2,6 @@
 
 import { Fragment } from 'react';
 import { twMerge } from 'tailwind-merge';
-import Link from '@/components/general/link';
 import { SOCIAL_LINKS } from '@/lib/data';
 import EnterAnimation from '@/components/animations/EnterAnimation';
 
