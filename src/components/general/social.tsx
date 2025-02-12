@@ -20,18 +20,15 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
             visualDuration={0.4 + index * 0.2}
             hoverEnabled
           >
-            <Link
+            <a
               className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-primary hover:scale-150"
-              variant={variant}
-              href={link.href}
-              externalLink
+              href={link.href || ''}
               rel="noopener noreferrer"
               title={link.label}
               aria-label={link.label}
-              withUnderline={false}
             >
               <link.icon />
-            </Link>
+            </a>
           </EnterAnimation>
         </Fragment>
       ))}
