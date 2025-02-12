@@ -12,7 +12,7 @@ export default function Home() {
       <SEO
         title="Ricardo Camilo - Programador Frontend Web Developer"
         description="Ricardo Camilo - Programador Frontend Web Developer"
-        url={process.env.NEXT_PUBLIC_SITE_URL || ''}
+        url={process.env.NEXT_PUBLIC_SITE_URL || 'https://www.instagram.com/ricardo.camilo.dev/'}
       />
 
       <Hero />
