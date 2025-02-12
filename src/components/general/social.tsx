@@ -21,7 +21,7 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
             hoverEnabled
           >
             <a
-              href={link.href || ''}
+              href={link.href || 'https://www.linkedin.com/in/ricardo-camilo-programador-frontend-web-developer'}
               title={link.label}
               aria-label={link.label}
               className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-primary hover:scale-150"
