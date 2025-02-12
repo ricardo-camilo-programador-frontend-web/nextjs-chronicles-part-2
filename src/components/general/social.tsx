@@ -21,11 +21,12 @@ const Social = ({ variant = 'dark' }: { variant?: 'dark' | 'light' }) => {
             hoverEnabled
           >
             <a
-              className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-primary hover:scale-150"
               href={link.href || ''}
-              rel="noopener noreferrer"
               title={link.label}
               aria-label={link.label}
+              className="transform transition-all duration-300 ease-in-out hover:rotate-12 cursor-pointer hover:text-primary hover:scale-150"
+              rel="noopener noreferrer"
+              target="_blank"
             >
               <link.icon />
             </a>
