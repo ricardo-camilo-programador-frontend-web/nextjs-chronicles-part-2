@@ -110,19 +110,19 @@ export const SKILLS = [
 export const FOOTERLINKS = [
   {
     label: 'GITHUB',
-    href: `https://github.com/${process.env.GITHUB_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_GITHUB_URL,
   },
   {
     label: 'FIGMA',
-    href: `https://www.figma.com/${process.env.FIGMA_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_FIGMA_URL,
   },
   {
     label: 'TWITTER',
-    href: `https://x.com/${process.env.X_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_X_URL,
   },
   {
     label: 'CV',
-    href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_LINKEDIN_URL,
   },
 ];
 
@@ -130,21 +130,21 @@ export const SOCIAL_LINKS = [
   {
     label: 'Instagram',
     icon: Instagram,
-    href: `https://www.instagram.com/${process.env.NEXT_PUBLIC_INSTAGRAM_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_INSTAGRAM_URL,
   },
   {
     label: 'Linkedin',
     icon: Linkedin,
-    href: `https://www.linkedin.com/in/${process.env.LINKEDIN_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_LINKEDIN_URL,
   },
   {
     label: 'Github',
     icon: Github,
-    href: `https://github.com/${process.env.GITHUB_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_GITHUB_URL,
   },
   {
     label: 'X',
     icon: X,
-    href: `https://x.com/${process.env.X_USERNAME}`,
+    href: process.env.NEXT_PUBLIC_X_URL,
   },
 ];

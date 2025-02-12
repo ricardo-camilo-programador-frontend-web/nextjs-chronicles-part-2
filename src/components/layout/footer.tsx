@@ -47,7 +47,7 @@ const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
             </Link>{" "}
             with ❤️ by Riddhi Limbachiya |{" "}
             <Link
-              href="https://github.com/ricardo-camilo-programador-frontend-web"
+              href={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
               variant={variant}
               withUnderline
               externalLink
@@ -56,7 +56,7 @@ const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
             </Link>{" "}
             with ☕️ by{" "}
             <Link
-              href={`https://github.com/${process.env.GITHUB_USERNAME}`}
+              href={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
               variant={variant}
               withUnderline
               externalLink

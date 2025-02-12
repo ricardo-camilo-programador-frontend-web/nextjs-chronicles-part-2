@@ -11,6 +11,7 @@ import "./globals.css";
 import "@/assets/css/scrollDriven.css";
 import "@/assets/css/animatedUnderline.css";
 import "@/assets/css/pageTransition.css";
+import "@/assets/css/scrollDriven.css";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -90,7 +91,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Ricardo Camilo",
-      url: `https://linkedin.com/in/${process.env.GITHUB_USERNAME}`,
+      url: process.env.NEXT_PUBLIC_LINKEDIN_URL,
     },
   ],
   openGraph: {
@@ -113,8 +114,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title,
     description,
-    site: process.env.TWITTER_USERNAME,
-    creator: process.env.TWITTER_USERNAME,
+    site: process.env.NEXT_PUBLIC_TWITTER_URL,
+    creator: process.env.NEXT_PUBLIC_TWITTER_URL,
     images: ["/images/open-graph-ricardo.png"],
   },
   robots: {
@@ -169,10 +170,10 @@ export default async function RootLayout({
           <main>{children}</main>
           <IntroWarningModal
             projectTitle={process.env.PROJECT_TITLE || ""}
-            githubUsername={process.env.GITHUB_USERNAME || ""}
-            linkedinUsername={process.env.LINKEDIN_USERNAME || ""}
-            figmaUsername={process.env.FIGMA_USERNAME || ""}
-            figmaOriginalDesign={process.env.FIGMA_ORIGINAL_DESIGN || ""}
+            githubUsername={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
+            linkedinUsername={process.env.NEXT_PUBLIC_LINKEDIN_URL || ""}
+            figmaUsername={process.env.NEXT_PUBLIC_FIGMA_URL || ""}
+            figmaOriginalDesign={process.env.NEXT_PUBLIC_FIGMA_ORIGINAL_DESIGN || ""}
           />
         </NextIntlClientProvider>
         <div className="scroll-indicator"></div>
