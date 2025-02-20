@@ -77,7 +77,6 @@ export const metadata: Metadata = {
     "Frontend Brasil",
     "Desenvolvedor React Brasil",
     "Abyss Tech",
-    "Ricardo Camilo",
     "Astro.js",
     "Tailwind CSS",
     "Material UI",
