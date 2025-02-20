@@ -6,6 +6,7 @@ import Header from "@/components/layout/header";
 import Script from "next/script";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
+import { locales } from '@/config/i18n-config';
 
 import "./globals.css";
 import "@/assets/css/scrollDriven.css";
@@ -146,10 +147,9 @@ async function getMessages(locale: string) {
   }
 }
 export async function generateStaticParams() {
-  return [
-    { locale: 'en' },
-    { locale: 'pt' }
-  ];
+  return locales.map((locale) => ({
+    locale,
+  }));
 }
 
 export default async function RootLayout({
