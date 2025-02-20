@@ -145,6 +145,12 @@ async function getMessages(locale: string) {
     notFound();
   }
 }
+export async function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'pt' }
+  ];
+}
 
 export default async function RootLayout({
   children,
@@ -153,11 +159,11 @@ export default async function RootLayout({
   children: ReactNode;
   params: { locale: string };
 }) {
-  const locale = await params.locale;
-  const messages = await getMessages(locale);
+  const resolvedParams = await Promise.resolve(params);
+  const messages = await getMessages(resolvedParams.locale);
 
   return (
-    <html lang={locale}>
+    <html lang={resolvedParams.locale}>
       <head>
         <script
           type="application/ld+json"
@@ -165,7 +171,7 @@ export default async function RootLayout({
         />
       </head>
       <body className={`${montserrat.className} flex justify-center w-full flex-col`}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
+        <NextIntlClientProvider messages={messages} locale={resolvedParams.locale}>
           <Header />
           <main>{children}</main>
           <IntroWarningModal
