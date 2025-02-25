@@ -38,7 +38,7 @@
     "description": "Conheça alguns casos reais de como venho ajudando empresas a alcançarem seus objetivos através de soluções técnicas eficientes.",
     "projects": {
       "breathNatural": {
-        "name": "🪴 Breath Natural - NextJS",
+        "name": "🌱 Breath Natural - NextJS",
         "video": "https://youtu.be/cKmv-1xcKDk",
         "description": "Minha primeira imersão no universo NextJS! Desenvolvi este e-commerce de plantas com foco em sustentabilidade, transformando um design minimalista em uma experiência de compra envolvente e moderna. Mesmo sendo meu primeiro projeto com NextJS, consegui implementar recursos avançados como SSR (Server-Side Rendering), otimização de imagens automática e rotas dinâmicas. O resultado é uma aplicação com performance excepcional, atingindo 90+ no Lighthouse, com animações fluidas e uma experiência de usuário premium. Este projeto demonstra minha capacidade de dominar rapidamente novas tecnologias e entregar resultados profissionais mesmo durante a curva de aprendizado.",
         "seeMore": "Acessar projeto",
