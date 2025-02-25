@@ -30,6 +30,7 @@ const Journey = () => {
                   <Skill
                     icon={skill.icon}
                     label={skill.label}
+                    url={skill.url}
                     variant="sm"
                     id={`skill-${skill.label}-${skill.icon}`}
                   />
