@@ -1,4 +1,4 @@
-import { Linkedin, Github, X, Instagram } from 'iconoir-react';
+import { Linkedin, Github, X, Instagram, Phone } from 'iconoir-react';
 
 import LogoJavaScript from '@/public/icons/icon-javascript.svg';
 import LogoTypeScript from '@/public/icons/icon-typescript.svg';
@@ -170,4 +170,9 @@ export const SOCIAL_LINKS = [
     icon: X,
     href: process.env.NEXT_PUBLIC_X_URL,
   },
+  {
+    label: "Whatsapp",
+    icon: Phone,
+    href: process.env.NEXT_PUBLIC_WHATSAPP_URL,
+  }
 ];
