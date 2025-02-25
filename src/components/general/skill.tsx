@@ -4,15 +4,17 @@ import Image from 'next/image';
 import Typography from '@/components/general/typography';
 import EnterAnimation from '@/components/animations/EnterAnimation';
 import RippleEffect from '@/components/animations/RippleEffect';
+import Link from '@/components/general/link';
 
 interface SkillProps {
   label: string;
   icon: StaticImageData | string;
   id: string;
+  url?: string;
   variant?: 'sm' | 'lg';
 }
 
-const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id }) => {
+const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id, url }) => {
   const rippleId = `ripple-${id}`
   const randomFromZeroToNinetnine = Math.floor(Math.random() * 10)
 
@@ -24,17 +26,23 @@ const Skill: FC<SkillProps> = ({ variant = 'sm', label, icon, id }) => {
     >
       <RippleEffect id={rippleId} />
 
-      <div
-        id={rippleId}
-        className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 overflow-hidden shadow-xs transition-all duration-300 ease-in-out hover:z-10 hover:border-primary'}
-        title={label}
-        aria-label={label}
+      <Link
+        href={url ?? "#"}
+        className="w-auto"
+        externalLink
       >
-        <Image src={icon} alt={label} className="w-6 h-6" />
-        <Typography variant={variant === 'sm' ? 'body2' : 'body1'}>
-          {label}
-        </Typography>
-      </div>
+        <div
+          id={rippleId}
+          className={'relative px-2 flex items-center gap-2 border border-zinc-200 rounded py-1 overflow-hidden shadow-xs transition-all duration-300 ease-in-out hover:z-10 hover:border-primary'}
+          title={label}
+          aria-label={label}
+        >
+          <Image src={icon} alt={label} className="w-6 h-6" />
+          <Typography variant={variant === 'sm' ? 'body2' : 'body1'}>
+            {label}
+          </Typography>
+        </div>
+      </Link>
     </EnterAnimation>
   );
 };
