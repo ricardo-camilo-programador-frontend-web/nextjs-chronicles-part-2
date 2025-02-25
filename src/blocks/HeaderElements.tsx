@@ -59,10 +59,9 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
   }, [pathname]);
 
   return (
-    <>
-
+    <div className="ml-auto flex justify-end items-center w-full">
       {isHomePage && (
-        <ul className="flex gap-8 max-md:hidden max-lg:gap-4">
+        <ul className="flex gap-8 max-md:hidden max-lg:gap-4 mx-auto">
           {renderHomePageSectionNavLinks()}
         </ul>
       )}
@@ -77,14 +76,16 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
           {isHomePage ? t('beyond-bio') : t('home')}
         </Link>
       </div>
+
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger
           asChild
           className={twMerge(isHomePage ? 'flex md:hidden' : 'sm:hidden')}>
           <Menu />
         </DrawerTrigger>
+
         <DrawerContent>
-          <div className="flex items-center justify-between border-b border-zinc-100 p-4 bg-white">
+          <div className="flex items-center justify-between p-4 border-b border-zinc-100/20 backdrop-blur-md bg-white/70 supports-[backdrop-filter]:bg-white/40">
             <p className="text-base font-medium uppercase text-zinc-900 tracking-[1px]">
               RICARDO CAMILO
             </p>
@@ -92,7 +93,8 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
               <Xmark height={20} width={20} />
             </DrawerClose>
           </div>
-          <div className="border-b border-zinc-100 p-4 bg-white h-screen">
+
+          <div className="p-4 h-screen backdrop-blur-md bg-white/70 supports-[backdrop-filter]:bg-white/40">
             <ul className="flex flex-col gap-2 max-lg:gap-4">
               <li className="py-4">
                 <Link href={isHomePage ? '/beyond-bio' : '/'}>
@@ -103,7 +105,7 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
           </div>
         </DrawerContent>
       </Drawer>
-    </>
+    </div>
   );
 };
 
