@@ -164,17 +164,17 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
           <Image
             src={image}
             alt={`${name} project screenshot`}
-            className="object-scale-down object-center w-full h-full group-hover:hidden"
+            className="object-scale-down object-center w-full h-full"
             style={{
               backgroundColor: `${color.bgColor}20`,
             }}
             priority
           />
 
-          {currentVideo.link && (
+          {/* {currentVideo.link && (
             <div className="absolute inset-0 z-30">
               <VideoPlayer
-                className="rounded-xl w-full h-full hidden group-hover:block mt-0"
+                className="rounded-xl w-full h-full hidden mt-0"
                 src={currentVideo.link}
                 params={{
                   controls: "1",
@@ -185,7 +185,7 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
                 title={currentVideo.name}
               />
             </div>
-          )}
+          )} */}
         </Shape>
 
         <Link href={href}
