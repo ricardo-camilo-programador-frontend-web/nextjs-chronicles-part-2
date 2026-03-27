@@ -3,7 +3,7 @@
 import type { FC } from "react";
 import { ReactNode } from "react";
 import Link, { LinkProps as NextLinkProps } from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { twMerge } from "tailwind-merge";
 
 export interface LinkProps extends NextLinkProps {
@@ -35,7 +35,7 @@ const LinkComponent: FC<LinkProps> = ({
   const router = useRouter();
 
   const handleTransition = async (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
   ) => {
     if (!router) return;
 
@@ -72,7 +72,7 @@ const LinkComponent: FC<LinkProps> = ({
               ? "text-zinc-950 hover:text-zinc-950 hover:decoration-zinc-200 active:text-zinc-950"
               : "text-white hover:text-zinc-200 hover:decoration-zinc-200 active:text-white",
             withUnderline && "animate-underline",
-            className
+            className,
           )}
         >
           {children}
@@ -90,7 +90,7 @@ const LinkComponent: FC<LinkProps> = ({
               ? "text-zinc-950 hover:text-zinc-950 hover:decoration-zinc-200 active:text-zinc-950"
               : "text-white hover:text-zinc-200 hover:decoration-zinc-200 active:text-white",
             withUnderline && "animate-underline",
-            className
+            className,
           )}
           {...props}
           rel={rel}
