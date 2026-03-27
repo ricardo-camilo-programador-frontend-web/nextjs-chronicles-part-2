@@ -1,5 +1,33 @@
 @import "../../assets/css/tailwind.css";
 
+:root {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #fafafa;
+  --color-bg-tertiary: #f4f4f5;
+  --color-text-primary: #18181b;
+  --color-text-secondary: #3f3f46;
+  --color-border: #e4e4e7;
+  --color-header-bg: rgba(255, 255, 255, 0.7);
+  --color-header-bg-blur: rgba(255, 255, 255, 0.4);
+  --color-scrollbar-track: #f1f1f1;
+  --color-scrollbar-thumb: #888888;
+  --color-scrollbar-thumb-hover: #555555;
+}
+
+.dark {
+  --color-bg-primary: #09090b;
+  --color-bg-secondary: #18181b;
+  --color-bg-tertiary: #27272a;
+  --color-text-primary: #fafafa;
+  --color-text-secondary: #a1a1aa;
+  --color-border: #3f3f46;
+  --color-header-bg: rgba(9, 9, 11, 0.7);
+  --color-header-bg-blur: rgba(9, 9, 11, 0.4);
+  --color-scrollbar-track: #27272a;
+  --color-scrollbar-thumb: #52525b;
+  --color-scrollbar-thumb-hover: #71717a;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,15 +43,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--color-scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--color-scrollbar-thumb);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--color-scrollbar-thumb-hover);
 }
 
 span.ripple {

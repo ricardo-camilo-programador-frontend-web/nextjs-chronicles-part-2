@@ -1,39 +1,39 @@
 import Typography from "@/components/general/typography";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 const AboutMe = () => {
-  const t = useTranslations('about');
+  const t = useTranslations("about");
 
   const bitOfMe = [
-    { emoji: '📚', text: t('bitOfMe.reading') },
-    { emoji: '🎬', text: t('bitOfMe.movies') },
-    { emoji: '🐱', text: t('bitOfMe.cats') },
-    { emoji: '💻', text: t('bitOfMe.programming') },
-    { emoji: '🌙', text: t('bitOfMe.relaxing') },
-    { emoji: '🎮', text: t('bitOfMe.gaming') }
+    { emoji: "📚", text: t("bitOfMe.reading") },
+    { emoji: "🎬", text: t("bitOfMe.movies") },
+    { emoji: "🐱", text: t("bitOfMe.cats") },
+    { emoji: "💻", text: t("bitOfMe.programming") },
+    { emoji: "🌙", text: t("bitOfMe.relaxing") },
+    { emoji: "🎮", text: t("bitOfMe.gaming") },
   ];
 
   return (
-    <section className="w-full pb-24 pt-16 border-b border-zinc-200 flex justify-center px-4 max-md:py-10">
+    <section className="w-full pb-24 pt-16 border-b border-zinc-200 dark:border-zinc-800 flex justify-center px-4 max-md:py-10">
       <div className="flex flex-col gap-8 max-w-[928px]">
-        <Typography variant="h1">{t('greeting')}</Typography>
+        <Typography variant="h1">{t("greeting")}</Typography>
         <div className="flex flex-col gap-6">
           <Typography variant="body1">
-            {t('intro')}
+            {t("intro")}
             <br />
             <br />
-            {t('description')}
+            {t("description")}
             <br />
             <br />
-            {t('education')}
+            {t("education")}
             <br />
             <br />
-            {t('hobbies')}
+            {t("hobbies")}
           </Typography>
 
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold">
-              {t('aboutMeTitle')}
+              {t("aboutMeTitle")}
             </Typography>
             <ul className="flex flex-col gap-2">
               {bitOfMe.map((point) => (
@@ -47,11 +47,9 @@ const AboutMe = () => {
 
           <div className="flex flex-col gap-3">
             <Typography variant="body1" className="font-semibold">
-              {t('lifeBeliefTitle')}
+              {t("lifeBeliefTitle")}
             </Typography>
-            <Typography variant="body1">
-              {t('bruceQuote')}
-            </Typography>
+            <Typography variant="body1">{t("bruceQuote")}</Typography>
           </div>
         </div>
       </div>

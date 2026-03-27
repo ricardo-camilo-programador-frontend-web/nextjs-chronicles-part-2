@@ -1,12 +1,13 @@
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import Script from "next/script";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
 import Header from "@/components/layout/header";
-import Script from "next/script";
-import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
-import { locales } from '@/config/i18n-config';
+import { NextIntlClientProvider } from "next-intl";
+import { notFound } from "next/navigation";
+import { locales } from "@/config/i18n-config";
 
 import "./globals.css";
 import "@/assets/css/scrollDriven.css";
@@ -25,24 +26,24 @@ const url = process.env.NEXT_PUBLIC_SITE_URL || "";
 const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Ricardo Camilo",
-  "jobTitle": "Desenvolvedor Frontend",
-  "address": {
+  name: "Ricardo Camilo",
+  jobTitle: "Desenvolvedor Frontend",
+  address: {
     "@type": "PostalAddress",
-    "addressLocality": "Jaú",
-    "addressRegion": "SP",
-    "addressCountry": "BR"
+    addressLocality: "Jaú",
+    addressRegion: "SP",
+    addressCountry: "BR",
   },
-  "knowsAbout": ["React", "Vue.js", "JavaScript", "Frontend Development"],
-  "url": process.env.NEXT_PUBLIC_SITE_URL,
-  "workLocation": {
+  knowsAbout: ["React", "Vue.js", "JavaScript", "Frontend Development"],
+  url: process.env.NEXT_PUBLIC_SITE_URL,
+  workLocation: {
     "@type": "Place",
-    "address": {
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Jaú",
-      "addressRegion": "SP"
-    }
-  }
+      addressLocality: "Jaú",
+      addressRegion: "SP",
+    },
+  },
 };
 
 export const metadata: Metadata = {
@@ -141,7 +142,7 @@ async function getMessages(locale: string) {
   try {
     return (await import(`../../messages/${locale}.json`)).default;
   } catch (error) {
-    console.error("Error loading messages", error)
+    console.error("Error loading messages", error);
     notFound();
   }
 }
@@ -162,25 +163,34 @@ export default async function RootLayout({
   const messages = await getMessages(resolvedParams.locale);
 
   return (
-    <html lang={resolvedParams.locale}>
+    <html lang={resolvedParams.locale} suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
       </head>
-      <body className={`${montserrat.className} flex justify-center w-full flex-col`}>
-        <NextIntlClientProvider messages={messages} locale={resolvedParams.locale}>
-          <Header />
-          <main>{children}</main>
-          <IntroWarningModal
-            projectTitle={process.env.PROJECT_TITLE || ""}
-            githubUsername={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
-            linkedinUsername={process.env.NEXT_PUBLIC_LINKEDIN_URL || ""}
-            figmaUsername={process.env.NEXT_PUBLIC_FIGMA_URL || ""}
-            figmaOriginalDesign={process.env.NEXT_PUBLIC_FIGMA_ORIGINAL_DESIGN || ""}
-          />
-        </NextIntlClientProvider>
+      <body
+        className={`${montserrat.className} flex justify-center w-full flex-col bg-white dark:bg-zinc-950 transition-colors`}
+      >
+        <ThemeProvider>
+          <NextIntlClientProvider
+            messages={messages}
+            locale={resolvedParams.locale}
+          >
+            <Header />
+            <main>{children}</main>
+            <IntroWarningModal
+              projectTitle={process.env.PROJECT_TITLE || ""}
+              githubUsername={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
+              linkedinUsername={process.env.NEXT_PUBLIC_LINKEDIN_URL || ""}
+              figmaUsername={process.env.NEXT_PUBLIC_FIGMA_URL || ""}
+              figmaOriginalDesign={
+                process.env.NEXT_PUBLIC_FIGMA_ORIGINAL_DESIGN || ""
+              }
+            />
+          </NextIntlClientProvider>
+        </ThemeProvider>
         <div className="scroll-indicator"></div>
       </body>
       <Script

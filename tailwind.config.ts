@@ -1,11 +1,12 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/lib/**',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/lib/**",
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -18,41 +19,41 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#6de0ec',
+        primary: "#6de0ec",
         purple: {
-          100: '#EBE5ED',
-          700: '#C6B3CF',
+          100: "#EBE5ED",
+          700: "#C6B3CF",
         },
         indigo: {
-          100: '#DEDFEF',
-          700: '#ADAFD0',
+          100: "#DEDFEF",
+          700: "#ADAFD0",
         },
         green: {
-          100: '#D1D7CE',
-          700: '#A8B0A4',
+          100: "#D1D7CE",
+          700: "#A8B0A4",
         },
         sky: {
-          100: '#E2EAEE',
-          700: '#B6C1C6',
+          100: "#E2EAEE",
+          700: "#B6C1C6",
         },
       },
       keyframes: {
         open: {
-          '0%': {
-            opacity: '1',
-            transform: 'translateX(100%)',
+          "0%": {
+            opacity: "1",
+            transform: "translateX(100%)",
           },
         },
         close: {
           to: {
-            opacity: '0',
-            transform: 'translateX(100%)',
+            opacity: "0",
+            transform: "translateX(100%)",
           },
         },
       },
       animation: {
-        'drawer-open': 'open 0.3s ease-in-out',
-        'drawer-close': 'close 0.3s ease-in-out',
+        "drawer-open": "open 0.3s ease-in-out",
+        "drawer-close": "close 0.3s ease-in-out",
       },
     },
   },
