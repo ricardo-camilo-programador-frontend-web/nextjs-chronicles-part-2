@@ -2,7 +2,7 @@
 
 import type { FC } from "react";
 import { ReactElement, useState, useRef, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/routing";
 import { locales } from "@/config/i18n-config";
 import { Globe } from "lucide-react";
 import { twMerge } from "tailwind-merge";
@@ -27,16 +27,12 @@ export const LanguageSwitcher: FC = (): ReactElement => {
   }, []);
 
   const handleLanguageChange = (locale: string) => {
-    const newPath = pathname.replace(`/${currentLang}`, `/${locale}`);
-    router.push(newPath);
+    router.replace(pathname, { locale });
     setIsOpen(false);
   };
 
   return (
-    <div
-      className="relative text-left inline-block"
-      ref={menuRef}
-    >
+    <div className="relative text-left inline-block" ref={menuRef}>
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
@@ -57,7 +53,7 @@ export const LanguageSwitcher: FC = (): ReactElement => {
                 onClick={() => handleLanguageChange(locale)}
                 className={twMerge(
                   "flex w-full items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900",
-                  locale === currentLang && "font-bold"
+                  locale === currentLang && "font-bold",
                 )}
                 role="menuitem"
               >

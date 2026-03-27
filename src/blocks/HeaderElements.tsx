@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import type { FC } from 'react';
-import { usePathname } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import type { FC } from "react";
+import { usePathname } from "@/i18n/routing";
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
-import { Menu, Xmark } from 'iconoir-react';
-import { twMerge } from 'tailwind-merge';
+import { Menu, Xmark } from "iconoir-react";
+import { twMerge } from "tailwind-merge";
 
-import EnterAnimation from '@/components/animations/EnterAnimation';
+import EnterAnimation from "@/components/animations/EnterAnimation";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
   DrawerTrigger,
-} from '@/components/general/drawer';
-import Link from '@/components/general/link';
-import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { locales } from '@/config/i18n-config';
+} from "@/components/general/drawer";
+import Link from "@/components/general/link";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { locales } from "@/config/i18n-config";
 
 interface HeaderProps {
   navLinks: Array<{
@@ -28,16 +28,16 @@ interface HeaderProps {
 }
 
 const Header: FC<HeaderProps> = ({ navLinks }) => {
-  const t = useTranslations('navigation');
+  const t = useTranslations("navigation");
   const pathname = usePathname();
 
-  const homePaths = ['/', ...locales.map(locale => `/${locale}`)];
+  const homePaths = ["/", ...locales.map((locale) => `/${locale}`)];
   const isHomePage = homePaths.includes(pathname);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const renderHomePageSectionNavLinks = () => {
-    const randomFromZeroToNinetnine = Math.floor(Math.random() * 5)
+    const randomFromZeroToNinetnine = Math.floor(Math.random() * 5);
 
     return navLinks.map((link) => (
       <EnterAnimation
@@ -71,16 +71,18 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
         </div>
 
         <Link
-          href={isHomePage ? '/beyond-bio' : '/'}
-          className={isHomePage ? 'max-md:hidden' : 'max-sm:hidden'}>
-          {isHomePage ? t('beyond-bio') : t('home')}
+          href={isHomePage ? "/beyond-bio" : "/"}
+          className={isHomePage ? "max-md:hidden" : "max-sm:hidden"}
+        >
+          {isHomePage ? t("beyond-bio") : t("home")}
         </Link>
       </div>
 
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger
           asChild
-          className={twMerge(isHomePage ? 'flex md:hidden' : 'sm:hidden')}>
+          className={twMerge(isHomePage ? "flex md:hidden" : "sm:hidden")}
+        >
           <Menu />
         </DrawerTrigger>
 
@@ -97,8 +99,8 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
           <div className="p-4 h-screen backdrop-blur-md bg-white/70 supports-[backdrop-filter]:bg-white/40">
             <ul className="flex flex-col gap-2 max-lg:gap-4">
               <li className="py-4">
-                <Link href={isHomePage ? '/beyond-bio' : '/'}>
-                  {isHomePage ? t('beyond-bio') : t('home')}
+                <Link href={isHomePage ? "/beyond-bio" : "/"}>
+                  {isHomePage ? t("beyond-bio") : t("home")}
                 </Link>
               </li>
             </ul>
