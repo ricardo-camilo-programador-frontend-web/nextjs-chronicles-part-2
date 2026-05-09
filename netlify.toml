@@ -1,2 +1,12 @@
 # Next.js on Netlify is handled by the Essential Next.js plugin
 # No manual redirects needed — the plugin generates them automatically.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18.20.0"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
