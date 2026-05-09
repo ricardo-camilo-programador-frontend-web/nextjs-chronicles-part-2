@@ -185,7 +185,7 @@ export default async function RootLayout({
       </body>
       <Script
         src="https://cdn.counter.dev/script.js"
-        data-id={process.env.COUNTER_API_KEY}
+        data-id={process.env.NEXT_PUBLIC_COUNTER_DEV_ID || ''}
         data-utcoffset="-3"
       />
     </html>
