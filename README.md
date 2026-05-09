@@ -67,6 +67,46 @@ Este projeto foi desenvolvido usando NextJS para criar uma aplicação web moder
 ## 📝 Licença
 [MIT License](https://github.com/ricardo-camilo-programador-frontend-web/nextjs-chronicles-part-2?tab=License-1-ov-file#readme)
 
+## ⚙️ Environment Variables
+
+Copy `.env.example` to `.env` and fill in the values:
+
+```bash
+cp .env.example .env
+```
+
+### Public Variables (exposed to the browser — must use `NEXT_PUBLIC_` prefix)
+
+| Variable | Description |
+|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Production site URL (used for SEO, sitemap, metadata) |
+| `NEXT_PUBLIC_PORTFOLIO_URL` | Portfolio website URL |
+| `NEXT_PUBLIC_GITHUB_URL` | GitHub profile URL |
+| `NEXT_PUBLIC_LINKEDIN_URL` | LinkedIn profile URL |
+| `NEXT_PUBLIC_X_URL` | X (Twitter) profile URL |
+| `NEXT_PUBLIC_INSTAGRAM_URL` | Instagram profile URL |
+| `NEXT_PUBLIC_YOUTUBE_URL` | YouTube channel URL |
+| `NEXT_PUBLIC_99FREELAS_URL` | 99Freelas profile URL |
+| `NEXT_PUBLIC_WORKANA_URL` | Workana profile URL |
+| `NEXT_PUBLIC_BUYMEACOFFEE_URL` | Buy Me a Coffee URL |
+| `NEXT_PUBLIC_FACEBOOK_URL` | Facebook profile URL |
+| `NEXT_PUBLIC_FIGMA_URL` | Figma profile URL |
+| `NEXT_PUBLIC_FIGMA_ORIGINAL_DESIGN` | Original Figma design file URL |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Contact email address |
+| `NEXT_PUBLIC_WHATSAPP_URL` | WhatsApp contact URL |
+| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics measurement ID |
+| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager container ID |
+| `NEXT_PUBLIC_COUNTER_DEV_ID` | Counter.dev analytics ID |
+
+### Server-only Variables (no prefix, never exposed to the browser)
+
+| Variable | Description |
+|---|---|
+| `PROJECT_TITLE` | Project title for metadata |
+| `PORT` | Dev server port (default: 3000) |
+| `GOOGLE_SITE_VERIFICATION` | Google Search Console verification code |
+| `COUNTER_API_KEY` | Counter.dev API key |
+
 ## 📝 Créditos
 
 Design by [@riddhilimbachiy](https://www.figma.com/@riddhilimbachiy)
