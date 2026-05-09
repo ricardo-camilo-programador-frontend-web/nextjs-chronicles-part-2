@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC, ReactNode } from 'react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 import { twMerge } from 'tailwind-merge';
@@ -108,7 +108,8 @@ const Shape: FC<ShapeProps> = ({
 const ProjectDetails: FC<ProjectDetailsProps> = ({
   id,
   name,
-  video,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  video: _video,
   description,
   techs,
   image,
@@ -119,16 +120,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState<Skill[]>([]);
 
-  const renderTechs = () => {
+  const renderTechs = useCallback(() => {
     const filteredTechsLocal = SKILLS.filter((skill) =>
       techs?.includes(skill.label)
     ) as Skill[];
     setFilteredTechs(filteredTechsLocal);
-  };
+  }, [techs]);
 
   useEffect(() => {
     renderTechs();
-  }, [video, techs]);
+  }, [renderTechs]);
 
   return (
     <div

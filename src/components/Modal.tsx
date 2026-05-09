@@ -27,9 +27,8 @@ export const Modal: FC<ModalProps> = ({
 
   useEffect(() => {
     setIsMounted(true);
+    const dialog = modalRef.current;
     return () => {
-      const dialog = modalRef.current;
-
       if (dialog?.open) {
         dialog.close();
         blockScroll(false);
