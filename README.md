@@ -1,6 +1,6 @@
 # 🎭 Persona - NextJS Chronicles Part 2
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d47b2f19-f948-4850-926f-40a3fdf478e8/deploy-status)](https://persona-nextjs-chronicles-part-2.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a3f464f7-c765-44ae-97c0-b571b0e626ff/deploy-status)](https://app.netlify.com/sites/persona-nextjs-chronicles-part-2/deploys)
 
 
 > A showcase application built with NextJS, TypeScript, and TailwindCSS for my portifólio.
