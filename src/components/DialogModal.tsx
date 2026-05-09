@@ -51,19 +51,18 @@ const DialogModal: FC<Props> = ({
     close();
   };
 
-  const lockScroll = (): void => {
-    window.scrollTo(0, currentScroll);
-  };
-
   useEffect(() => {
     const dialog = document.getElementById(uniqueId) as HTMLDialogElement;
+    const lockScroll = (): void => {
+      window.scrollTo(0, currentScroll);
+    };
     if (isOpen && dialog) {
       dialog.showModal();
       lockScroll();
     } else if (!isOpen && dialog) {
       dialog.close();
     }
-  }, [isOpen, uniqueId]);
+  }, [isOpen, uniqueId, currentScroll]);
 
   return (
     <>
