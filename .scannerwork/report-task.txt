@@ -1,0 +1,6 @@
+projectKey=nextjs-chronicles-part-2
+serverUrl=http://localhost:9000
+serverVersion=26.4.0.121862
+dashboardUrl=http://localhost:9000/dashboard?id=nextjs-chronicles-part-2
+ceTaskId=9aa979bd-a641-4ab8-8165-79472b718f82
+ceTaskUrl=http://localhost:9000/api/ce/task?id=9aa979bd-a641-4ab8-8165-79472b718f82
