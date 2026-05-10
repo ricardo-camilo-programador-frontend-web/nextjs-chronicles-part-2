@@ -1,3 +1,4 @@
+[![CI](https://github.com/ricardo-camilo-programador-frontend-web/nextjs-chronicles-part-2/actions/workflows/ci.yml/badge.svg)](https://github.com/ricardo-camilo-programador-frontend-web/nextjs-chronicles-part-2/actions)
 # 🎭 Persona - NextJS Chronicles Part 2
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a3f464f7-c765-44ae-97c0-b571b0e626ff/deploy-status)](https://app.netlify.com/sites/persona-nextjs-chronicles-part-2/deploys)
