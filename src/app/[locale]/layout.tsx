@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import IntroWarningModal from "@/blocks/IntroWarningModal";
 import Header from "@/components/layout/header";
-import Script from "next/script";
+import { AnalyticsScripts } from "@/components/AnalyticsScripts";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { locales } from '@/config/i18n-config';
@@ -182,12 +182,8 @@ export default async function RootLayout({
           />
         </NextIntlClientProvider>
         <div className="scroll-indicator"></div>
+        <AnalyticsScripts />
       </body>
-      <Script
-        src="https://cdn.counter.dev/script.js"
-        data-id={process.env.NEXT_PUBLIC_COUNTER_DEV_ID || ''}
-        data-utcoffset="-3"
-      />
     </html>
   );
 }
