@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC, ReactNode } from 'react';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import type { StaticImageData } from 'next/image';
 import { twMerge } from 'tailwind-merge';
@@ -11,9 +11,7 @@ import Skill from '@/components/general/skill';
 import { PropertyColors } from '@/types/PropertyColors';
 import { CircularButton } from '@/components/CircularButton';
 import { ArrowRightIcon, ArrowUpRight } from 'lucide-react';
-import { Videos } from '@/types/Videos';
 import Link from "@/components/general/link";
-import VideoPlayer from '../VideoPlayer';
 import EnterAnimation from '@/components/animations/EnterAnimation';
 
 interface ProjectDetailsProps {
@@ -110,7 +108,8 @@ const Shape: FC<ShapeProps> = ({
 const ProjectDetails: FC<ProjectDetailsProps> = ({
   id,
   name,
-  video,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  video: _video,
   description,
   techs,
   image,
@@ -120,40 +119,21 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
   seeMore,
 }: ProjectDetailsProps) => {
   const [filteredTechs, setFilteredTechs] = useState<Skill[]>([]);
-  const [currentVideo, setCurrentVideo] = useState<Videos>({
-    id: id,
-    name: name,
-    link: video,
-  });
 
-  const handleVideoClick = (video: string) => {
-    setCurrentVideo({
-      id: id,
-      name: name,
-      link: video,
-    });
-  };
-
-  const renderTechs = () => {
+  const renderTechs = useCallback(() => {
     const filteredTechsLocal = SKILLS.filter((skill) =>
       techs?.includes(skill.label)
     ) as Skill[];
     setFilteredTechs(filteredTechsLocal);
-  };
+  }, [techs]);
 
   useEffect(() => {
     renderTechs();
-  }, [video, techs]);
+  }, [renderTechs]);
 
   return (
     <div
       className="flex flex-col gap-6 max-w-[420px] max-lg:max-w-xl w-full group"
-      onMouseEnter={() => handleVideoClick(video)}
-      onMouseLeave={() => setCurrentVideo({
-        id: id,
-        name: name,
-        link: '',
-      })}
     >
       <div className="min-w-full w-full h-[298px] rounded-lg relative flex justify-center max-lg:hidden">
         <Shape
@@ -171,21 +151,6 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({
             priority
           />
 
-          {/* {currentVideo.link && (
-            <div className="absolute inset-0 z-30">
-              <VideoPlayer
-                className="rounded-xl w-full h-full hidden mt-0"
-                src={currentVideo.link}
-                params={{
-                  controls: "1",
-                  autoplay: "1",
-                  loop: "1",
-                  muted: "1",
-                }}
-                title={currentVideo.name}
-              />
-            </div>
-          )} */}
         </Shape>
 
         <Link href={href}

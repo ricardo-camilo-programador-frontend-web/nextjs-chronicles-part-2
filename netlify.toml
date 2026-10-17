@@ -1,9 +1,12 @@
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+# Next.js on Netlify is handled by the Essential Next.js plugin
+# No manual redirects needed — the plugin generates them automatically.
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "18.20.0"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

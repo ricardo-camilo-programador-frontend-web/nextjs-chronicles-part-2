@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
             Part 2&apos;s policy to respect your privacy regarding any information
             we may collect from you on the
             <a
-              href={`${process.env.NEXT_PUBLIC_URL}/`}
+              href={`${process.env.NEXT_PUBLIC_SITE_URL}/`}
               target="_blank"
             >
               🎭 Persona - NextJS Chronicles Part 2
@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
             <a
               target="_BLANK"
               className="text-blue-600 dark:text-blue-400 hover:underline"
-              href={`https://confiavel.com.br/${process.env.NEXT_PUBLIC_URL}`}
+              href={`https://confiavel.com.br/${process.env.NEXT_PUBLIC_SITE_URL}`}
               rel="noopener noreferrer"
             >
               Verification
@@ -84,7 +84,7 @@ export default function PrivacyPolicy() {
             <a
               target="_BLANK"
               className="text-blue-600 dark:text-blue-400 hover:underline"
-              href={`https://transparencyreport.google.com/safe-browsing/search?url=${process.env.NEXT_PUBLIC_URL}`}
+              href={`https://transparencyreport.google.com/safe-browsing/search?url=${process.env.NEXT_PUBLIC_SITE_URL}`}
               rel="noopener noreferrer"
             >
               Google&apos;s security tool
