@@ -29,24 +29,23 @@ export default function IntroWarningModal({
   const [isOpen, setIsOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(true);
-  const now = new Date();
-  const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
-
-  const clearLocalStorageAfterOneHour = () => {
-    const lastVisit = getItemFromLocalStorage("last-visit");
-
-    if (lastVisit) {
-      const lastVisitDate = new Date(lastVisit);
-
-      if (lastVisitDate < oneHourAgo) {
-        removeItemFromLocalStorage("last-visit");
-        removeItemFromLocalStorage("intro-warning-modal");
-        removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
-      }
-    }
-  };
 
   useEffect(() => {
+    const now = new Date();
+    const oneHourAgo = new Date(now.setHours(now.getHours() - 1));
+    const clearLocalStorageAfterOneHour = () => {
+      const lastVisit = getItemFromLocalStorage("last-visit");
+
+      if (lastVisit) {
+        const lastVisitDate = new Date(lastVisit);
+
+        if (lastVisitDate < oneHourAgo) {
+          removeItemFromLocalStorage("last-visit");
+          removeItemFromLocalStorage("intro-warning-modal");
+          removeItemFromLocalStorage(ANALYTICS_LOCAL_STORAGE_NAME);
+        }
+      }
+    };
     clearLocalStorageAfterOneHour();
   }, []);
 
