@@ -12,9 +12,8 @@ import "./globals.css";
 import "@/assets/css/scrollDriven.css";
 import "@/assets/css/animatedUnderline.css";
 import "@/assets/css/pageTransition.css";
-import "@/assets/css/scrollDriven.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 
 const title =
   "RICARDO CAMILO Programador | Programador Frontend Especialista em React & Vue.js";
@@ -156,9 +155,9 @@ export default async function RootLayout({
   params,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
-  const resolvedParams = await Promise.resolve(params);
+  const resolvedParams = await params;
   const messages = await getMessages(resolvedParams.locale);
 
   return (

@@ -79,9 +79,9 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
 
       <Drawer open={isOpen} onOpenChange={setIsOpen}>
         <DrawerTrigger
-          asChild
+          aria-label={t('openMenu')}
           className={twMerge(isHomePage ? 'flex md:hidden' : 'sm:hidden')}>
-          <Menu />
+          <Menu aria-hidden="true" />
         </DrawerTrigger>
 
         <DrawerContent>
@@ -89,8 +89,8 @@ const Header: FC<HeaderProps> = ({ navLinks }) => {
             <p className="text-base font-medium uppercase text-zinc-900 tracking-[1px]">
               RICARDO CAMILO
             </p>
-            <DrawerClose asChild>
-              <Xmark height={20} width={20} />
+            <DrawerClose aria-label={t('closeMenu')}>
+              <Xmark height={20} width={20} aria-hidden="true" />
             </DrawerClose>
           </div>
 

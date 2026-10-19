@@ -166,6 +166,7 @@ export default function IntroWarningModal({
                 }`}
               role="switch"
               aria-checked={analyticsEnabled}
+              aria-label={t('allowAnalytics')}
             >
               <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${analyticsEnabled ? "translate-x-6" : "translate-x-1"

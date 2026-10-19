@@ -122,7 +122,9 @@
     "testimonials": "Testimonials",
     "contact": "Contact",
     "beyond-bio": "Beyond Bio",
-    "home": "Home"
+    "home": "Home",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
   },
   "IntroWarningModal": {
     "welcome": "Welcome to Portfolio - v1.0! 🚀",
