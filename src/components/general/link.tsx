@@ -15,6 +15,7 @@ export interface LinkProps extends NextLinkProps {
   rel?: string;
   title?: string;
   animate?: boolean;
+  "aria-label"?: string;
   children: ReactNode;
 }
 
@@ -30,6 +31,7 @@ const LinkComponent: FC<LinkProps> = ({
   rel,
   title,
   animate = true,
+  "aria-label": ariaLabel,
   ...props
 }: LinkProps) => {
   const router = useRouter();
@@ -66,6 +68,8 @@ const LinkComponent: FC<LinkProps> = ({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
+          title={title}
+          aria-label={ariaLabel}
           className={twMerge(
             "w-max text-base",
             variant === "light"
@@ -95,6 +99,7 @@ const LinkComponent: FC<LinkProps> = ({
           {...props}
           rel={rel}
           title={title}
+          aria-label={ariaLabel}
         >
           {children}
         </Link>
