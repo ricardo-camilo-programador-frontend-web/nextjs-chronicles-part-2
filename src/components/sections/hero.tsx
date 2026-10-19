@@ -56,6 +56,9 @@ const Hero = () => {
             alt="Ricardo Camilo - Programador Frontend Web Developer"
             title="Ricardo Camilo - Programador Frontend Web Developer"
             width={400}
+            height={533}
+            sizes="(max-width: 1023px) 92vw, 400px"
+            priority
             className="object-cover relative"
           />
         </div>
