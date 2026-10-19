@@ -19,7 +19,7 @@
     "lucide-react": "^0.471.2",
     "motion": "^12.43.0",
     "next": "^15.5.28",
-    "next-intl": "^3.26.5",
+    "next-intl": "^4.14.9",
     "postcss": "^8.5.30",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

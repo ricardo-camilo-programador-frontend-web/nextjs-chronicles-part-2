@@ -3,8 +3,18 @@ packages:
 
 overrides:
   postcss: ^8.5.23
+  postcss-selector-parser: ^7.1.6
 
 allowBuilds:
+  '@parcel/watcher': false
+  '@swc/core': false
   esbuild: true
   sharp: true
   unrs-resolver: true
+
+# braces <=3.0.3 (GHSA-vfj7-8cjw-p6xm) ainda nao tem versao corrigida publicada.
+# Entra so como dependencia de build do tailwindcss 3 (chokidar/micromatch) e
+# nunca recebe entrada do usuario. Remover este ignore quando sair o patch (refs #17).
+auditConfig:
+  ignoreGhsas:
+    - GHSA-vfj7-8cjw-p6xm
