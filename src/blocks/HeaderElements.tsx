@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname } from '@/i18n/routing';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
