@@ -116,6 +116,10 @@
       "country": "BR"
     }
   },
+  "theme": {
+    "toDark": "Switch to dark mode",
+    "toLight": "Switch to light mode"
+  },
   "navigation": {
     "journey": "Journey",
     "work": "Work",
