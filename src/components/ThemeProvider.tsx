@@ -30,8 +30,12 @@ const STORAGE_KEY = "theme";
 function getInitialTheme(): Theme {
   if (typeof window === "undefined") return "light";
 
-  const stored = localStorage.getItem(STORAGE_KEY) as Theme | null;
-  if (stored === "dark" || stored === "light") return stored;
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === "dark" || stored === "light") return stored;
+  } catch {
+    // Storage may be disabled; the system preference still works.
+  }
 
   return window.matchMedia("(prefers-color-scheme: dark)").matches
     ? "dark"
@@ -58,7 +62,11 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
       root.classList.remove("dark");
     }
 
-    localStorage.setItem(STORAGE_KEY, theme);
+    try {
+      localStorage.setItem(STORAGE_KEY, theme);
+    } catch {
+      // Keep the selected theme for this session when storage is unavailable.
+    }
   }, [theme, mounted]);
 
   const toggleTheme = useCallback(() => {
