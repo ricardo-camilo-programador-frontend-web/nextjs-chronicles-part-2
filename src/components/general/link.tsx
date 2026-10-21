@@ -3,7 +3,7 @@
 import type { FC } from "react";
 import { ReactNode } from "react";
 import Link, { LinkProps as NextLinkProps } from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/routing";
 import { twMerge } from "tailwind-merge";
 
 export interface LinkProps extends NextLinkProps {

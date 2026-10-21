@@ -3,9 +3,11 @@ import { twMerge } from "tailwind-merge";
 import Typography from "@/components/general/typography";
 import Link from "@/components/general/link";
 import Social from "@/components/general/social";
+import { useTranslations } from "next-intl";
 
 const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
   const isDark = variant === "dark";
+  const t = useTranslations("Footer");
   return (
     <footer
       className={twMerge(
@@ -27,7 +29,7 @@ const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
               "max-md:order-2"
             )}
           >
-            Copyright {new Date().getFullYear()}
+            {t("copyright")} {new Date().getFullYear()}
           </Typography>
           <Typography
             variant="body1"
@@ -43,18 +45,18 @@ const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
               externalLink
             >
               {" "}
-              Designed
+              {t("designedWith")}
             </Link>{" "}
-            with ❤️ by Riddhi Limbachiya |{" "}
+            ❤️ {t("by")} Riddhi Limbachiya |{" "}
             <Link
               href={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
               variant={variant}
               withUnderline
               externalLink
             >
-              Developed
+              {t("developedWith")}
             </Link>{" "}
-            with ☕️ by{" "}
+            ☕️ {t("by")}{" "}
             <Link
               href={process.env.NEXT_PUBLIC_GITHUB_URL || ""}
               variant={variant}

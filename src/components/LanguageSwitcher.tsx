@@ -2,7 +2,8 @@
 
 import type { FC } from "react";
 import { ReactElement, useState, useRef, useEffect } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { useLocale } from "next-intl";
 import { locales } from "@/config/i18n-config";
 import { Globe } from "lucide-react";
 import { twMerge } from "tailwind-merge";
@@ -10,10 +11,9 @@ import { twMerge } from "tailwind-merge";
 export const LanguageSwitcher: FC = (): ReactElement => {
   const pathname = usePathname();
   const router = useRouter();
+  const currentLang = useLocale();
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
-
-  const currentLang = pathname.split("/")[1] ?? "en";
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -27,8 +27,7 @@ export const LanguageSwitcher: FC = (): ReactElement => {
   }, []);
 
   const handleLanguageChange = (locale: string) => {
-    const newPath = pathname.replace(`/${currentLang}`, `/${locale}`);
-    router.push(newPath);
+    router.replace(pathname, { locale });
     setIsOpen(false);
   };
 
