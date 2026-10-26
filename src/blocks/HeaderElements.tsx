@@ -1,9 +1,9 @@
 "use client";
 
-import type { FC } from "react";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import type { FC } from 'react';
+import { usePathname } from '@/i18n/routing';
+import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 import { Menu, Xmark } from "iconoir-react";
 import { twMerge } from "tailwind-merge";
