@@ -116,6 +116,10 @@
       "country": "BR"
     }
   },
+  "theme": {
+    "toDark": "Ativar tema escuro",
+    "toLight": "Ativar tema claro"
+  },
   "navigation": {
     "journey": "Jornada",
     "work": "Trabalhos",
