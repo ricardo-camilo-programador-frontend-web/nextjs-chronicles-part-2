@@ -1,5 +1,8 @@
 import { defineConfig, devices } from "@playwright/test";
 
+const port = process.env.E2E_PORT ?? "3000";
+const baseURL = `http://localhost:${port}`;
+
 export default defineConfig({
   testDir: "./e2e",
   fullyParallel: true,
@@ -11,7 +14,8 @@ export default defineConfig({
   expect: { timeout: 5_000 },
 
   use: {
-    baseURL: "http://localhost:3000",
+    baseURL,
+
     trace: "on-first-retry",
     screenshot: "only-on-failure",
   },
@@ -24,8 +28,8 @@ export default defineConfig({
   ],
 
   webServer: {
-    command: "pnpm dev",
-    url: "http://localhost:3000",
+    command: `npx next dev --turbopack -H 0.0.0.0 -p ${port}`,
+    url: baseURL,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
   },
