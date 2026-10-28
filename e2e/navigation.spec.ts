@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test.describe("Navigation", () => {
   test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => { localStorage.setItem("intro-warning-modal", "true"); });
     await page.goto("/en");
   });
 

@@ -1,5 +1,9 @@
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => { localStorage.setItem("intro-warning-modal", "true"); });
+});
+
 test.describe("Language Switching", () => {
   test("should load in English by default", async ({ page }) => {
     await page.goto("/en");

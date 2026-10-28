@@ -1,5 +1,9 @@
 import { test, expect } from "@playwright/test";
 
+test.beforeEach(async ({ page }) => {
+  await page.addInitScript(() => { localStorage.setItem("intro-warning-modal", "true"); });
+});
+
 test.describe("Home Page", () => {
   test("should load the home page with hero section", async ({ page }) => {
     await page.goto("/en");
