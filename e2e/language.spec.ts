@@ -4,7 +4,7 @@ test.describe("Language Switching", () => {
   test("should load in English by default", async ({ page }) => {
     await page.goto("/en");
 
-    await expect(page.locator("text=RICARDO CAMILO")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "RICARDO CAMILO" })).toBeVisible();
   });
 
   test("should switch from English to Portuguese", async ({ page }) => {
@@ -30,7 +30,7 @@ test.describe("Language Switching", () => {
   }) => {
     await page.goto("/pt-BR");
 
-    await expect(page.locator("text=RICARDO CAMILO")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "RICARDO CAMILO" })).toBeVisible();
     await expect(page.locator("text=Desenvolvedor Frontend")).toBeVisible();
   });
 

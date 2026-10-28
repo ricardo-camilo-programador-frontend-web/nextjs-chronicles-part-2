@@ -4,7 +4,7 @@ test.describe("Home Page", () => {
   test("should load the home page with hero section", async ({ page }) => {
     await page.goto("/en");
 
-    await expect(page.locator("section")).toBeVisible();
+    await expect(page.locator("section").first()).toBeVisible();
     await expect(page.locator("header")).toBeVisible();
     await expect(page.locator("footer")).toBeVisible();
   });
@@ -12,7 +12,7 @@ test.describe("Home Page", () => {
   test("should display the developer name in the hero", async ({ page }) => {
     await page.goto("/en");
 
-    await expect(page.locator("text=RICARDO CAMILO")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "RICARDO CAMILO" })).toBeVisible();
   });
 
   test("should redirect to default locale when accessing root", async ({
