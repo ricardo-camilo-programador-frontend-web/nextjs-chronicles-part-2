@@ -35,7 +35,7 @@ test.describe("Language Switching", () => {
     await page.goto("/pt-BR");
 
     await expect(page.getByRole("heading", { name: "RICARDO CAMILO" })).toBeVisible();
-    await expect(page.locator("text=Desenvolvedor Frontend")).toBeVisible();
+    await expect(page.getByText("Desenvolvedor Frontend", { exact: true })).toBeVisible();
   });
 
   test("should close language dropdown when clicking outside", async ({
