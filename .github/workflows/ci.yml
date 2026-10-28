@@ -28,6 +28,9 @@ jobs:
       - name: Instalar dependencias
         run: pnpm install --frozen-lockfile --ignore-scripts
 
+      - name: Instalar browsers Playwright
+        run: pnpm exec playwright install --with-deps chromium
+
       - name: Executar Lint
         run: pnpm run lint
 
@@ -36,6 +39,14 @@ jobs:
 
       - name: Testes
         run: pnpm run test
+
+      - name: Testes E2E
+        env:
+          NEXT_PUBLIC_SITE_URL: "https://persona-nextjs-chronicles-part-2.netlify.app"
+          NEXT_PUBLIC_PORTFOLIO_URL: "https://ricardo-camilo-programador-frontend-web.github.io/portfolio2.0"
+          NEXT_PUBLIC_GITHUB_URL: "https://github.com/ricardo-camilo-programador-frontend-web"
+          NEXT_PUBLIC_CONTACT_EMAIL: "contato@ricardocamilo.com"
+        run: pnpm run test:e2e
 
   build:
     name: Build do Projeto
@@ -126,7 +137,7 @@ jobs:
             exit 0
           fi
 
-          if grep -q "ERR_PNPM_AUDIT_BAD_RESPONSE" "$LOG_FILE" && grep -Eq "responded with 5[0-9]{2}([^0-9]|$)|error \\(5[0-9]{2}\\)" "$LOG_FILE"; then
+          if grep -q "ERR_PNPM_AUDIT_BAD_RESPONSE" "$LOG_FILE" && grep -Eq "responded with 5[0-9]{2}([^0-9]|$)|error \(5[0-9]{2}\)" "$LOG_FILE"; then
             echo "::warning::pnpm audit falhou por erro 5xx do endpoint de auditoria da npm."
             exit 0
           fi
