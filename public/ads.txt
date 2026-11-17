@@ -1,0 +1,3 @@
+# Adsterra: a rede nao fornece linha oficial de ads.txt por padrao (somente sob
+# pedido ao suporte). Quando o suporte enviar a linha oficial, adiciona-la aqui.
+# Nao inventar publisher id nem zona.

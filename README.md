@@ -98,6 +98,11 @@ cp .env.example .env
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics measurement ID |
 | `NEXT_PUBLIC_GTM_ID` | Google Tag Manager container ID |
 | `NEXT_PUBLIC_COUNTER_DEV_ID` | Counter.dev analytics ID |
+| `NEXT_PUBLIC_ADSTERRA_NATIVE_KEY` | Adsterra Native Banner zone key (empty = no ad rendered) |
+| `NEXT_PUBLIC_ADSTERRA_NATIVE_HOST` | Adsterra script host, no `https://` (e.g. `plXXXX.effectivegatecpm.com`) |
+| `NEXT_PUBLIC_ADSTERRA_BANNER_KEY` | Optional display banner key (replaces the native slot, never a second slot) |
+| `NEXT_PUBLIC_ADSTERRA_BANNER_HOST` | Optional display banner host (defaults to `www.highperformanceformat.com`) |
+| `NEXT_PUBLIC_ADSTERRA_ENABLED` | `false` disables the ad slot; empty = on only when a key exists |
 
 ### Server-only Variables (no prefix, never exposed to the browser)
 

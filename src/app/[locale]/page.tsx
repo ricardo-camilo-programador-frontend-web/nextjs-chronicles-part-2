@@ -4,6 +4,7 @@ import Hero from "@/components/sections/hero";
 import Testimonials from "@/components/sections/testimonials";
 import Work from "@/components/sections/work";
 import Companies from "@/components/general/companies";
+import AdsterraBanner from "@/components/AdsterraBanner";
 import { SEO } from '@/components/SEO';
 
 export default function Home() {
@@ -24,6 +25,8 @@ export default function Home() {
       <Testimonials />
 
       <Companies />
+
+      <AdsterraBanner format="native" />
 
       <Footer />
     </main>
