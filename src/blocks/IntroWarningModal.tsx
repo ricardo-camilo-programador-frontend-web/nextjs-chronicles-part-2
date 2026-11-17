@@ -8,6 +8,10 @@ import {
   removeItemFromLocalStorage,
 } from "@/utils/localStorage";
 import { ANALYTICS_LOCAL_STORAGE_NAME } from "@/static/analyticsLocalStorageName";
+import {
+  ADSTERRA_CONSENT_EVENT,
+  type RcStudyModalApi,
+} from "@/lib/ads/adsterra";
 import { useTranslations } from 'next-intl';
 
 interface IntroWarningModalProps {
@@ -80,6 +84,15 @@ export default function IntroWarningModal({
     saveItemOnLocalStorage(
       ANALYTICS_LOCAL_STORAGE_NAME,
       analyticsEnabled.toString()
+    );
+    // Expõe o consentimento para o slot de publicidade (window.rcStudyModal),
+    // sem criar toggle novo: a fonte continua sendo o estado acima.
+    const studyModalApi: RcStudyModalApi = {
+      isAnalyticsEnabled: () => analyticsEnabled,
+    };
+    window.rcStudyModal = studyModalApi;
+    window.dispatchEvent(
+      new CustomEvent(ADSTERRA_CONSENT_EVENT, { detail: analyticsEnabled })
     );
   }, [analyticsEnabled]);
 
@@ -174,6 +187,9 @@ export default function IntroWarningModal({
               />
             </button>
           </div>
+          <p className="text-xs text-gray-500 text-center mt-2">
+            {t('adNotice')}
+          </p>
 
           <a
             href="/privacy"
