@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Footer from '@/components/layout/footer';
 import AboutMe from '@/components/sections/about-me';
 import Link from '@/components/general/link';
+import AdsterraBanner from '@/components/AdsterraBanner';
 
 const BeyondBio = () => {
   return (
@@ -16,6 +17,8 @@ const BeyondBio = () => {
       />
 
       <AboutMe />
+
+      <AdsterraBanner format="native" />
 
       <Footer variant="light" />
       <div className="fixed bottom-10 left-10 max-lg:invisible">

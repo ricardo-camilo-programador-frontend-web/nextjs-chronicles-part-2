@@ -3,15 +3,12 @@ import { twMerge } from "tailwind-merge";
 import Typography from "@/components/general/typography";
 import Link from "@/components/general/link";
 import Social from "@/components/general/social";
-import AdsterraBanner from "@/components/AdsterraBanner";
 import { useTranslations } from "next-intl";
 
 const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
   const isDark = variant === "dark";
   const t = useTranslations("Footer");
   return (
-    <>
-    <AdsterraBanner format="native" />
     <footer
       className={twMerge(
         "bg-zinc-950 w-full flex flex-col justify-center",
@@ -75,7 +72,6 @@ const Footer = ({ variant = "dark" }: { variant?: "dark" | "light" }) => {
         </div>
       </div>
     </footer>
-    </>
   );
 };
 
